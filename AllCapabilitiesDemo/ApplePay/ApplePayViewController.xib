@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ApplePayViewController" customModule="AllCapabilitiesDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="priceLabel" destination="1J3-kM-gbv" id="Qo6-bp-Kdc"/>
+                <outlet property="shoePickerView" destination="foP-G3-Aye" id="XSo-3k-ekQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="f7T-Id-beV" customClass="ApplePayViewController" customModule="AllCapabilitiesDemo" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="2g8-7K-ChE">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <viewLayoutGuide key="safeArea" id="4eF-sR-Bfh"/>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            </view>
+            <navigationItem key="navigationItem" id="MTq-3a-b3g"/>
+            <point key="canvasLocation" x="69" y="-138"/>
+        </viewController>
+        <view contentMode="scaleToFill" id="5zS-OT-gQG">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" id="wn5-yv-IcJ">
+                    <rect key="frame" x="16" y="221" width="361" height="410"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoe Store" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pg-Rf-Ym8">
+                            <rect key="frame" x="103.66666666666669" y="0.0" width="154" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="chY-K7-aZf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a shoe to buy." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kI0-8L-kPp">
+                            <rect key="frame" x="97" y="52" width="167" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="r4H-i3-sVd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foP-G3-Aye">
+                            <rect key="frame" x="20.666666666666657" y="92" width="320" height="216"/>
+                        </pickerView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price: $110.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1J3-kM-gbv">
+                            <rect key="frame" x="125.33333333333334" y="324" width="110.33333333333334" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="nQT-fa-bFC"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeA-jk-DKl">
+                            <rect key="frame" x="124.33333333333334" y="365" width="112.33333333333334" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="JeA-jk-DKl" secondAttribute="height" multiplier="2.5" id="Gh8-ee-wgU"/>
+                                <constraint firstAttribute="height" constant="45" id="vTO-Sh-zJM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <state key="normal" title="Buy Shoe"/>
+                            <connections>
+                                <action selector="buyShoeTapped:" destination="-1" eventType="touchUpInside" id="hZy-nO-vdm"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="lCE-LL-cty"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <point key="canvasLocation" x="-367" y="-785"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DataProtectionVC" customModule="AllCapabilitiesDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="tv" destination="rgg-eF-PNt" id="olf-49-KsL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgg-eF-PNt">
+                    <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <mutableString key="text">In iOS, the Data Protection capability is used to enhance the security of your app’s data stored on disk by controlling when your data is accessible based on the device's lock state and encryption.
+
+🔐 Key Uses of Data Protection:
+ - Encrypts app data at rest using the device’s passcode and hardware encryption.
+
+ - Ensures data is unreadable when the device is locked, depending on the protection level you choose.
+
+- Protects sensitive files like user documents, database r records, and other app content.
+
+Common Protection Classes:
+ - NSFileProtectionComplete: Data is only accessible when the device is unlocked.
+
+- NSFileProtectionCompleteUntilFirstUserAuthentication: Data becomes accessible after the device is unlocked once after reboot.
+
+- NSFileProtectionNone: No additional protection; data is always accessible.
+
+Why Use It:
+ - Complies with privacy requirements and app guidelines.
+
+- Prevents unauthorized access to user data if the device is lost or stolen.
+
+You enable it in the "Signing &amp; Capabilities" tab by turning on Data Protection and optionally choosing a protection level in your code.                                                                                           import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        saveProtectedFile()
+    }
+
+    func saveProtectedFile() {
+        let fileName = "secure_note.txt"
+        let content = "This is a secure file protected with NSFileProtectionComplete."
+        
+        if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let fileURL = documentDirectory.appendingPathComponent(fileName)
+            let data = content.data(using: .utf8)
+
+            do {
+                // Save file with NSFileProtectionComplete
+                try data?.write(to: fileURL, options: .completeFileProtection)
+                print("✅ File saved securely at: \(fileURL)")
+            } catch {
+                print("❌ Failed to write file: \(error.localizedDescription)")
+            }
+        }
+    }
+}</mutableString>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="rgg-eF-PNt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Rh3-MC-J0r"/>
+                <constraint firstItem="rgg-eF-PNt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Txr-YW-0XF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rgg-eF-PNt" secondAttribute="trailing" id="edG-6v-fyR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rgg-eF-PNt" secondAttribute="bottom" id="f5F-bb-PAW"/>
+            </constraints>
+            <point key="canvasLocation" x="131" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

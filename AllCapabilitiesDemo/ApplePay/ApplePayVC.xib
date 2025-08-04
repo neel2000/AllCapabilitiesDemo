@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ApplePayVC" customModule="AllCapabilitiesDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="priceLabel" destination="eYS-GS-4Vn" id="zmS-Dy-UAN"/>
+                <outlet property="shoePickerView" destination="ehx-Tm-fis" id="VEK-mH-Gme"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pq9-p8-ObK">
+                    <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="aOW-Na-6xZ">
+                            <rect key="frame" x="16" y="184.66666666666663" width="358" height="394"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoe Store" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m62-mi-i3M">
+                                    <rect key="frame" x="0.0" y="0.0" width="358" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="QYx-Pg-4Fx"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a shoe to buy." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcj-wZ-CFH">
+                                    <rect key="frame" x="0.0" y="52.000000000000028" width="358" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="Tyx-6S-hDa"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehx-Tm-fis">
+                                    <rect key="frame" x="0.0" y="92.000000000000028" width="358" height="199.99999999999997"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="vgw-bd-0Wm"/>
+                                    </constraints>
+                                </pickerView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price: $110.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYS-GS-4Vn">
+                                    <rect key="frame" x="0.0" y="308" width="358" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="lvG-US-xnf"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afm-Wb-kCD">
+                                    <rect key="frame" x="0.0" y="349" width="358" height="45"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="AL7-yP-wdT"/>
+                                        <constraint firstAttribute="width" priority="749" constant="50" id="Rd0-vv-faX"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                    <state key="normal" title="Buy Shoe"/>
+                                    <connections>
+                                        <action selector="buyShoeTapped:" destination="-1" eventType="touchUpInside" id="qgb-Cw-oso"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="aOW-Na-6xZ" firstAttribute="centerY" secondItem="pq9-p8-ObK" secondAttribute="centerY" id="B7t-ib-ml6"/>
+                        <constraint firstItem="aOW-Na-6xZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="pq9-p8-ObK" secondAttribute="top" constant="16" id="CEo-fW-dGo"/>
+                        <constraint firstAttribute="trailing" secondItem="aOW-Na-6xZ" secondAttribute="trailing" constant="16" id="VZe-d9-646"/>
+                        <constraint firstItem="aOW-Na-6xZ" firstAttribute="leading" secondItem="pq9-p8-ObK" secondAttribute="leading" constant="16" id="ly9-F3-j0G"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="aOW-Na-6xZ" secondAttribute="bottom" constant="16" id="wNL-oC-4kJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="pq9-p8-ObK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9lD-XP-K9Z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pq9-p8-ObK" secondAttribute="bottom" id="OSY-tF-HK1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pq9-p8-ObK" secondAttribute="trailing" id="fnF-HH-VO9"/>
+                <constraint firstItem="pq9-p8-ObK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oHC-Dh-Tk9"/>
+            </constraints>
+            <point key="canvasLocation" x="-68" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
