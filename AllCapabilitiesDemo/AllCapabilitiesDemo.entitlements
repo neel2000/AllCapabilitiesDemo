@@ -39,13 +39,25 @@
 	</array>
 	<key>com.apple.developer.messaging-app</key>
 	<true/>
+	<key>com.apple.developer.networking.slicing.appcategory</key>
+	<array/>
+	<key>com.apple.developer.networking.slicing.trafficcategory</key>
+	<array/>
 	<key>com.apple.developer.networking.wifi-info</key>
 	<true/>
+	<key>com.apple.developer.pass-type-identifiers</key>
+	<array/>
 	<key>com.apple.developer.pay-later-merchandising</key>
 	<array>
 		<string>payinfour-merchandising</string>
 	</array>
+	<key>com.apple.developer.sensitivecontentanalysis.client</key>
+	<array>
+		<string>analysis</string>
+	</array>
 	<key>com.apple.developer.siri</key>
+	<true/>
+	<key>com.apple.developer.spatial-audio.profile-access</key>
 	<true/>
 	<key>com.apple.developer.ubiquity-container-identifiers</key>
 	<array>

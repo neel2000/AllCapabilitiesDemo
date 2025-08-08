@@ -9,7 +9,6 @@
 	</array>
 	<key>NSUserActivityTypes</key>
 	<array>
-		<string>IntentIntent</string>
 		<string>SaveTextIntent</string>
 	</array>
 	<key>NSUserNotificationsUsageDescription</key>

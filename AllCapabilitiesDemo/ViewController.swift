@@ -20,6 +20,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var btnCapiCloud: UIButton!
     
+    
     @IBOutlet weak var mview: UIView!
     
     private var locationManager = CLLocationManager()
@@ -109,9 +110,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         return address
     }
 
-    
-
-    
     @IBAction func btnCapiCloudAction(_ sender: Any) {
         let vc = ICloudTypeViewController()
         self.navigationController?.pushViewController(vc, animated: true)
@@ -139,16 +137,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func btnWeatherKitAction(_ sender: Any) {
 //        let vc = WeatherKitViewController()
 //        self.navigationController?.pushViewController(vc, animated: true)
-        
-        let weatherView = WeatherView()
-        let hostingVC = UIHostingController(rootView: weatherView)
-        navigationController?.pushViewController(hostingVC, animated: true)
+        if #available(iOS 16.0, *) {
+            let weatherView = WeatherView()
+            let hostingVC = UIHostingController(rootView: weatherView)
+            navigationController?.pushViewController(hostingVC, animated: true)
+        } else {
+            showAlert(message: "Weatherkit is available on iOS 16.0 and later")
+        }
     }
     
     @IBAction func btnHealthKitAction(_ sender: Any) {
-        let healthView = HealthSummaryView()
-        let vc = UIHostingController(rootView: healthView)
-        self.navigationController?.pushViewController(vc, animated: true)
+        if #available(iOS 16.0, *) {
+            let healthView = HealthSummaryView()
+            let vc = UIHostingController(rootView: healthView)
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else{
+            showAlert(message: "Healthkit is available on iOS 16.0 and later")
+        }
     }
     
     @IBAction func btnSignApple(_ sender: Any) {
@@ -181,11 +186,35 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-     @IBAction func btnSiriAction(_ sender: Any) {
+    @IBAction func btnSiriAction(_ sender: Any) {
         let vc = SiriVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func btn5GNetworkSliceAction(_ sender: Any) {
+        let vc = FiveGNetworkSliceVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnSensitiveContentAnalysisAction(_ sender: Any) {
+        if #available(iOS 17.0, *) {
+            let vc = SensitiveContentVC()
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            // Fallback on earlier versions
+            showAlert(message: "Sensitive Content Analysis is not supported on this device.")
+        }
+    }
+    @IBAction func btnSpatialAudioAction(_ sender: Any) {
+        if #available(iOS 16.0, *) {
+            let vc = SpatialAudioProfileVC()
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            // Fallback on earlier versions
+            showAlert(message: "Spatial Audio Profile is not supported on this device.")
+        }
+    }
+            
     @objc private func scheduleNotification() {
         let content = UNMutableNotificationContent()
         content.title = "Time Sensitive Alert"
@@ -209,6 +238,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 print("✅ Time Sensitive Notification scheduled.")
             }
         }
+    }
+    
+    private func showAlert(message: String) {
+        let alert = UIAlertController(title: "Info", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
 

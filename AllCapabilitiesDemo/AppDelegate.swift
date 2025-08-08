@@ -7,6 +7,9 @@
 
 import UIKit
 import UserNotifications
+import Intents
+import IQKeyboardManagerSwift
+import IQKeyboardToolbarManager
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
@@ -15,11 +18,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        addIQKeyboardManagerVariables()
+        INPreferences.requestSiriAuthorization { status in
+            print("Siri Authorization Status: \(status == .authorized ? "Authorized" : "Not Authorized")")
+        }
         UNUserNotificationCenter.current().delegate = self
         requestNotificationPermission()
         
         return true
+    }
+    
+    func addIQKeyboardManagerVariables() {
+        IQKeyboardManager.shared.isEnabled = true
+        IQKeyboardManager.shared.resignOnTouchOutside = true
+        IQKeyboardToolbarManager.shared.isEnabled = true
     }
 
     // MARK: UISceneSession Lifecycle

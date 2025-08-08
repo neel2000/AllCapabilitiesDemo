@@ -16,9 +16,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "518C28122E3A30B00024C2A2"
-               BuildableName = "CredentialsExtension.appex"
-               BlueprintName = "CredentialsExtension"
+               BlueprintIdentifier = "51BBC7352E40DA1100211F13"
+               BuildableName = "SaveTextIntent.appex"
+               BlueprintName = "SaveTextIntent"
                ReferencedContainer = "container:AllCapabilitiesDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,6 +47,7 @@
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
+      intentQueryString = "Save Rohit to widget in AppCapabilitiesDemo"
       selectedDebuggerIdentifier = ""
       selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       launchStyle = "0"
@@ -58,9 +59,15 @@
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
       <RemoteRunnable
-         runnableDebuggingMode = "1"
-         BundleIdentifier = "com.appcaps"
-         RemotePath = "/var/containers/Bundle/Application/0D631A40-5455-489D-A6BC-55FE938CACFA/AllCapabilitiesDemo.app">
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.notificationcenterui">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "51BBC7352E40DA1100211F13"
+            BuildableName = "SaveTextIntent.appex"
+            BlueprintName = "SaveTextIntent"
+            ReferencedContainer = "container:AllCapabilitiesDemo.xcodeproj">
+         </BuildableReference>
       </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference
@@ -74,6 +81,7 @@
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
+      intentQueryString = "Save Rohit to widget in AppCapabilitiesDemo"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"

