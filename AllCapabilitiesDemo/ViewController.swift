@@ -233,6 +233,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func btnFontsAction(_ sender: Any) {
+        let vc = FontViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @objc private func scheduleNotification() {
         let content = UNMutableNotificationContent()
         content.title = "Time Sensitive Alert"
