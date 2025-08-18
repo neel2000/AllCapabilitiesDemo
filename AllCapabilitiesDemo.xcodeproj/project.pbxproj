@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		490D3F05B6CAF7EAF1877BEF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E5D99E70D9BB7FD9BE877BEF /* README.md */; };
 		5117C1162E3C995200D8FCCD /* DataProtectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5117C1142E3C995200D8FCCD /* DataProtectionVC.swift */; };
 		5117C1172E3C995200D8FCCD /* DataProtectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5117C1152E3C995200D8FCCD /* DataProtectionVC.xib */; };
 		51346A562E3B403F008664DB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51346A382E3B3FEE008664DB /* WidgetKit.framework */; };
@@ -17,18 +16,9 @@
 		513DC6732E41E76500DA2C0F /* SiriVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC6E12E40A99500211F13 /* SiriVC.swift */; };
 		513DC6E42E42305000DA2C0F /* AppGroupsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51346A6E2E3B42D5008664DB /* AppGroupsViewController.xib */; };
 		513DC6E52E42305000DA2C0F /* AppGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51346A6D2E3B42D5008664DB /* AppGroupsViewController.swift */; };
-		515AF6342E45E11C00EF1477 /* SensitiveContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515AF6332E45E11C00EF1477 /* SensitiveContentVC.xib */; };
-		515AF6352E45E11C00EF1477 /* SensitiveContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515AF6322E45E11C00EF1477 /* SensitiveContentVC.swift */; };
-		515AF6392E46383600EF1477 /* SpatialAudioProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 515AF6382E46383600EF1477 /* SpatialAudioProfileVC.xib */; };
-		515AF63A2E46383600EF1477 /* SpatialAudioProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515AF6372E46383600EF1477 /* SpatialAudioProfileVC.swift */; };
 		51B526002E44869800999ABE /* WalletVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B525FF2E44869800999ABE /* WalletVC.xib */; };
 		51B526012E44869800999ABE /* WalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B525FE2E44869800999ABE /* WalletVC.swift */; };
 		51B526052E44E7B900999ABE /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 51B526042E44E7B900999ABE /* IQKeyboardManagerSwift */; };
-		51BBC6D12E407C5100211F13 /* DefaultCallingAppVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BBC6D02E407C5100211F13 /* DefaultCallingAppVC.xib */; };
-		51BBC6D22E407C5100211F13 /* DefaultCallingAppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC6CF2E407C5100211F13 /* DefaultCallingAppVC.swift */; };
-		51BBC6D42E407DE100211F13 /* CallHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC6D32E407DDF00211F13 /* CallHandler.swift */; };
-		51BBC6D92E40893600211F13 /* DefaultMessagingAppVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BBC6D82E40893600211F13 /* DefaultMessagingAppVC.xib */; };
-		51BBC6DA2E40893600211F13 /* DefaultMessagingAppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC6D72E40893600211F13 /* DefaultMessagingAppVC.swift */; };
 		51BBC6DE2E40951A00211F13 /* HeadPoseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BBC6DD2E40951A00211F13 /* HeadPoseVC.xib */; };
 		51BBC6DF2E40951A00211F13 /* HeadPoseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC6DC2E40951A00211F13 /* HeadPoseVC.swift */; };
 		51BBC6E32E40A99500211F13 /* SiriVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC6E12E40A99500211F13 /* SiriVC.swift */; };
@@ -41,15 +31,32 @@
 		51C5A8C92E0ECE02008A79F5 /* HealthKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51C5A8C72E0ECE02008A79F5 /* HealthKitViewController.xib */; };
 		51C979482E4367F6006E99C6 /* FiveGNetworkSliceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C979462E4367F6006E99C6 /* FiveGNetworkSliceVC.swift */; };
 		51C979492E4367F6006E99C6 /* FiveGNetworkSliceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51C979472E4367F6006E99C6 /* FiveGNetworkSliceVC.xib */; };
-		51D036A22E39F33B00948296 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D036A12E39F33800948296 /* KeychainManager.swift */; };
 		51D036AA2E3A013900948296 /* AppleLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51D036A92E3A013900948296 /* AppleLoginViewController.xib */; };
 		51D036AB2E3A013900948296 /* AppleLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D036A82E3A013900948296 /* AppleLoginViewController.swift */; };
 		51E700F12E0D88A30033F74D /* WeatherKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E700F02E0D88A30033F74D /* WeatherKitViewController.xib */; };
 		51E700F22E0D88A30033F74D /* WeatherKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E700EF2E0D88A30033F74D /* WeatherKitViewController.swift */; };
+		51F01B922E53245200F04F6B /* SensitiveContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F01B902E53245200F04F6B /* SensitiveContentVC.xib */; };
+		51F01B932E53245200F04F6B /* SensitiveContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F01B8F2E53245200F04F6B /* SensitiveContentVC.swift */; };
+		51F01B972E53249C00F04F6B /* AccessWiFiInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F01B942E53249C00F04F6B /* AccessWiFiInfoViewController.swift */; };
+		51F01B982E53249C00F04F6B /* AccessWiFiInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F01B952E53249C00F04F6B /* AccessWiFiInfoViewController.xib */; };
+		51F01B9D2E5324C200F04F6B /* AutoFillCredentialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F01B9A2E5324C200F04F6B /* AutoFillCredentialViewController.xib */; };
+		51F01B9E2E5324C200F04F6B /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F01B9B2E5324C200F04F6B /* KeychainManager.swift */; };
+		51F01B9F2E5324C200F04F6B /* AutoFillCredentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F01B992E5324C200F04F6B /* AutoFillCredentialViewController.swift */; };
+		51F01BA42E5324F000F04F6B /* DefaultCallingAppVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BA22E5324F000F04F6B /* DefaultCallingAppVC.xib */; };
+		51F01BA52E5324F000F04F6B /* DefaultCallingAppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F01BA12E5324F000F04F6B /* DefaultCallingAppVC.swift */; };
+		51F01BA62E5324F000F04F6B /* CallHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F01BA02E5324F000F04F6B /* CallHandler.swift */; };
+		51F01BAA2E53251800F04F6B /* DefaultMessagingAppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F01BA72E53251800F04F6B /* DefaultMessagingAppVC.swift */; };
+		51F01BAB2E53251800F04F6B /* DefaultMessagingAppVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BA82E53251800F04F6B /* DefaultMessagingAppVC.xib */; };
+		51F01BAF2E53252E00F04F6B /* SpatialAudioProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BAD2E53252E00F04F6B /* SpatialAudioProfileVC.xib */; };
+		51F01BB02E53252E00F04F6B /* SpatialAudioProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F01BAC2E53252E00F04F6B /* SpatialAudioProfileVC.swift */; };
+		51F01BB42E53257600F04F6B /* NFCReadWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F01BB12E53257600F04F6B /* NFCReadWriteViewController.swift */; };
+		51F01BB52E53257600F04F6B /* NFCReadWriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BB22E53257600F04F6B /* NFCReadWriteViewController.xib */; };
+		51F01BB92E53258000F04F6B /* DriverkitFamiliyMIDIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F01BB62E53258000F04F6B /* DriverkitFamiliyMIDIVC.swift */; };
+		51F01BBA2E53258000F04F6B /* DriverkitFamiliyMIDIVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BB72E53258000F04F6B /* DriverkitFamiliyMIDIVC.xib */; };
+		51F01BBE2E5325A000F04F6B /* SIMInsertedforWirelessCarriersVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BBC2E5325A000F04F6B /* SIMInsertedforWirelessCarriersVC.xib */; };
+		51F01BBF2E5325A000F04F6B /* SIMInsertedforWirelessCarriersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F01BBB2E5325A000F04F6B /* SIMInsertedforWirelessCarriersVC.swift */; };
 		BD2162F12D11A5FD0071786F /* ApplePayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2162EF2D11A5FD0071786F /* ApplePayVC.swift */; };
 		BD2162F22D11A5FD0071786F /* ApplePayVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2162F02D11A5FD0071786F /* ApplePayVC.xib */; };
-		BD279F9F2D0AC589001D05E4 /* AutoFillCredentialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD279F9D2D0AC589001D05E4 /* AutoFillCredentialViewController.swift */; };
-		BD279FA02D0AC589001D05E4 /* AutoFillCredentialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD279F9E2D0AC589001D05E4 /* AutoFillCredentialViewController.xib */; };
 		BD279FA42D0AE219001D05E4 /* ICloudDocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD279FA22D0AE219001D05E4 /* ICloudDocumentsViewController.swift */; };
 		BD279FA52D0AE219001D05E4 /* ICloudDocumentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD279FA32D0AE219001D05E4 /* ICloudDocumentsViewController.xib */; };
 		BD279FA82D0AFAEE001D05E4 /* ICloudTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD279FA62D0AFAEE001D05E4 /* ICloudTypeViewController.swift */; };
@@ -67,8 +74,6 @@
 		BD2ECEF42D08591400639E0D /* ICloudViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2ECEF12D08591400639E0D /* ICloudViewController.swift */; };
 		BD45BA5E2D106B5F006B45C3 /* ApplePayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD45BA5D2D106B5F006B45C3 /* ApplePayViewController.xib */; };
 		BD45BA5F2D106B5F006B45C3 /* ApplePayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45BA5C2D106B5F006B45C3 /* ApplePayViewController.swift */; };
-		BDFCA04C2D096BDC0054CA3B /* AccessWiFiInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDFCA04B2D096BDC0054CA3B /* AccessWiFiInfoViewController.xib */; };
-		BDFCA04D2D096BDD0054CA3B /* AccessWiFiInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFCA04A2D096BDC0054CA3B /* AccessWiFiInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -142,17 +147,8 @@
 		51346A6C2E3B4216008664DB /* DemoWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DemoWidgetExtension.entitlements; sourceTree = "<group>"; };
 		51346A6D2E3B42D5008664DB /* AppGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroupsViewController.swift; sourceTree = "<group>"; };
 		51346A6E2E3B42D5008664DB /* AppGroupsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppGroupsViewController.xib; sourceTree = "<group>"; };
-		515AF6322E45E11C00EF1477 /* SensitiveContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensitiveContentVC.swift; sourceTree = "<group>"; };
-		515AF6332E45E11C00EF1477 /* SensitiveContentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SensitiveContentVC.xib; sourceTree = "<group>"; };
-		515AF6372E46383600EF1477 /* SpatialAudioProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialAudioProfileVC.swift; sourceTree = "<group>"; };
-		515AF6382E46383600EF1477 /* SpatialAudioProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpatialAudioProfileVC.xib; sourceTree = "<group>"; };
 		51B525FE2E44869800999ABE /* WalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletVC.swift; sourceTree = "<group>"; };
 		51B525FF2E44869800999ABE /* WalletVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletVC.xib; sourceTree = "<group>"; };
-		51BBC6CF2E407C5100211F13 /* DefaultCallingAppVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCallingAppVC.swift; sourceTree = "<group>"; };
-		51BBC6D02E407C5100211F13 /* DefaultCallingAppVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultCallingAppVC.xib; sourceTree = "<group>"; };
-		51BBC6D32E407DDF00211F13 /* CallHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallHandler.swift; sourceTree = "<group>"; };
-		51BBC6D72E40893600211F13 /* DefaultMessagingAppVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMessagingAppVC.swift; sourceTree = "<group>"; };
-		51BBC6D82E40893600211F13 /* DefaultMessagingAppVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultMessagingAppVC.xib; sourceTree = "<group>"; };
 		51BBC6DC2E40951A00211F13 /* HeadPoseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadPoseVC.swift; sourceTree = "<group>"; };
 		51BBC6DD2E40951A00211F13 /* HeadPoseVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadPoseVC.xib; sourceTree = "<group>"; };
 		51BBC6E12E40A99500211F13 /* SiriVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriVC.swift; sourceTree = "<group>"; };
@@ -165,16 +161,33 @@
 		51C5A8C72E0ECE02008A79F5 /* HealthKitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthKitViewController.xib; sourceTree = "<group>"; };
 		51C979462E4367F6006E99C6 /* FiveGNetworkSliceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveGNetworkSliceVC.swift; sourceTree = "<group>"; };
 		51C979472E4367F6006E99C6 /* FiveGNetworkSliceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiveGNetworkSliceVC.xib; sourceTree = "<group>"; };
-		51D036A12E39F33800948296 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		51D036A82E3A013900948296 /* AppleLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginViewController.swift; sourceTree = "<group>"; };
 		51D036A92E3A013900948296 /* AppleLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppleLoginViewController.xib; sourceTree = "<group>"; };
 		51E700EF2E0D88A30033F74D /* WeatherKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherKitViewController.swift; sourceTree = "<group>"; };
 		51E700F02E0D88A30033F74D /* WeatherKitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherKitViewController.xib; sourceTree = "<group>"; };
+		51F01B8F2E53245200F04F6B /* SensitiveContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensitiveContentVC.swift; sourceTree = "<group>"; };
+		51F01B902E53245200F04F6B /* SensitiveContentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SensitiveContentVC.xib; sourceTree = "<group>"; };
+		51F01B942E53249C00F04F6B /* AccessWiFiInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessWiFiInfoViewController.swift; sourceTree = "<group>"; };
+		51F01B952E53249C00F04F6B /* AccessWiFiInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccessWiFiInfoViewController.xib; sourceTree = "<group>"; };
+		51F01B992E5324C200F04F6B /* AutoFillCredentialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoFillCredentialViewController.swift; sourceTree = "<group>"; };
+		51F01B9A2E5324C200F04F6B /* AutoFillCredentialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoFillCredentialViewController.xib; sourceTree = "<group>"; };
+		51F01B9B2E5324C200F04F6B /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		51F01BA02E5324F000F04F6B /* CallHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallHandler.swift; sourceTree = "<group>"; };
+		51F01BA12E5324F000F04F6B /* DefaultCallingAppVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCallingAppVC.swift; sourceTree = "<group>"; };
+		51F01BA22E5324F000F04F6B /* DefaultCallingAppVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultCallingAppVC.xib; sourceTree = "<group>"; };
+		51F01BA72E53251800F04F6B /* DefaultMessagingAppVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMessagingAppVC.swift; sourceTree = "<group>"; };
+		51F01BA82E53251800F04F6B /* DefaultMessagingAppVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultMessagingAppVC.xib; sourceTree = "<group>"; };
+		51F01BAC2E53252E00F04F6B /* SpatialAudioProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialAudioProfileVC.swift; sourceTree = "<group>"; };
+		51F01BAD2E53252E00F04F6B /* SpatialAudioProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpatialAudioProfileVC.xib; sourceTree = "<group>"; };
+		51F01BB12E53257600F04F6B /* NFCReadWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCReadWriteViewController.swift; sourceTree = "<group>"; };
+		51F01BB22E53257600F04F6B /* NFCReadWriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NFCReadWriteViewController.xib; sourceTree = "<group>"; };
+		51F01BB62E53258000F04F6B /* DriverkitFamiliyMIDIVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverkitFamiliyMIDIVC.swift; sourceTree = "<group>"; };
+		51F01BB72E53258000F04F6B /* DriverkitFamiliyMIDIVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriverkitFamiliyMIDIVC.xib; sourceTree = "<group>"; };
+		51F01BBB2E5325A000F04F6B /* SIMInsertedforWirelessCarriersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIMInsertedforWirelessCarriersVC.swift; sourceTree = "<group>"; };
+		51F01BBC2E5325A000F04F6B /* SIMInsertedforWirelessCarriersVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SIMInsertedforWirelessCarriersVC.xib; sourceTree = "<group>"; };
 		BD2162EF2D11A5FD0071786F /* ApplePayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayVC.swift; sourceTree = "<group>"; };
 		BD2162F02D11A5FD0071786F /* ApplePayVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplePayVC.xib; sourceTree = "<group>"; };
 		BD279F8C2D0ABD33001D05E4 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
-		BD279F9D2D0AC589001D05E4 /* AutoFillCredentialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoFillCredentialViewController.swift; sourceTree = "<group>"; };
-		BD279F9E2D0AC589001D05E4 /* AutoFillCredentialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutoFillCredentialViewController.xib; sourceTree = "<group>"; };
 		BD279FA22D0AE219001D05E4 /* ICloudDocumentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudDocumentsViewController.swift; sourceTree = "<group>"; };
 		BD279FA32D0AE219001D05E4 /* ICloudDocumentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ICloudDocumentsViewController.xib; sourceTree = "<group>"; };
 		BD279FA62D0AFAEE001D05E4 /* ICloudTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudTypeViewController.swift; sourceTree = "<group>"; };
@@ -197,8 +210,6 @@
 		BD2ECEF22D08591400639E0D /* ICloudViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ICloudViewController.xib; sourceTree = "<group>"; };
 		BD45BA5C2D106B5F006B45C3 /* ApplePayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayViewController.swift; sourceTree = "<group>"; };
 		BD45BA5D2D106B5F006B45C3 /* ApplePayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplePayViewController.xib; sourceTree = "<group>"; };
-		BDFCA04A2D096BDC0054CA3B /* AccessWiFiInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessWiFiInfoViewController.swift; sourceTree = "<group>"; };
-		BDFCA04B2D096BDC0054CA3B /* AccessWiFiInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccessWiFiInfoViewController.xib; sourceTree = "<group>"; };
 		E5D99E70D9BB7FD9BE877BEF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = AllCapabilitiesDemo.xcodeproj/README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -272,7 +283,6 @@
 			children = (
 				5117C1142E3C995200D8FCCD /* DataProtectionVC.swift */,
 				5117C1152E3C995200D8FCCD /* DataProtectionVC.xib */,
-				BD2ECEC52D0841CA00639E0D /* Main.storyboard */,
 			);
 			path = "Data Protection";
 			sourceTree = "<group>";
@@ -286,24 +296,6 @@
 			path = "App Groups";
 			sourceTree = "<group>";
 		};
-		515AF6312E45E10000EF1477 /* SensitiveContent */ = {
-			isa = PBXGroup;
-			children = (
-				515AF6322E45E11C00EF1477 /* SensitiveContentVC.swift */,
-				515AF6332E45E11C00EF1477 /* SensitiveContentVC.xib */,
-			);
-			path = SensitiveContent;
-			sourceTree = "<group>";
-		};
-		515AF6362E46380F00EF1477 /* SpatialAudioProfile */ = {
-			isa = PBXGroup;
-			children = (
-				515AF6372E46383600EF1477 /* SpatialAudioProfileVC.swift */,
-				515AF6382E46383600EF1477 /* SpatialAudioProfileVC.xib */,
-			);
-			path = SpatialAudioProfile;
-			sourceTree = "<group>";
-		};
 		51B525FD2E44868600999ABE /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,25 +303,6 @@
 				51B525FF2E44869800999ABE /* WalletVC.xib */,
 			);
 			path = Wallet;
-			sourceTree = "<group>";
-		};
-		51BBC6CE2E407C2E00211F13 /* DefaultCallingApp */ = {
-			isa = PBXGroup;
-			children = (
-				51BBC6D32E407DDF00211F13 /* CallHandler.swift */,
-				51BBC6CF2E407C5100211F13 /* DefaultCallingAppVC.swift */,
-				51BBC6D02E407C5100211F13 /* DefaultCallingAppVC.xib */,
-			);
-			path = DefaultCallingApp;
-			sourceTree = "<group>";
-		};
-		51BBC6D52E4087C100211F13 /* DefaultMessagingApp */ = {
-			isa = PBXGroup;
-			children = (
-				51BBC6D72E40893600211F13 /* DefaultMessagingAppVC.swift */,
-				51BBC6D82E40893600211F13 /* DefaultMessagingAppVC.xib */,
-			);
-			path = DefaultMessagingApp;
 			sourceTree = "<group>";
 		};
 		51BBC6DB2E40950300211F13 /* HeadPose */ = {
@@ -387,6 +360,89 @@
 			path = WeatherKit;
 			sourceTree = "<group>";
 		};
+		51F01B912E53245200F04F6B /* Sensitive Content */ = {
+			isa = PBXGroup;
+			children = (
+				51F01B8F2E53245200F04F6B /* SensitiveContentVC.swift */,
+				51F01B902E53245200F04F6B /* SensitiveContentVC.xib */,
+			);
+			path = "Sensitive Content";
+			sourceTree = "<group>";
+		};
+		51F01B962E53249C00F04F6B /* Access WiFi Info */ = {
+			isa = PBXGroup;
+			children = (
+				51F01B942E53249C00F04F6B /* AccessWiFiInfoViewController.swift */,
+				51F01B952E53249C00F04F6B /* AccessWiFiInfoViewController.xib */,
+			);
+			path = "Access WiFi Info";
+			sourceTree = "<group>";
+		};
+		51F01B9C2E5324C200F04F6B /* Auto Fill Credential */ = {
+			isa = PBXGroup;
+			children = (
+				51F01B992E5324C200F04F6B /* AutoFillCredentialViewController.swift */,
+				51F01B9A2E5324C200F04F6B /* AutoFillCredentialViewController.xib */,
+				51F01B9B2E5324C200F04F6B /* KeychainManager.swift */,
+			);
+			path = "Auto Fill Credential";
+			sourceTree = "<group>";
+		};
+		51F01BA32E5324F000F04F6B /* Default Calling App */ = {
+			isa = PBXGroup;
+			children = (
+				51F01BA02E5324F000F04F6B /* CallHandler.swift */,
+				51F01BA12E5324F000F04F6B /* DefaultCallingAppVC.swift */,
+				51F01BA22E5324F000F04F6B /* DefaultCallingAppVC.xib */,
+			);
+			path = "Default Calling App";
+			sourceTree = "<group>";
+		};
+		51F01BA92E53251800F04F6B /* Default Messaging App */ = {
+			isa = PBXGroup;
+			children = (
+				51F01BA72E53251800F04F6B /* DefaultMessagingAppVC.swift */,
+				51F01BA82E53251800F04F6B /* DefaultMessagingAppVC.xib */,
+			);
+			path = "Default Messaging App";
+			sourceTree = "<group>";
+		};
+		51F01BAE2E53252E00F04F6B /* Spatial Audio Profile */ = {
+			isa = PBXGroup;
+			children = (
+				51F01BAC2E53252E00F04F6B /* SpatialAudioProfileVC.swift */,
+				51F01BAD2E53252E00F04F6B /* SpatialAudioProfileVC.xib */,
+			);
+			path = "Spatial Audio Profile";
+			sourceTree = "<group>";
+		};
+		51F01BB32E53257600F04F6B /* Near Field Communication Tag Reading */ = {
+			isa = PBXGroup;
+			children = (
+				51F01BB12E53257600F04F6B /* NFCReadWriteViewController.swift */,
+				51F01BB22E53257600F04F6B /* NFCReadWriteViewController.xib */,
+			);
+			path = "Near Field Communication Tag Reading";
+			sourceTree = "<group>";
+		};
+		51F01BB82E53258000F04F6B /* Driverkit Familiy MIDI */ = {
+			isa = PBXGroup;
+			children = (
+				51F01BB62E53258000F04F6B /* DriverkitFamiliyMIDIVC.swift */,
+				51F01BB72E53258000F04F6B /* DriverkitFamiliyMIDIVC.xib */,
+			);
+			path = "Driverkit Familiy MIDI";
+			sourceTree = "<group>";
+		};
+		51F01BBD2E5325A000F04F6B /* SIM Inserted for Wireless Carriers */ = {
+			isa = PBXGroup;
+			children = (
+				51F01BBB2E5325A000F04F6B /* SIMInsertedforWirelessCarriersVC.swift */,
+				51F01BBC2E5325A000F04F6B /* SIMInsertedforWirelessCarriersVC.xib */,
+			);
+			path = "SIM Inserted for Wireless Carriers";
+			sourceTree = "<group>";
+		};
 		BD279F8B2D0ABD33001D05E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,16 +453,6 @@
 				51BBC6F52E40B4DE00211F13 /* IntentsUI.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BD279FA12D0AC58D001D05E4 /* AutoFillCredential */ = {
-			isa = PBXGroup;
-			children = (
-				51D036A12E39F33800948296 /* KeychainManager.swift */,
-				BD279F9D2D0AC589001D05E4 /* AutoFillCredentialViewController.swift */,
-				BD279F9E2D0AC589001D05E4 /* AutoFillCredentialViewController.xib */,
-			);
-			path = AutoFillCredential;
 			sourceTree = "<group>";
 		};
 		BD2ECEB32D0841CA00639E0D = {
@@ -443,25 +489,28 @@
 				BD2ECEBF2D0841CA00639E0D /* AppDelegate.swift */,
 				BD2ECEC12D0841CA00639E0D /* SceneDelegate.swift */,
 				BD2ECEC32D0841CA00639E0D /* ViewController.swift */,
-				515AF6312E45E10000EF1477 /* SensitiveContent */,
 				51B525FD2E44868600999ABE /* Wallet */,
 				51C5A8C52E0ECDF0008A79F5 /* HealthKit */,
 				51E700EE2E0D88890033F74D /* WeatherKit */,
 				BD45BA5B2D106B48006B45C3 /* ApplePay */,
 				BD2ECEF02D0858F900639E0D /* iCloud */,
-				BDFCA04E2D098C620054CA3B /* AccessWiFiInfo */,
-				BD279FA12D0AC58D001D05E4 /* AutoFillCredential */,
-				BDFCA0492D096BBB0054CA3B /* CommonCapabilities */,
+				51F01B912E53245200F04F6B /* Sensitive Content */,
+				51F01B962E53249C00F04F6B /* Access WiFi Info */,
+				51F01B9C2E5324C200F04F6B /* Auto Fill Credential */,
 				51346A322E3B3F6D008664DB /* App Groups */,
 				51D036A72E3A011C00948296 /* Apple Login */,
 				5117C1132E3C993900D8FCCD /* Data Protection */,
-				51BBC6CE2E407C2E00211F13 /* DefaultCallingApp */,
+				51F01BA32E5324F000F04F6B /* Default Calling App */,
+				51F01BA92E53251800F04F6B /* Default Messaging App */,
+				51F01BAE2E53252E00F04F6B /* Spatial Audio Profile */,
 				51BBC6DB2E40950300211F13 /* HeadPose */,
-				51BBC6D52E4087C100211F13 /* DefaultMessagingApp */,
 				51BBC6E02E40A90F00211F13 /* Siri */,
 				51C979452E4367D6006E99C6 /* 5G Network Slicing */,
-				515AF6362E46380F00EF1477 /* SpatialAudioProfile */,
+				51F01BB32E53257600F04F6B /* Near Field Communication Tag Reading */,
+				51F01BB82E53258000F04F6B /* Driverkit Familiy MIDI */,
+				51F01BBD2E5325A000F04F6B /* SIM Inserted for Wireless Carriers */,
 				BD2ECEC82D0841CB00639E0D /* Assets.xcassets */,
+				BD2ECEC52D0841CA00639E0D /* Main.storyboard */,
 				BD2ECECA2D0841CB00639E0D /* LaunchScreen.storyboard */,
 				BD2ECECD2D0841CB00639E0D /* Info.plist */,
 			);
@@ -507,22 +556,6 @@
 				BD2162F02D11A5FD0071786F /* ApplePayVC.xib */,
 			);
 			path = ApplePay;
-			sourceTree = "<group>";
-		};
-		BDFCA0492D096BBB0054CA3B /* CommonCapabilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CommonCapabilities;
-			sourceTree = "<group>";
-		};
-		BDFCA04E2D098C620054CA3B /* AccessWiFiInfo */ = {
-			isa = PBXGroup;
-			children = (
-				BDFCA04A2D096BDC0054CA3B /* AccessWiFiInfoViewController.swift */,
-				BDFCA04B2D096BDC0054CA3B /* AccessWiFiInfoViewController.xib */,
-			);
-			path = AccessWiFiInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -688,7 +721,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				490D3F05B6CAF7EAF1877BEF /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,20 +737,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD2ECEF32D08591400639E0D /* ICloudViewController.xib in Resources */,
+				51F01B922E53245200F04F6B /* SensitiveContentVC.xib in Resources */,
+				51F01B9D2E5324C200F04F6B /* AutoFillCredentialViewController.xib in Resources */,
+				51F01BBA2E53258000F04F6B /* DriverkitFamiliyMIDIVC.xib in Resources */,
+				51F01B982E53249C00F04F6B /* AccessWiFiInfoViewController.xib in Resources */,
+				51F01BBE2E5325A000F04F6B /* SIMInsertedforWirelessCarriersVC.xib in Resources */,
 				513DC6E42E42305000DA2C0F /* AppGroupsViewController.xib in Resources */,
-				51BBC6D12E407C5100211F13 /* DefaultCallingAppVC.xib in Resources */,
-				515AF6392E46383600EF1477 /* SpatialAudioProfileVC.xib in Resources */,
-				BD279FA02D0AC589001D05E4 /* AutoFillCredentialViewController.xib in Resources */,
 				51C979492E4367F6006E99C6 /* FiveGNetworkSliceVC.xib in Resources */,
-				51BBC6D92E40893600211F13 /* DefaultMessagingAppVC.xib in Resources */,
+				51F01BA42E5324F000F04F6B /* DefaultCallingAppVC.xib in Resources */,
 				BD2ECEC92D0841CB00639E0D /* Assets.xcassets in Resources */,
 				51E700F12E0D88A30033F74D /* WeatherKitViewController.xib in Resources */,
+				51F01BAF2E53252E00F04F6B /* SpatialAudioProfileVC.xib in Resources */,
 				BD2ECECC2D0841CB00639E0D /* Base in Resources */,
 				51C5A8C92E0ECE02008A79F5 /* HealthKitViewController.xib in Resources */,
+				51F01BB52E53257600F04F6B /* NFCReadWriteViewController.xib in Resources */,
 				BD2162F22D11A5FD0071786F /* ApplePayVC.xib in Resources */,
 				BD2ECEC72D0841CA00639E0D /* Base in Resources */,
+				51F01BAB2E53251800F04F6B /* DefaultMessagingAppVC.xib in Resources */,
 				5117C1172E3C995200D8FCCD /* DataProtectionVC.xib in Resources */,
-				BDFCA04C2D096BDC0054CA3B /* AccessWiFiInfoViewController.xib in Resources */,
 				51D036AA2E3A013900948296 /* AppleLoginViewController.xib in Resources */,
 				BD279FA92D0AFAEE001D05E4 /* ICloudTypeViewController.xib in Resources */,
 				51BBC6E42E40A99500211F13 /* SiriVC.xib in Resources */,
@@ -726,7 +762,6 @@
 				51BBC6DE2E40951A00211F13 /* HeadPoseVC.xib in Resources */,
 				BD45BA5E2D106B5F006B45C3 /* ApplePayViewController.xib in Resources */,
 				BD279FA52D0AE219001D05E4 /* ICloudDocumentsViewController.xib in Resources */,
-				515AF6342E45E11C00EF1477 /* SensitiveContentVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,31 +803,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				513DC6E52E42305000DA2C0F /* AppGroupsViewController.swift in Sources */,
-				51D036A22E39F33B00948296 /* KeychainManager.swift in Sources */,
 				BD2162F12D11A5FD0071786F /* ApplePayVC.swift in Sources */,
-				51BBC6DA2E40893600211F13 /* DefaultMessagingAppVC.swift in Sources */,
-				BDFCA04D2D096BDD0054CA3B /* AccessWiFiInfoViewController.swift in Sources */,
 				51BBC6E32E40A99500211F13 /* SiriVC.swift in Sources */,
 				BD45BA5F2D106B5F006B45C3 /* ApplePayViewController.swift in Sources */,
 				BD2ECEF42D08591400639E0D /* ICloudViewController.swift in Sources */,
 				BD279FA82D0AFAEE001D05E4 /* ICloudTypeViewController.swift in Sources */,
+				51F01BB92E53258000F04F6B /* DriverkitFamiliyMIDIVC.swift in Sources */,
+				51F01BB42E53257600F04F6B /* NFCReadWriteViewController.swift in Sources */,
+				51F01BBF2E5325A000F04F6B /* SIMInsertedforWirelessCarriersVC.swift in Sources */,
 				51BBC72F2E40BE9800211F13 /* SaveTextIntent.intentdefinition in Sources */,
 				51C5A8C82E0ECE02008A79F5 /* HealthKitViewController.swift in Sources */,
 				51BBC6DF2E40951A00211F13 /* HeadPoseVC.swift in Sources */,
 				BD2ECEC42D0841CA00639E0D /* ViewController.swift in Sources */,
-				BD279F9F2D0AC589001D05E4 /* AutoFillCredentialViewController.swift in Sources */,
-				515AF63A2E46383600EF1477 /* SpatialAudioProfileVC.swift in Sources */,
+				51F01B972E53249C00F04F6B /* AccessWiFiInfoViewController.swift in Sources */,
+				51F01BAA2E53251800F04F6B /* DefaultMessagingAppVC.swift in Sources */,
 				51D036AB2E3A013900948296 /* AppleLoginViewController.swift in Sources */,
+				51F01BA52E5324F000F04F6B /* DefaultCallingAppVC.swift in Sources */,
+				51F01BA62E5324F000F04F6B /* CallHandler.swift in Sources */,
 				5117C1162E3C995200D8FCCD /* DataProtectionVC.swift in Sources */,
-				51BBC6D42E407DE100211F13 /* CallHandler.swift in Sources */,
 				51C979482E4367F6006E99C6 /* FiveGNetworkSliceVC.swift in Sources */,
 				BD2ECEC02D0841CA00639E0D /* AppDelegate.swift in Sources */,
 				51B526012E44869800999ABE /* WalletVC.swift in Sources */,
 				BD279FA42D0AE219001D05E4 /* ICloudDocumentsViewController.swift in Sources */,
 				51E700F22E0D88A30033F74D /* WeatherKitViewController.swift in Sources */,
-				51BBC6D22E407C5100211F13 /* DefaultCallingAppVC.swift in Sources */,
+				51F01B9E2E5324C200F04F6B /* KeychainManager.swift in Sources */,
+				51F01BB02E53252E00F04F6B /* SpatialAudioProfileVC.swift in Sources */,
+				51F01B9F2E5324C200F04F6B /* AutoFillCredentialViewController.swift in Sources */,
 				BD2ECEC22D0841CA00639E0D /* SceneDelegate.swift in Sources */,
-				515AF6352E45E11C00EF1477 /* SensitiveContentVC.swift in Sources */,
+				51F01B932E53245200F04F6B /* SensitiveContentVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

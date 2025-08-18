@@ -28,7 +28,7 @@ class SiriVC: UIViewController {
         
         // Suggest Siri Shortcut
         let activity = NSUserActivity(activityType: "com.appcaps.SaveTextIntent")
-        activity.title = "Save text to widget in AppCapabilitiesDemo"
+        activity.title = "Add text in AppDemo"
         activity.userInfo = ["text": "Ronit"]
         activity.isEligibleForPrediction = true
         activity.persistentIdentifier = "com.allcaps.SaveTextIntent"
@@ -62,7 +62,7 @@ class SiriVC: UIViewController {
     private func donateInteraction(text: String) {
         let intent = SaveTextIntent()
         intent.widgetText = text
-        intent.suggestedInvocationPhrase = "Save text to widget in AppCapabilitiesDemo"
+        intent.suggestedInvocationPhrase = "Add text in AppDemo"
         
         let interaction = INInteraction(intent: intent, response: nil)
         interaction.donate { error in

@@ -6,17 +6,52 @@
 //
 
 import UIKit
+import Intents
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
+    let callManager = CallManager.shared
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        // If launched with a dialing intent, extract and start call here.
+        if let userActivity = connectionOptions.userActivities.first {
+            handle(userActivity: userActivity)
+        }
+    }
+    
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        // Fallback if the activity carries a URL like tel:123456789
+        handle(userActivity: userActivity)
+    }
+    
+    func application(_ application: UIApplication,
+                     continue userActivity: NSUserActivity,
+                     restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        handle(userActivity: userActivity)
+        return true
+    }
+    
+    private func handle(userActivity: NSUserActivity) {
+        print("activityType =", userActivity.activityType)
+        
+        // Prefer the intent payload over webpageURL for call intents
+        if let interaction = userActivity.interaction,
+           let audioIntent = interaction.intent as? INStartAudioCallIntent,
+           let handle = audioIntent.contacts?.first?.personHandle?.value,
+           !handle.isEmpty {
+            // handle is the phone number/identifier to dial
+            startCall(with: handle)
+        }
+    }
+    
+    private func startCall(with number: String) {
+        // Your CallKit flow here
+        callManager.startCall(to: number, from: "AppCapabilitiesDemo")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

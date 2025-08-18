@@ -18,13 +18,15 @@
 	<array>
 		<dict>
 			<key>INIntentCategory</key>
-			<string>generic</string>
+			<string>create</string>
 			<key>INIntentConfigurable</key>
 			<true/>
 			<key>INIntentDescription</key>
-			<string>Save text to widget in AppCapabilitiesDemo</string>
+			<string>Add text in AppDemo</string>
 			<key>INIntentDescriptionID</key>
 			<string>t2pGqz</string>
+			<key>INIntentEligibleForWidgets</key>
+			<true/>
 			<key>INIntentLastParameterTag</key>
 			<integer>1</integer>
 			<key>INIntentManagedParameterCombinations</key>
@@ -34,7 +36,7 @@
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>Save ${widgetText}to widget in AppCapabilitiesDemo</string>
+					<string>Add ${widgetText} in AppDemo</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>Bud9GZ</string>
 					<key>INIntentParameterCombinationUpdatesLinked</key>
@@ -50,7 +52,7 @@
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>Save ${widgetText}to widget in AppCapabilitiesDemo</string>
+					<string>Add ${widgetText} in AppDemo</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>eS8zuC</string>
 				</dict>
@@ -183,13 +185,13 @@
 				</array>
 			</dict>
 			<key>INIntentTitle</key>
-			<string>Save Text</string>
+			<string>Add Text</string>
 			<key>INIntentTitleID</key>
 			<string>EGV0zB</string>
 			<key>INIntentType</key>
 			<string>Custom</string>
 			<key>INIntentVerb</key>
-			<string>Do</string>
+			<string>Create</string>
 		</dict>
 	</array>
 	<key>INTypes</key>

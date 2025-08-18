@@ -9,13 +9,13 @@ import UIKit
 import PassKit
 import SwiftUI
 
+struct Shoe {
+    var name: String
+    var price: Double
+}
+
 class ApplePayViewController: UIViewController {
-    
-    struct Shoe {
-        var name: String
-        var price: Double
-    }
-    
+
     let shoeData = [
         Shoe(name: "Nike Air Force 1 High LV8", price: 110.00),
         Shoe(name: "adidas Ultra Boost Clima", price: 139.99),

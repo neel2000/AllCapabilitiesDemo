@@ -131,8 +131,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func btnTimeSensitiveNotificationAction(_ sender: Any) {
-        self.scheduleNotification()
-    } 
+        DispatchQueue.main.async {
+            self.scheduleNotification()
+        }
+    }
     
     @IBAction func btnWeatherKitAction(_ sender: Any) {
 //        let vc = WeatherKitViewController()
@@ -172,7 +174,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func btnDefaultCallingAppAction(_ sender: Any) {
-        let vc = DefaultCallingAppVC()
+        let vc = CallViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -205,27 +207,41 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             showAlert(message: "Sensitive Content Analysis is not supported on this device.")
         }
     }
+    
     @IBAction func btnSpatialAudioAction(_ sender: Any) {
-        if #available(iOS 16.0, *) {
+       // if #available(iOS 16.0, *) {
             let vc = SpatialAudioProfileVC()
             self.navigationController?.pushViewController(vc, animated: true)
-        } else {
-            // Fallback on earlier versions
-            showAlert(message: "Spatial Audio Profile is not supported on this device.")
-        }
+//        } else {
+//            // Fallback on earlier versions
+//            showAlert(message: "Spatial Audio Profile is not supported on this device.")
+//        }
     }
-            
+    
+    @IBAction func btnNFCTagAction(_ sender: Any) {
+        let vc = NFCReadWriteViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnDriverkitFamiliyMIDIAction(_ sender: Any) {
+        let vc = DriverkitFamiliyMIDIVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnSimInsertedForWirelessCarriersAction(_ sender: Any) {
+        let vc = SIMInsertedforWirelessCarriersVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @objc private func scheduleNotification() {
         let content = UNMutableNotificationContent()
         content.title = "Time Sensitive Alert"
         content.body = "This alert can break through Focus modes if enabled."
         content.sound = .default
+        content.interruptionLevel = .timeSensitive
+      
         
-        if #available(iOS 15.0, *) {
-            content.interruptionLevel = .timeSensitive
-        }
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
         
         let request = UNNotificationRequest(identifier: "TimeSensitiveDemo",
                                             content: content,

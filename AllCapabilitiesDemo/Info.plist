@@ -2,6 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCallKitUsageDescription</key>
+	<string>We need access to handle calls.</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>tel</string>
+				<string>telprompt</string>
+			</array>
+			<key>CFBundleURLName</key>
+			<string>com.appcaps</string>
+		</dict>
+	</array>
 	<key>IntentsSupported</key>
 	<array>
 		<string>INStartAudioCallIntent</string>
@@ -41,6 +55,27 @@
 		<string>processing</string>
 		<string>remote-notification</string>
 		<string>voip</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+        <string>GreycliffCF-ThinOblique.otf</string>
+        <string>GreycliffCF-Heavy.otf</string>
+        <string>GreycliffCF-ExtraBold.otf</string>
+        <string>GreycliffCF-ExtraLightOblique.otf</string>
+        <string>GreycliffCF-Light.otf</string>
+        <string>GreycliffCF-BoldOblique.otf</string>
+        <string>GreycliffCF-DemiBoldOblique.otf</string>
+        <string>GreycliffCF-ExtraLight.otf</string>
+        <string>GreycliffCF-RegularOblique.otf</string>
+        <string>GreycliffCF-Thin.otf</string>
+        <string>GreycliffCF-Bold.otf</string>
+        <string>GreycliffCF-LightOblique.otf</string>
+        <string>GreycliffCF-DemiBold.otf</string>
+        <string>GreycliffCF-HeavyOblique.otf</string>
+        <string>GreycliffCF-Medium.otf</string>
+        <string>GreycliffCF-ExtraBoldOblique.otf</string>
+        <string>GreycliffCF-Regular.otf</string>
+        <string>GreycliffCF-MediumOblique.otf</string>
 	</array>
 </dict>
 </plist>

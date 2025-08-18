@@ -15,14 +15,18 @@ import WeatherKit
 
 @available(iOS 16.0, *)
 struct WeatherView: View {
+    @Environment(\.presentationMode) private var presentationMode
     @StateObject private var viewModel = WeatherViewModel()
 
     var body: some View {
-        ZStack {
-            LinearGradient(gradient: Gradient (colors: [.blue.opacity(0.7), .indigo]),
-                           startPoint: .topLeading,
-                           endPoint: .bottomTrailing)
-                .ignoresSafeArea()
+        ZStack(alignment: .topLeading) {
+            // Background gradient covers nav bar area too
+            LinearGradient(
+                gradient: Gradient(colors: [.blue.opacity(0.7), .indigo]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
 
             ScrollView {
                 VStack(spacing: 28) {
@@ -132,9 +136,29 @@ struct WeatherView: View {
                             .padding()
                     }
                 }
-                .padding(.top)
+                .padding(.top, 60) // leave space for back button
             }
+
+            // Custom back button
+            Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }) {
+                HStack(spacing: 4) {
+                    Image(systemName: "chevron.left")
+                        .font(.system(size: 17, weight: .semibold))
+                    Text("Back")
+                        .font(.system(size: 17))
+                }
+                .foregroundColor(.white)
+                .padding(.vertical, 8)
+                .padding(.horizontal, 12)
+                .background(Color.black.opacity(0.3))
+                .clipShape(Capsule())
+            }
+            .padding(.top, 10) // adjust for notch devices
+            .padding(.leading, 16)
         }
+        .navigationBarHidden(true)
         .onAppear {
             viewModel.requestLocationAndFetchWeather()
         }
