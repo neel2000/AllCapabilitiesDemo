@@ -11,7 +11,6 @@ class ICloudTypeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     @IBAction func btnCloudkitAction(_ sender: Any) {
@@ -23,5 +22,11 @@ class ICloudTypeViewController: UIViewController {
         let vc = ICloudDocumentsViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func btnKeyValueAction(_ sender: Any) {
+        let vc = KeyValueStorageViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
 }

@@ -22,10 +22,10 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2np-re-nDN">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1050"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1255"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WqT-Wo-Is2">
-                                                <rect key="frame" x="0.0" y="15" width="414" height="1020"/>
+                                                <rect key="frame" x="0.0" y="15" width="414" height="1225"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQe-aT-Fkn">
                                                         <rect key="frame" x="159" y="0.0" width="96" height="36"/>
@@ -102,8 +102,34 @@
                                                             <action selector="btnTimeSensitiveNotificationAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zqa-Za-UXh"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOO-rY-eeu">
+                                                        <rect key="frame" x="118" y="246" width="178" height="36"/>
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Group Activities">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="btnGroupActivities:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iDv-O0-fSZ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7a-J1-6ri">
+                                                        <rect key="frame" x="72" y="287" width="270" height="36"/>
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Sensitive Content Analysis">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="btnSensitiveContentAnalysisAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aib-vO-BMQ"/>
+                                                        </connections>
+                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrG-iy-gHN">
-                                                        <rect key="frame" x="138.66666666666666" y="246" width="136.99999999999997" height="36"/>
+                                                        <rect key="frame" x="138.66666666666666" y="328" width="136.99999999999997" height="36"/>
                                                         <color key="backgroundColor" name="AccentColor"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
@@ -116,7 +142,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsq-ZK-fZ1">
-                                                        <rect key="frame" x="119.66666666666669" y="287" width="175" height="36"/>
+                                                        <rect key="frame" x="119.66666666666669" y="369" width="175" height="36"/>
                                                         <color key="backgroundColor" name="AccentColor"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
@@ -129,7 +155,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yni-1n-JdG">
-                                                        <rect key="frame" x="146.66666666666666" y="328" width="120.99999999999997" height="36"/>
+                                                        <rect key="frame" x="146.66666666666666" y="410" width="120.99999999999997" height="36"/>
                                                         <color key="backgroundColor" name="AccentColor"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
@@ -142,7 +168,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RtW-J6-YWh">
-                                                        <rect key="frame" x="138" y="369" width="138" height="36"/>
+                                                        <rect key="frame" x="138" y="451" width="138" height="36"/>
                                                         <color key="backgroundColor" name="AccentColor"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
@@ -155,7 +181,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUZ-ey-aL5">
-                                                        <rect key="frame" x="119.66666666666669" y="410" width="175" height="36"/>
+                                                        <rect key="frame" x="119.66666666666669" y="492" width="175" height="36"/>
                                                         <color key="backgroundColor" name="AccentColor"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
@@ -168,7 +194,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiJ-3s-mTS">
-                                                        <rect key="frame" x="104" y="451" width="206" height="36"/>
+                                                        <rect key="frame" x="104" y="533" width="206" height="36"/>
                                                         <color key="backgroundColor" name="AccentColor"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
@@ -181,7 +207,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0n-LR-kfk">
-                                                        <rect key="frame" x="87" y="492" width="240" height="36"/>
+                                                        <rect key="frame" x="87" y="574" width="240" height="36"/>
                                                         <color key="backgroundColor" name="AccentColor"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
@@ -194,7 +220,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGK-RX-2ec">
-                                                        <rect key="frame" x="141" y="533" width="132" height="36"/>
+                                                        <rect key="frame" x="141" y="615" width="132" height="36"/>
                                                         <color key="backgroundColor" name="AccentColor"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
@@ -206,21 +232,8 @@
                                                             <action selector="btnHeadPoseAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NQe-3P-COw"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Pk-6f-A2N">
-                                                        <rect key="frame" x="172.66666666666666" y="574" width="69" height="36"/>
-                                                        <color key="backgroundColor" name="AccentColor"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                        <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Siri">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="btnSiriAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zfM-40-EA7"/>
-                                                        </connections>
-                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxi-Ve-tbV">
-                                                        <rect key="frame" x="113" y="615" width="188" height="36"/>
+                                                        <rect key="frame" x="113" y="656" width="188" height="36"/>
                                                         <color key="backgroundColor" name="AccentColor"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
@@ -230,19 +243,6 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="btn5GNetworkSliceAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cqz-Gk-ddX"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7a-J1-6ri">
-                                                        <rect key="frame" x="72" y="656" width="270" height="36"/>
-                                                        <color key="backgroundColor" name="AccentColor"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                        <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Sensitive Content Analysis">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="btnSensitiveContentAnalysisAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aib-vO-BMQ"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bR6-OS-CMv">
@@ -297,8 +297,31 @@
                                                             <action selector="btnFontsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8bf-Gu-7DS"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4H-7C-65q">
+                                                        <rect key="frame" x="145.66666666666666" y="861" width="122.99999999999997" height="36"/>
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Multipath">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="btnMultipathAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kj8-k8-CfT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmr-4e-cFp">
+                                                        <rect key="frame" x="107" y="902" width="200" height="36"/>
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Critical Messaging">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4d-vs-g0T">
-                                                        <rect key="frame" x="95.666666666666686" y="861" width="223" height="36"/>
+                                                        <rect key="frame" x="95.666666666666686" y="943" width="223" height="36"/>
                                                         <color key="backgroundColor" name="AccentColor"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
@@ -311,7 +334,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhY-QS-212">
-                                                        <rect key="frame" x="113" y="902" width="188" height="36"/>
+                                                        <rect key="frame" x="113" y="984" width="188" height="36"/>
                                                         <color key="backgroundColor" name="AccentColor"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
@@ -321,7 +344,7 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdA-sN-sJx">
-                                                        <rect key="frame" x="99" y="943" width="216" height="36"/>
+                                                        <rect key="frame" x="99" y="1025" width="216" height="36"/>
                                                         <color key="backgroundColor" name="AccentColor"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
@@ -331,7 +354,7 @@
                                                         </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lo9-aK-wB6">
-                                                        <rect key="frame" x="104" y="984" width="206" height="36"/>
+                                                        <rect key="frame" x="104" y="1066" width="206" height="36"/>
                                                         <color key="backgroundColor" name="AccentColor"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
@@ -339,6 +362,45 @@
                                                         <state key="normal" title="Background Modes">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Pk-6f-A2N">
+                                                        <rect key="frame" x="172.66666666666666" y="1107" width="69" height="36"/>
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Siri">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="btnSiriAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zfM-40-EA7"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V22-dN-uYK">
+                                                        <rect key="frame" x="85" y="1148" width="244" height="36"/>
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Journaling Suggestions">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="btnJournalingSuggestionsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ULw-Dt-grN"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0o-xR-Lqb">
+                                                        <rect key="frame" x="64.666666666666686" y="1189" width="285" height="36"/>
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Multitasking Camera Access">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="btnMultitaskingCameraAccess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fng-y1-mFy"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>

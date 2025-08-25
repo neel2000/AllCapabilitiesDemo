@@ -238,6 +238,31 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func btnGroupActivities(_ sender: Any) {
+        let vc = GroupActivitiesVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnMultipathAction(_ sender: Any) {
+        let vc = MultipathViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnJournalingSuggestionsAction(_ sender: Any) {
+        if #available(iOS 18.0, *) {
+            let vc = JournalingDemo()
+            let hostingVC = UIHostingController(rootView: vc)
+            self.navigationController?.pushViewController(hostingVC, animated: true)
+        } else {
+            showAlert(message: "Journaling Suggestions is available on iOS 17.2 and later")
+        }
+    }
+    
+    @IBAction func btnMultitaskingCameraAccess(_ sender: Any) {
+        let vc = MultitaskingCameraAccessVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @objc private func scheduleNotification() {
         let content = UNMutableNotificationContent()
         content.title = "Time Sensitive Alert"

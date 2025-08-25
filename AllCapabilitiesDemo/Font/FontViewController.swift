@@ -57,7 +57,7 @@ class FontViewController: UIViewController {
              for (index, fontName) in unregisterFonts.enumerated() {
                  let button = UIButton(type: .system)
                  button.setTitle("Unregister \(fontName)", for: .normal)
-                 button.titleLabel?.font = .systemFont(ofSize: 18, weight: .medium)
+                 button.titleLabel?.font = . systemFont(ofSize: 18, weight: .medium)
                  button.backgroundColor = .systemRed
                  button.setTitleColor(.white, for: .normal)
                  button.layer.cornerRadius = 10
@@ -77,14 +77,14 @@ class FontViewController: UIViewController {
              let mainStack = UIStackView(arrangedSubviews: [registerStack, unregisterStack])
              mainStack.axis = .vertical
              mainStack.alignment = .center
-             mainStack.spacing = 50 // space between register & unregister groups
+             mainStack.spacing = 35 // space between register & unregister groups
              mainStack.translatesAutoresizingMaskIntoConstraints = false
              
              view.addSubview(mainStack)
              
              NSLayoutConstraint.activate([
                  mainStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                 mainStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50)
+                 mainStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15)
              ])
      }
      

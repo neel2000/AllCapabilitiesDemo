@@ -14,6 +14,8 @@
 	</array>
 	<key>com.apple.developer.authentication-services.autofill-credential-provider</key>
 	<true/>
+	<key>com.apple.developer.avfoundation.multitasking-camera-access</key>
+	<true/>
 	<key>com.apple.developer.calling-app</key>
 	<true/>
 	<key>com.apple.developer.coremotion.head-pose</key>
@@ -22,6 +24,8 @@
 	<true/>
 	<key>com.apple.developer.default-data-protection</key>
 	<string>NSFileProtectionComplete</string>
+	<key>com.apple.developer.group-session</key>
+	<true/>
 	<key>com.apple.developer.healthkit</key>
 	<true/>
 	<key>com.apple.developer.healthkit.background-delivery</key>
@@ -39,7 +43,13 @@
 	<array>
 		<string>merchant.com.allcaps</string>
 	</array>
+	<key>com.apple.developer.journal.allow</key>
+	<array>
+		<string>suggestions</string>
+	</array>
 	<key>com.apple.developer.messaging-app</key>
+	<true/>
+	<key>com.apple.developer.networking.multipath</key>
 	<true/>
 	<key>com.apple.developer.networking.slicing.appcategory</key>
 	<array/>
@@ -71,6 +81,8 @@
 	<array>
 		<string>iCloud.allcaps.container</string>
 	</array>
+	<key>com.apple.developer.ubiquity-kvstore-identifier</key>
+	<string>$(TeamIdentifierPrefix)$(CFBundleIdentifier)</string>
 	<key>com.apple.developer.user-fonts</key>
 	<array>
 		<string>system-installation</string>

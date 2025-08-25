@@ -79,18 +79,25 @@ class ICloudViewController: UIViewController {
     }
     
     func saveRecord(name: String) {
+        loader.startAnimating()
         let record = CKRecord(recordType: "GroceryItem")
         record.setValue(name, forKey: "name")
+        
         database.save(record) { (record, error) in
-            if let error = error {
-                DispatchQueue.main.async {
+            DispatchQueue.main.async {
+                if let error = error {
                     self.loader.stopAnimating()
                     self.showAlert(message: error.localizedDescription)
+                    print(error.localizedDescription)
+                } else if let record = record, let savedName = record["name"] as? String {
+                    // ✅ Update local list immediately
+                    self.gItems.append(savedName)
+                    self.tblView.reloadData()
+                    self.lblNoData.isHidden = !self.gItems.isEmpty
+                    self.loader.stopAnimating()
+                    
+                    print("Record saved successfully")
                 }
-                print(error.localizedDescription)
-            } else {
-                self.fetchRecords()
-                print("Record saved successfully")
             }
         }
     }
@@ -99,32 +106,50 @@ class ICloudViewController: UIViewController {
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "GroceryItem", predicate: predicate)
         
-        database.perform(query, inZoneWith: nil) { (records, error) in
-            if let error = error {
+        database.fetch(withQuery: query, inZoneWith: nil, desiredKeys: nil, resultsLimit: 100) { result in
+            switch result {
+            case .success(let (matchResults, _)):
+                var fetchedItems: [String] = []
+                
+                // Loop through the matchResults array
+                for (_, recordResult) in matchResults {
+                    switch recordResult {
+                    case .success(let record):
+                        if let name = record["name"] as? String {
+                            fetchedItems.append(name)
+                        }
+                    case .failure(let error):
+                        print("Error fetching record: \(error.localizedDescription)")
+                    }
+                }
+
+                DispatchQueue.main.async {
+                    self.gItems = fetchedItems
+                    self.tblView.reloadData()
+                    self.lblNoData.isHidden = !fetchedItems.isEmpty
+                    self.loader.stopAnimating()
+                }
+                
+            case .failure(let error):
                 DispatchQueue.main.async {
                     self.loader.stopAnimating()
                     self.showAlert(message: error.localizedDescription)
                 }
-                print(error.localizedDescription)
-            } else {
-                if let records = records {
-                    DispatchQueue.main.async {
-                        self.gItems = records.compactMap({$0.value(forKey: "name") as? String})
-                        self.tblView.reloadData()
-                        self.lblNoData.isHidden = !(self.gItems.count == 0)
-                        self.loader.stopAnimating()
-                    }
-                }
+                print("Query failed: \(error.localizedDescription)")
             }
         }
     }
 
-    func updateRecordByName(name: String, newName: String) {
+
+    func updateRecordByName(name: String, newName: String, index: Int) {
+        self.loader.startAnimating()
+        
         let predicate = NSPredicate(format: "name == %@", name)
         let query = CKQuery(recordType: "GroceryItem", predicate: predicate)
         
         database.perform(query, inZoneWith: nil) { (records, error) in
             if let error = error {
+                self.loader.stopAnimating()
                 print("Error fetching record for update: \(error.localizedDescription)")
             } else if let records = records, let recordToUpdate = records.first {
                 // Update the fetched record
@@ -135,10 +160,18 @@ class ICloudViewController: UIViewController {
                         print("Error saving updated record: \(error.localizedDescription)")
                     } else {
                         print("Record updated successfully")
-                        self.fetchRecords() // Refresh the data after update
+                        //self.fetchRecords() // Refresh the data after update
+                        DispatchQueue.main.async {
+                            self.gItems[index] = newName
+                            self.tblView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
+                            self.loader.stopAnimating()
+                        }
                     }
                 }
             } else {
+                DispatchQueue.main.async {
+                    self.loader.stopAnimating()
+                }
                 print("No record found with the specified name")
             }
         }
@@ -224,7 +257,7 @@ extension ICloudViewController: UITableViewDelegate, UITableViewDataSource {
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             alert.addAction(UIAlertAction(title: "Update", style: .default, handler: { [weak self] _ in
                 if let field = alert.textFields?.first, let text = field.text, !text.isEmpty {
-                    self?.updateRecordByName(name: currentName, newName: text)
+                    self?.updateRecordByName(name: currentName, newName: text, index: indexPath.row)
                 }
             }))
             self.present(alert, animated: true)

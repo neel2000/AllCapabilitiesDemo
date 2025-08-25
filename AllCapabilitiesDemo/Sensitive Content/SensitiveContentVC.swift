@@ -154,18 +154,25 @@
 import UIKit
 import PhotosUI
 import SensitiveContentAnalysis
-import CoreGraphics
 import AVFoundation
 import UniformTypeIdentifiers
 
 @available(iOS 17.0, *)
-class SensitiveContentVC: UIViewController, PHPickerViewControllerDelegate {
+final class SensitiveContentVC: UIViewController, PHPickerViewControllerDelegate {
     
+    
+    // UI
     private let imageView = UIImageView()
     private let selectButton = UIButton(type: .system)
+    private let spinner = UIActivityIndicatorView(style: .large)
+    
+    // Analyzer
     private let analyzer = SCSensitivityAnalyzer()
+    
+    // State
     private var isVideo = false
     private var thumbnail: UIImage?
+    private var videoHandler: SCSensitivityAnalyzer.VideoAnalysisHandler?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -173,38 +180,50 @@ class SensitiveContentVC: UIViewController, PHPickerViewControllerDelegate {
         checkFeatureAvailability()
     }
     
+    // MARK: - UI
+    
     private func setupUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(imageView)
         
         selectButton.setTitle("Select Image or Video", for: .normal)
         selectButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .medium)
         selectButton.addTarget(self, action: #selector(selectMediaTapped), for: .touchUpInside)
         selectButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        spinner.hidesWhenStopped = true
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(imageView)
         view.addSubview(selectButton)
+        view.addSubview(spinner)
         
         NSLayoutConstraint.activate([
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -50),
-            imageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
+            imageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85),
             imageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5),
             
             selectButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            selectButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20)
+            selectButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
+            
+            spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
     
     private func checkFeatureAvailability() {
         let policy = analyzer.analysisPolicy
-        print("Sensitive Content Analysis policy: \(policy)")
         if policy == .disabled {
-            showAlert(message: "Sensitive Content Analysis is disabled. Enable it in Settings > Privacy & Security > Sensitive Content Warning.")
+            showAlert(title: "Sensitive Content Disabled",
+                      message: "Enable it in Settings > Privacy & Security > Sensitive Content Warning.")
             selectButton.isEnabled = false
         }
     }
+    
+    // MARK: - Actions
     
     @objc private func selectMediaTapped() {
         isVideo = false
@@ -219,6 +238,8 @@ class SensitiveContentVC: UIViewController, PHPickerViewControllerDelegate {
         picker.delegate = self
         present(picker, animated: true)
     }
+    
+    // MARK: - Picker Delegate
     
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         dismiss(animated: true)
@@ -235,76 +256,91 @@ class SensitiveContentVC: UIViewController, PHPickerViewControllerDelegate {
             UTType.mpeg4Movie.identifier
         ]
         
-        let isImage = itemProvider.canLoadObject(ofClass: UIImage.self)
+        let canLoadImage = itemProvider.canLoadObject(ofClass: UIImage.self)
         let isVideoFile = videoTypeIdentifiers.contains { itemProvider.hasItemConformingToTypeIdentifier($0) }
         
-        guard isImage || isVideoFile else {
+        guard canLoadImage || isVideoFile else {
             showAlert(message: "Unsupported media format.")
             return
         }
         
         isVideo = isVideoFile
         
-        if isImage && !isVideo {
+        if canLoadImage && !isVideoFile {
+            // Image flow
+            spinner.startAnimating()
             itemProvider.loadObject(ofClass: UIImage.self) { [weak self] object, error in
-                DispatchQueue.main.async {
-                    guard let self, let image = object as? UIImage, error == nil else {
-                        self?.showAlert(message: "Failed to load image.")
+                Task { @MainActor in
+                    guard let self else { return }
+                    self.spinner.stopAnimating()
+                    if let error = error {
+                        self.showAlert(message: "Failed to load image: $$error.localizedDescription)")
+                        return
+                    }
+                    guard let image = object as? UIImage else {
+                        self.showAlert(message: "Failed to load image.")
                         return
                     }
                     self.imageView.image = image
                     self.analyzeImage(image)
                 }
             }
-        } else if isVideo {
-            for type in videoTypeIdentifiers {
-                if itemProvider.hasItemConformingToTypeIdentifier(type) {
-                    itemProvider.loadFileRepresentation(forTypeIdentifier: type) { [weak self] url, error in
-                        guard let self, let url, error == nil else {
-                            DispatchQueue.main.async {
-                                self?.showAlert(message: "Failed to load video.")
-                            }
-                            return
+        } else if isVideoFile {
+            // Video flow: stage a persistent temp copy first
+            for type in videoTypeIdentifiers where itemProvider.hasItemConformingToTypeIdentifier(type) {
+                spinner.startAnimating()
+                itemProvider.loadFileRepresentation(forTypeIdentifier: type) { [weak self] sandboxURL, error in
+                    guard let self else { return }
+                    if let error = error {
+                        Task { @MainActor in
+                            self.spinner.stopAnimating()
+                            self.showAlert(message: "Failed to load video: $$error.localizedDescription)")
                         }
+                        return
+                    }
+                    guard let sandboxURL else {
+                        Task { @MainActor in
+                            self.spinner.stopAnimating()
+                            self.showAlert(message: "Failed to load video.")
+                        }
+                        return
+                    }
+                    
+                    let ext = sandboxURL.pathExtension.isEmpty ? "mov" : sandboxURL.pathExtension
+                    let tmpURL = FileManager.default.temporaryDirectory
+                        .appendingPathComponent(UUID().uuidString)
+                        .appendingPathExtension(ext)
+                    
+                    do {
+                        let needsAccess = sandboxURL.startAccessingSecurityScopedResource()
+                        defer { if needsAccess { sandboxURL.stopAccessingSecurityScopedResource() } }
                         
-                        if let thumb = self.generateThumbnail(from: url) {
-                            self.thumbnail = thumb
-                            DispatchQueue.main.async {
-                                self.imageView.image = thumb
-                                self.analyzeVideo(from: url)
-                            }
-                        } else {
-                            DispatchQueue.main.async {
-                                self.showAlert(message: "Failed to generate thumbnail.")
-                            }
+                        try? FileManager.default.removeItem(at: tmpURL)
+                        try FileManager.default.copyItem(at: sandboxURL, to: tmpURL)
+                        
+                        let thumb = self.generateThumbnail(from: tmpURL)
+                        
+                        Task { @MainActor in
+                            if let thumb { self.thumbnail = thumb; self.imageView.image = thumb }
+                            self.analyzeVideo(from: tmpURL)
+                        }
+                    } catch {
+                        Task { @MainActor in
+                            self.spinner.stopAnimating()
+                            self.showAlert(message: "Failed to stage video: $$error.localizedDescription)")
                         }
                     }
-                    break
                 }
+                break
             }
         }
     }
     
-    private func generateThumbnail(from url: URL) -> UIImage? {
-        let asset = AVAsset(url: url)
-        let generator = AVAssetImageGenerator(asset: asset)
-        generator.appliesPreferredTrackTransform = true
-        
-        let times = [CMTime(seconds: 0, preferredTimescale: 600),
-                     CMTime(seconds: 1, preferredTimescale: 600)]
-        
-        for time in times {
-            if let cgImage = try? generator.copyCGImage(at: time, actualTime: nil) {
-                return UIImage(cgImage: cgImage)
-            }
-        }
-        return nil
-    }
+    // MARK: - Analysis
     
     private func analyzeImage(_ image: UIImage) {
-        
-        if analyzer.analysisPolicy == .disabled {
-            showAlert(message: "Please enable sensitive content analysis in Settings > Privacy & Security > Sensitive Content")
+        guard analyzer.analysisPolicy != .disabled else {
+            showAlert(message: "Enable Sensitive Content Warning in Settings > Privacy & Security.")
             return
         }
         
@@ -313,10 +349,12 @@ class SensitiveContentVC: UIViewController, PHPickerViewControllerDelegate {
             return
         }
         
+        spinner.startAnimating()
         Task {
             do {
                 let result = try await analyzer.analyzeImage(cgImage)
-                DispatchQueue.main.async {
+                await MainActor.run {
+                    self.spinner.stopAnimating()
                     if result.isSensitive {
                         self.showAlert(message: "Image contains sensitive content.")
                         self.imageView.image = nil
@@ -325,25 +363,32 @@ class SensitiveContentVC: UIViewController, PHPickerViewControllerDelegate {
                     }
                 }
             } catch {
-                DispatchQueue.main.async {
-                    self.showAlert(message: "Image analysis failed.")
+                await MainActor.run {
+                    self.spinner.stopAnimating()
+                    self.showAlert(message: "Image analysis failed: $$error.localizedDescription)")
                 }
             }
         }
     }
     
     private func analyzeVideo(from url: URL) {
-        
-        if analyzer.analysisPolicy == .disabled {
-            showAlert(message: "Please enable sensitive content analysis in Settings > Privacy & Security > Sensitive Content")
+        guard analyzer.analysisPolicy != .disabled else {
+            spinner.stopAnimating()
+            showAlert(message: "Enable Sensitive Content Warning in Settings > Privacy & Security.")
             return
         }
         
         Task {
             do {
+                // Retain handler strongly during analysis
                 let handler = analyzer.videoAnalysis(forFileAt: url)
+                self.videoHandler = handler
+                
                 let result = try await handler.hasSensitiveContent()
-                DispatchQueue.main.async {
+                
+                await MainActor.run {
+                    self.videoHandler = nil
+                    self.spinner.stopAnimating()
                     if result.isSensitive {
                         self.showAlert(message: "Video contains sensitive content.")
                         self.imageView.image = nil
@@ -352,15 +397,39 @@ class SensitiveContentVC: UIViewController, PHPickerViewControllerDelegate {
                     }
                 }
             } catch {
-                DispatchQueue.main.async {
-                    self.showAlert(message: "Video analysis failed: \(error.localizedDescription)")
+                await MainActor.run {
+                    self.videoHandler = nil
+                    self.spinner.stopAnimating()
+                    self.showAlert(message: "Video analysis failed: $$error.localizedDescription)")
                 }
             }
+            
+            // Optional cleanup: remove temp file after analysis
+            try? FileManager.default.removeItem(at: url)
         }
     }
     
-    private func showAlert(message: String) {
-        let alert = UIAlertController(title: "Info", message: message, preferredStyle: .alert)
+    // MARK: - Utilities
+    
+    private func generateThumbnail(from url: URL) -> UIImage? {
+        let asset = AVAsset(url: url)
+        let generator = AVAssetImageGenerator(asset: asset)
+        generator.appliesPreferredTrackTransform = true
+        
+        let times = [CMTime(seconds: 0, preferredTimescale: 600),
+                     CMTime(seconds: 1, preferredTimescale: 600)]
+        for time in times {
+            if let cgImage = try? generator.copyCGImage(at: time, actualTime: nil) {
+                return UIImage(cgImage: cgImage)
+            }
+        }
+        return nil
+    }
+    
+    private func showAlert(title: String = "Info", message: String) {
+        // Ensure presented alert doesn’t clash with another
+        if presentedViewController is UIAlertController { dismiss(animated: false) }
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
