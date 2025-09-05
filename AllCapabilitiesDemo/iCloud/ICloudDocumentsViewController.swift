@@ -43,8 +43,9 @@ class NoteEditorViewController: UIViewController, UITextViewDelegate {
             doc.open { success in
                 if success {
                     self.textView.text = doc.text
+                    os_log("Opened document: %@", log: OSLog.default, type: .info, doc.fileURL.absoluteString)
                 } else {
-                    os_log("Failed to open document", log: OSLog.default, type: .error)
+                    os_log("Failed to open document: %@", log: OSLog.default, type: .error, doc.fileURL.absoluteString)
                 }
             }
         }
@@ -54,30 +55,38 @@ class NoteEditorViewController: UIViewController, UITextViewDelegate {
         guard let doc = document else { return }
         if doc.text == textView.text { return }
         doc.text = textView.text
-        doc.save(to: doc.fileURL, for: .forOverwriting) { success in
-            if success {
-                doc.close { _ in
-                    self.textView.resignFirstResponder()
-                    let alert = UIAlertController(title: "Success", message: "Note updated successfully.", preferredStyle: .alert)
-                    self.present(alert, animated: true)
-                    // Dismiss alert and bottom sheet after 1.5 seconds
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                        alert.dismiss(animated: true) {
-                            self.dismiss(animated: true)
+        doc.updateChangeCount(.done) // Mark document as changed
+        let coordinator = NSFileCoordinator(filePresenter: nil)
+        coordinator.coordinate(writingItemAt: doc.fileURL, options: .forReplacing, error: nil) { _ in
+            doc.save(to: doc.fileURL, for: .forOverwriting) { success in
+                if success {
+                    os_log("Note saved to: %@", log: OSLog.default, type: .info, doc.fileURL.absoluteString)
+                    doc.close { closeSuccess in
+                        if closeSuccess {
+                            self.textView.resignFirstResponder()
+                            let alert = UIAlertController(title: "Success", message: "Note updated successfully.", preferredStyle: .alert)
+                            self.present(alert, animated: true)
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                                alert.dismiss(animated: true) {
+                                    self.dismiss(animated: true)
+                                }
+                            }
+                        } else {
+                            os_log("Failed to close document: %@", log: OSLog.default, type: .error, doc.fileURL.absoluteString)
                         }
                     }
+                } else {
+                    os_log("Failed to save document: %@", log: OSLog.default, type: .error, doc.fileURL.absoluteString)
+                    let alert = UIAlertController(title: "Error", message: "Failed to update note.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(alert, animated: true)
                 }
-            } else {
-                os_log("Failed to save document", log: OSLog.default, type: .error)
-                let alert = UIAlertController(title: "Error", message: "Failed to update note.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default))
-                self.present(alert, animated: true)
             }
         }
     }
     
     func textViewDidChange(_ textView: UITextView) {
-        // Auto-save can be implemented here if needed, but for simplicity, save on done
+        // Auto-save can be implemented here if needed
     }
 }
 
@@ -91,6 +100,7 @@ class ICloudDocumentsViewController: UITableViewController {
         super.viewDidLoad()
         title = "iCloud Notes"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createNote))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Syncing...", style: .plain, target: nil, action: nil)
         
         // Make UI attractive
         navigationController?.navigationBar.tintColor = .systemBlue
@@ -100,19 +110,35 @@ class ICloudDocumentsViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         // Add pull-to-refresh
-        /*let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(refreshNotes), for: .valueChanged)
-        tableView.refreshControl = refreshControl*/
+//        let refreshControl = UIRefreshControl()
+//        refreshControl.addTarget(self, action: #selector(refreshNotes), for: .valueChanged)
+//        tableView.refreshControl = refreshControl
         
         setupMetadataQuery()
         checkiCloudAvailability()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        query?.stop()
+        query?.start()
+        os_log("Restarted metadata query", log: OSLog.default, type: .info)
+    }
+    
     func checkiCloudAvailability() {
+        os_log("Checking iCloud availability", log: OSLog.default, type: .debug)
         if let containerURL = FileManager.default.url(forUbiquityContainerIdentifier: containerIdentifier) {
             os_log("iCloud container URL: %@", log: OSLog.default, type: .info, containerURL.absoluteString)
+            // Ensure Documents directory exists
+            let documentsURL = containerURL.appendingPathComponent("Documents")
+            do {
+                try FileManager.default.createDirectory(at: documentsURL, withIntermediateDirectories: true)
+                os_log("Documents directory ready: %@", log: OSLog.default, type: .info, documentsURL.absoluteString)
+            } catch {
+                os_log("Failed to create Documents directory: %@", log: OSLog.default, type: .error, error.localizedDescription)
+            }
         } else {
-            os_log("iCloud not available or container not configured", log: OSLog.default, type: .error)
+            os_log("iCloud container unavailable", log: OSLog.default, type: .error)
             let alert = UIAlertController(title: "iCloud Error", message: "Please ensure iCloud is enabled and the container is set up in entitlements.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
             present(alert, animated: true)
@@ -128,31 +154,38 @@ class ICloudDocumentsViewController: UITableViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateQueryResults), name: .NSMetadataQueryDidUpdate, object: query)
         
         query?.start()
+        os_log("Metadata query started", log: OSLog.default, type: .info)
     }
     
     @objc func updateQueryResults() {
         DispatchQueue.main.async {
             self.documents = []
             if let results = self.query?.results as? [NSMetadataItem] {
+                os_log("Query found %d items", log: OSLog.default, type: .info, results.count)
                 for item in results {
                     if let url = item.value(forAttribute: NSMetadataItemURLKey) as? URL {
                         self.documents.append(url)
+                        os_log("Found document: %@", log: OSLog.default, type: .info, url.absoluteString)
                     }
                 }
+                self.navigationItem.leftBarButtonItem?.title = "Synced"
+            } else {
+                self.navigationItem.leftBarButtonItem?.title = "No Data"
+                os_log("No query results", log: OSLog.default, type: .error)
             }
             self.tableView.reloadData()
-            // Ensure refresh control stops
             if self.tableView.refreshControl?.isRefreshing == true {
                 self.tableView.refreshControl?.endRefreshing()
             }
         }
     }
     
-    /*@objc func refreshNotes() {
+    @objc func refreshNotes() {
+        os_log("Refreshing notes", log: OSLog.default, type: .info)
         query?.disableUpdates()
         query?.enableUpdates()
-        query?.start() // Restart query to force refresh
-    }*/
+        query?.start()
+    }
     
     @objc func createNote() {
         let alert = UIAlertController(title: "New Note", message: "Enter title and description", preferredStyle: .alert)
@@ -182,20 +215,23 @@ class ICloudDocumentsViewController: UITableViewController {
             
             let document = NoteDocument(fileURL: newFileURL)
             document.text = description
-            document.save(to: newFileURL, for: .forCreating) { success in
-                if success {
-                    os_log("Note created", log: OSLog.default, type: .info)
-                    document.close(completionHandler: nil)
-                    let successAlert = UIAlertController(title: "Success", message: "Note added successfully.", preferredStyle: .alert)
-                    self.present(successAlert, animated: true)
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                        successAlert.dismiss(animated: true)
+            let coordinator = NSFileCoordinator(filePresenter: nil)
+            coordinator.coordinate(writingItemAt: newFileURL, options: .forReplacing, error: nil) { _ in
+                document.save(to: newFileURL, for: .forCreating) { success in
+                    if success {
+                        os_log("Note created at: %@", log: OSLog.default, type: .info, newFileURL.absoluteString)
+                        document.close(completionHandler: nil)
+                        let successAlert = UIAlertController(title: "Success", message: "Note added successfully.", preferredStyle: .alert)
+                        self.present(successAlert, animated: true)
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                            successAlert.dismiss(animated: true)
+                        }
+                    } else {
+                        os_log("Failed to create note at %@: %@", log: OSLog.default, type: .error, newFileURL.absoluteString, String(describing: FileManager.default.fileExists(atPath: newFileURL.path)))
+                        let errorAlert = UIAlertController(title: "Error", message: "Failed to add note.", preferredStyle: .alert)
+                        errorAlert.addAction(UIAlertAction(title: "OK", style: .default))
+                        self.present(errorAlert, animated: true)
                     }
-                } else {
-                    os_log("Failed to create note", log: OSLog.default, type: .error)
-                    let errorAlert = UIAlertController(title: "Error", message: "Failed to add note.", preferredStyle: .alert)
-                    errorAlert.addAction(UIAlertAction(title: "OK", style: .default))
-                    self.present(errorAlert, animated: true)
                 }
             }
         })
@@ -224,7 +260,7 @@ class ICloudDocumentsViewController: UITableViewController {
         coordinator.coordinate(writingItemAt: url, options: .forDeleting, error: nil) { _ in
             do {
                 try FileManager.default.removeItem(at: url)
-                os_log("Note deleted", log: OSLog.default, type: .info)
+                os_log("Note deleted: %@", log: OSLog.default, type: .info, url.absoluteString)
                 DispatchQueue.main.async {
                     let alert = UIAlertController(title: "Success", message: "Note deleted successfully.", preferredStyle: .alert)
                     self.present(alert, animated: true)
@@ -277,5 +313,6 @@ class ICloudDocumentsViewController: UITableViewController {
     deinit {
         query?.stop()
         NotificationCenter.default.removeObserver(self)
+        os_log("ICloudDocumentsViewController deinit", log: OSLog.default, type: .info)
     }
 }

@@ -197,7 +197,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let vc = FiveGNetworkSliceVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
+     
     @IBAction func btnSensitiveContentAnalysisAction(_ sender: Any) {
         if #available(iOS 17.0, *) {
             let vc = SensitiveContentVC()
@@ -254,12 +254,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             let hostingVC = UIHostingController(rootView: vc)
             self.navigationController?.pushViewController(hostingVC, animated: true)
         } else {
-            showAlert(message: "Journaling Suggestions is available on iOS 17.2 and later")
+            showAlert(message: "Journaling Suggestions is available on iOS 18.0 and later")
         }
     }
     
     @IBAction func btnMultitaskingCameraAccess(_ sender: Any) {
         let vc = MultitaskingCameraAccessVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnHotspotAction(_ sender: Any) {
+        let vc = HotspotVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

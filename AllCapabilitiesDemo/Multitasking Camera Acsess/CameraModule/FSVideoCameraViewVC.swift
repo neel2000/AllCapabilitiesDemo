@@ -134,9 +134,13 @@ final class FSVideoCameraViewVC: UIView {
             // Configure the capture session.
             session.beginConfiguration()
 
-            if session.isMultitaskingCameraAccessSupported {
-                // Enable use of the camera in multitasking modes.
-                session.isMultitaskingCameraAccessEnabled = true
+            if #available(iOS 16.0, *) {
+                if session.isMultitaskingCameraAccessSupported {
+                    // Enable use of the camera in multitasking modes.
+                    session.isMultitaskingCameraAccessEnabled = true
+                }
+            } else {
+                // Fallback on earlier versions
             }
             session.commitConfiguration()
 

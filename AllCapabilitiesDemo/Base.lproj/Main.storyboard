@@ -22,10 +22,10 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2np-re-nDN">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1255"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1296"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WqT-Wo-Is2">
-                                                <rect key="frame" x="0.0" y="15" width="414" height="1225"/>
+                                                <rect key="frame" x="0.0" y="15" width="414" height="1266"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQe-aT-Fkn">
                                                         <rect key="frame" x="159" y="0.0" width="96" height="36"/>
@@ -400,6 +400,19 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="btnMultitaskingCameraAccess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fng-y1-mFy"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JK-Vh-2CT">
+                                                        <rect key="frame" x="152" y="1230" width="110" height="36"/>
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                        <inset key="contentEdgeInsets" minX="20" minY="7" maxX="20" maxY="7"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Hotspot">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="btnHotspotAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0CV-t4-K5D"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
