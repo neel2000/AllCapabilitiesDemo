@@ -27,7 +27,7 @@ class DataProtectionVC: UIViewController {
         Common Protection Classes:
            • NSFileProtectionComplete: Data is only accessible when the device is unlocked.
 
-           • NSFileProtectionCompleteUntilFirstUserAuthentication: Data becomes accessible after the  device is unlocked once after reboot.
+           • NSFileProtectionCompleteUntilFirstUserAuthentication: Data becomes accessible after the ddevice is unlocked once after reboot.
 
            • NSFileProtectionNone: No additional protection; data is always accessible.
 

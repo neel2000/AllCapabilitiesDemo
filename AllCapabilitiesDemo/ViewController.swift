@@ -131,9 +131,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func btnTimeSensitiveNotificationAction(_ sender: Any) {
-        DispatchQueue.main.async {
-            self.scheduleNotification()
-        }
+        let vc = TimeSensitiveNotiVC()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func btnWeatherKitAction(_ sender: Any) {
@@ -174,8 +173,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func btnDefaultCallingAppAction(_ sender: Any) {
-        let vc = CallViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        if #available(iOS 18.2, *) {
+            let vc = CallViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            showAlert(message: "Default Calling app is available on iOS 18.2 and later")
+        }
     }
     
     @IBAction func btnDefaultMessagingAppAction(_ sender: Any) {
@@ -185,6 +188,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func btnHeadPoseAction(_ sender: Any) {
         let vc = HeadPoseVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnCriticalMessagingAction(_ sender: Any) {
+        let vc = CriticalMessagingVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -204,7 +212,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.navigationController?.pushViewController(vc, animated: true)
         } else {
             // Fallback on earlier versions
-            showAlert(message: "Sensitive Content Analysis is not supported on this device.")
+            showAlert(message: "Sensitive Content Analysis is available on iOS 17.0 and later")
         }
     }
     
@@ -249,13 +257,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func btnJournalingSuggestionsAction(_ sender: Any) {
-        if #available(iOS 18.0, *) {
-            let vc = JournalingDemo()
-            let hostingVC = UIHostingController(rootView: vc)
-            self.navigationController?.pushViewController(hostingVC, animated: true)
-        } else {
-            showAlert(message: "Journaling Suggestions is available on iOS 18.0 and later")
-        }
+        let vc = JournalingSuggestionsVC()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func btnMultitaskingCameraAccess(_ sender: Any) {
@@ -268,28 +271,110 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @objc private func scheduleNotification() {
-        let content = UNMutableNotificationContent()
-        content.title = "Time Sensitive Alert"
-        content.body = "This alert can break through Focus modes if enabled."
-        content.sound = .default
-        content.interruptionLevel = .timeSensitive
-      
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
-        
-        let request = UNNotificationRequest(identifier: "TimeSensitiveDemo",
-                                            content: content,
-                                            trigger: trigger)
-        
-        UNUserNotificationCenter.current().add(request) { error in
-            if let error = error {
-                print("❌ Notification error:", error.localizedDescription)
-            } else {
-                print("✅ Time Sensitive Notification scheduled.")
-            }
+    @IBAction func btnClassKitAction(_ sender: Any) {
+        let vc = ClassKitVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnWirelessAccessoryConfigurationAction(_ sender: Any) {
+        let vc = WirelessAccessoryConfigurationVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnCommunicationNotificationsAction(_ sender: Any) {
+        let vc = CommunicationNotificationsVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnDefaultTransaltionAppAction(_ sender: Any) {
+        if #available(iOS 18.4, *) {
+            let vc = DefaultTranslationAppVC()
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            showAlert(message: "Default translation app is available on iOS 18.4 and later")
         }
     }
+    
+    @IBAction func btnGameCenterAction(_ sender: Any) {
+        let vc = GameCenterVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnExtendedVirtualAddressingAction(_ sender: Any) {
+        let vc = DescriptionVC()
+        vc.infoText = """
+            
+            The Extended Virtual Addressing capability allows apps to use a much larger virtual memory space on supported Apple devices. This is especially useful for apps that handle very large datasets, complex files, or advanced workloads like video editing, 3D modeling, AI/ML, and scientific computing.
+
+            🔹 What It Does
+
+                • Expands the virtual memory address range available to your app.
+
+                • Lets your app load, process, and manage bigger datasets without hitting memory mapping limits.
+
+                • Improves stability and performance for pro-level apps that work with large assets.
+
+            🔑 Why It’s Useful
+
+                • Prevents memory-related crashes in apps that handle huge files or advanced workflows.
+
+                • Enables high-performance apps (CAD, media editing, AI, simulations) to run more smoothly.
+
+                • Future-proofs apps for devices with higher RAM capacity.
+
+            📌 Requirements
+
+                • Enable Extended Virtual Addressing in Xcode → Signing & Capabilities.
+
+                • Works only on supported devices (e.g., newer iPad Pro and Apple silicon devices with large RAM).
+
+                • No special Swift code is required — iOS automatically manages the extended memory once the capability is turned on.
+            
+            """
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnDefaultNavigtionAppAction(_ sender: Any) {
+        let vc = DescriptionVC()
+        vc.infoText = """
+            
+            The Default Navigation App capability allows third-party apps to register themselves as a user’s preferred navigation app, similar to how users can choose a default browser or mail app. With this capability, your app can replace Apple Maps as the system-wide navigation choice.
+
+            🔹 What It Does
+
+                    • System Integration – Lets your app act as the default navigation app across iOS.
+
+                    • Deep Linking from Other Apps – When another app (like Safari, Mail, or Messages) tries to open a navigation route, iOS can launch your app instead of Apple Maps.
+
+                    • Consistent User Experience – Ensures all directions and navigation requests go through the app the user prefers.
+
+                    •  Custom Features – Third-party navigation apps (Google Maps, Waze, etc.) can offer traffic alerts, EV charging stops, or specialized routing.
+
+            🔑 Why It’s Useful
+
+                    • Provides users freedom to choose their favorite navigation app.
+
+                    • Helps developers compete directly with Apple Maps.
+
+                    • Supports apps that specialize in delivery, logistics, ride-hailing, or niche travel experiences.
+
+            📌 Requirements
+
+                    • Apple Developer Program membership.
+
+                    • Enable Default Navigation App capability in Xcode → Signing & Capabilities.
+
+                    • App must implement support for handling navigation intents (via Intents framework and URL schemes like maps://).
+
+                    • Apple must approve the app’s entitlement — not all apps get it automatically.
+                
+            
+            ⚡ Note:
+            As of iOS 18, Apple has not fully exposed a Settings UI where users can easily pick a default navigation app (like they can for Mail or Browser). This capability exists for entitlements and is mainly used by big navigation apps (Google Maps, Waze) through Apple approval.
+            """
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
     private func showAlert(message: String) {
         let alert = UIAlertController(title: "Info", message: message, preferredStyle: .alert)

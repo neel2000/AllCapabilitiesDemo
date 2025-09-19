@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,10 +22,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pq9-p8-ObK">
-                    <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                    <rect key="frame" x="0.0" y="94" width="390" height="682"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="aOW-Na-6xZ">
-                            <rect key="frame" x="16" y="184.66666666666663" width="358" height="394"/>
+                            <rect key="frame" x="16" y="144" width="358" height="394"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoe Store" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m62-mi-i3M">
                                     <rect key="frame" x="0.0" y="0.0" width="358" height="36"/>
@@ -37,7 +37,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a shoe to buy." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcj-wZ-CFH">
-                                    <rect key="frame" x="0.0" y="52.000000000000028" width="358" height="24"/>
+                                    <rect key="frame" x="0.0" y="52" width="358" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="24" id="Tyx-6S-hDa"/>
                                     </constraints>
@@ -46,7 +46,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehx-Tm-fis">
-                                    <rect key="frame" x="0.0" y="92.000000000000028" width="358" height="199.99999999999997"/>
+                                    <rect key="frame" x="0.0" y="92" width="358" height="200"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="200" id="vgw-bd-0Wm"/>
                                     </constraints>
@@ -74,14 +74,31 @@
                                 </button>
                             </subviews>
                         </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugz-6f-6Io">
+                            <rect key="frame" x="160" y="626" width="70" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="gzE-oy-vKG"/>
+                                <constraint firstAttribute="width" constant="70" id="oEy-Ot-Rdd"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Info">
+                                <color key="baseForegroundColor" name="AccentColor"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="btnInfoAction:" destination="-1" eventType="touchUpInside" id="L6b-ZV-bVy"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Ugz-6f-6Io" secondAttribute="bottom" constant="16" id="1DH-V5-8MU"/>
                         <constraint firstItem="aOW-Na-6xZ" firstAttribute="centerY" secondItem="pq9-p8-ObK" secondAttribute="centerY" id="B7t-ib-ml6"/>
                         <constraint firstItem="aOW-Na-6xZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="pq9-p8-ObK" secondAttribute="top" constant="16" id="CEo-fW-dGo"/>
                         <constraint firstAttribute="trailing" secondItem="aOW-Na-6xZ" secondAttribute="trailing" constant="16" id="VZe-d9-646"/>
+                        <constraint firstItem="Ugz-6f-6Io" firstAttribute="centerX" secondItem="pq9-p8-ObK" secondAttribute="centerX" id="iC5-tw-vSE"/>
                         <constraint firstItem="aOW-Na-6xZ" firstAttribute="leading" secondItem="pq9-p8-ObK" secondAttribute="leading" constant="16" id="ly9-F3-j0G"/>
-                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="aOW-Na-6xZ" secondAttribute="bottom" constant="16" id="wNL-oC-4kJ"/>
+                        <constraint firstItem="Ugz-6f-6Io" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aOW-Na-6xZ" secondAttribute="bottom" constant="16" id="wNL-oC-4kJ"/>
                     </constraints>
                 </view>
             </subviews>
@@ -97,6 +114,9 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

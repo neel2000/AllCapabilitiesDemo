@@ -79,6 +79,56 @@ class ApplePayVC: UIViewController {
            }
     }
     
+    @IBAction func btnInfoAction(_ sender: Any) {
+        let vc = DescriptionVC()
+        vc.infoText = """
+            
+            🛒 Apple Pay Later (Merchandise) Capability in iOS
+            
+            What Is It?
+
+                Apple Pay Later is Apple’s buy now, pay later feature, built into Apple Pay. It lets customers split a purchase into multiple payments over time.
+                The “Merchandise” capability in Xcode is for apps that sell goods and services, so they can offer Apple Pay Later as a payment option at checkout.
+
+            This is useful for apps that sell:
+
+                • Physical products (clothing, gadgets, etc.)
+
+                • Services (tickets, bookings, subscriptions that qualify as merchandise)
+
+            ⚠️ Note: Apple Pay Later is currently available only in the United States and requires merchants to be set up with the right Apple Pay configuration.
+
+            
+            ✅ What Does This Capability Allow?
+
+            When enabled in your app, the Apple Pay Later (Merchandise) capability:
+
+            1. Integrates with Apple Pay so users can choose “Pay Later” as a payment option.
+
+            2. Supports installment payments (e.g., 4 payments over 6 weeks).
+
+            3. Shows Pay Later availability automatically in the Apple Pay sheet when the user is eligible.
+
+            4. Uses your existing Apple Pay merchant ID — no separate implementation is needed for “later” vs. “now.”
+
+            
+            🔑 Requirements
+
+            To use Apple Pay Later (Merchandise) in your iOS app, you need:
+
+                • An Apple Developer Account with Apple Pay entitlement.
+
+                • A valid Apple Pay Merchant ID configured in your developer portal.
+
+                • Apple Pay Later (Merchandise) capability turned on in your Xcode project.
+
+                • Your app must use PassKit (PKPaymentAuthorizationController) for Apple Pay.
+
+                • User must be in the United States (feature not yet global).
+            
+            """
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     func displayDefaultAlert(title: String?, message: String?, completion: (() -> Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

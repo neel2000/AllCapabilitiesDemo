@@ -23,6 +23,38 @@ class AccessWiFiInfoViewController: UIViewController, CLLocationManagerDelegate 
         startLocationUpdates()
     }
     
+    @IBAction func btnInfoAction(_ sender: Any) {
+        let vc = DescriptionVC()
+        vc.infoText = """
+            This capability allows your app to read limited details about the Wi-Fi network the device is currently connected to.
+
+            🔑 Key Features
+
+                • Retrieve the SSID (network name) and BSSID (access point identifier).
+
+                • Identify whether the connection is through a personal hotspot.
+
+                • Useful for apps that need to confirm a trusted or specific Wi-Fi connection.
+
+            📌 Common Use Cases
+
+                • Enterprise apps verifying connection to a secure corporate Wi-Fi.
+
+                • Apps that provide network diagnostics or troubleshooting.
+
+                • IoT/Smart-home apps ensuring the device is on the same network as the accessory.
+
+            ⚠️ Important Considerations
+
+                • Requires user permission and proper entitlement from Apple.
+
+                • Doesn’t provide signal strength or browsing data (for privacy reasons).
+
+                • If permission isn’t granted, your app may only get limited or no Wi-Fi info.
+            """
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func startLocationUpdates() {
         DispatchQueue.global().async {
             if CLLocationManager.locationServicesEnabled(){

@@ -36,6 +36,41 @@ class SIMInsertedforWirelessCarriersVC: UIViewController {
             stack.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85)
         ])
     }
+    
+    @IBAction func btnInfoAction(_ sender: Any) {
+        let vc = DescriptionVC()
+        vc.infoText = """
+            This capability allows your app (typically carrier or telecom apps) to detect and work only when a valid SIM card from the associated wireless carrier is inserted in the device.
+
+            🔑 Key Features
+
+                • Restricts app usage to devices with a specific carrier’s SIM card.
+
+                • Ensures only eligible subscribers can use the app.
+
+                • Works in combination with carrier entitlements from Apple.
+
+            📌 Common Use Cases
+
+                • Carrier self-care apps: Managing mobile data, bills, and services.
+
+                • Operator-specific apps: Features available only to that carrier’s customers.
+
+                • SIM-based authentication: Allowing access to exclusive plans, offers, or features.
+
+            ⚠️ Important Considerations
+
+                • Requires a special entitlement from Apple, granted only to carriers or partners.
+
+                • Not available for general third-party apps.
+
+                • If no valid SIM is inserted (or it’s from a different carrier), the app may not launch or may restrict features.
+
+                • Users with eSIM are also supported if linked to the carrier.
+            """
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 
     @objc func checkSIMStatus() {
         let networkInfo = CTTelephonyNetworkInfo()

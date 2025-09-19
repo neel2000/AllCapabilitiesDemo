@@ -77,6 +77,36 @@ final class CallManager: NSObject, CXProviderDelegate {
     }
 
     // MARK: - End Call
+    
+    func endActiveCallForComminicationNotification(activeCallUUID: UUID?) {
+        guard let uuid = activeCallUUID else {
+            print("ℹ️ No active call to end")
+            logCurrentCalls()
+            return
+        }
+
+        // Check if CallKit knows about this call
+        let activeCalls = callController.callObserver.calls
+        if !activeCalls.contains(where: { $0.uuid == uuid }) {
+            print("⚠️ Call with UUID \(uuid) not found in callObserver")
+            logCurrentCalls()
+            return
+        }
+
+        print("🔴 Ending call — uuid:", uuid)
+        let end = CXEndCallAction(call: uuid)
+        let tx = CXTransaction(action: end)
+
+        callController.request(tx) { error in
+            if let error = error {
+                print("❌ End call error:", error.localizedDescription)
+            } else {
+                isFromCommunicationNotification = false
+                print("✅ End call transaction sent")
+            }
+        }
+    }
+    
     func endActiveCall() {
         guard let uuid = activeCallUUID else {
             print("ℹ️ No active call to end")

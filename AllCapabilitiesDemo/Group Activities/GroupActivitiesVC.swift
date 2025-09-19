@@ -119,6 +119,45 @@ class GroupActivitiesVC: UIViewController, UITableViewDataSource, UITableViewDel
             await coordinator.configureGroupSession()
         }
     }
+    
+    @IBAction func btnInfoAction(_ sender: Any) {
+        let vc = DescriptionVC()
+        vc.infoText = """
+            This capability lets your app use SharePlay to create shared, synchronized experiences for people on a FaceTime call or in a Messages conversation.
+
+            🔑 Key Features
+
+                • Enables real-time, synchronized activities across multiple devices.
+
+                • Built on the GroupActivities framework (introduced in iOS 15).
+
+                • Supports apps like video streaming, music playback, games, workouts, or study sessions.
+
+                • Activities stay in sync — if one person pauses, skips, or interacts, everyone sees the same update.
+
+            📌 Common Use Cases
+
+                • Media apps: Watch movies, listen to music, or view content together with friends.
+
+                • Games: Play multiplayer games during a FaceTime call.
+
+                • Education/work apps: Collaborate on lessons, study materials, or documents.
+
+                • Wellness apps: Share meditation or workout sessions in sync.
+
+            ⚠️ Important Considerations
+
+                • Requires enabling the Group Activities entitlement in your app.
+
+                • Works only on devices that support SharePlay (iOS 15+, iPadOS 15+, macOS 12+).
+
+                • Users must be in a FaceTime call or Messages group to start/join an activity.
+
+                •You must design the experience to be collaborative and respectful of privacy.
+            """
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 
     // Set up the UI
     private func setupUI() {

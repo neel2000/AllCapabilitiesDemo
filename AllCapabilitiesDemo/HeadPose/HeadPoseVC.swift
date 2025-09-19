@@ -10,122 +10,87 @@ import ARKit
 import SceneKit
 
 class HeadPoseVC: UIViewController, ARSessionDelegate {
-
+    
     private var arView: ARSCNView!
     private var resultLabel: UILabel!
-
+    
     private var lastPitchValues: [Float] = []
     private var lastYawValues: [Float] = []
     private let maxStoredFrames = 20
     private let yesThreshold: Float = 0.4 // nod up/down range
     private let noThreshold: Float = 0.5  // shake left/right range
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
-        setupARView()
-        setupResultLabel()
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        startFaceTracking()
+    
+    
+    @IBAction func btnHeadPoseAction(_ sender: Any) {
+        let vc = HeadPoseVC1()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func btnInfoAction(_ sender: Any) {
+        let vc = DescriptionVC()
+        vc.infoText = """
+            
+            The Head Pose capability lets your app access the position and orientation of the user’s head in 3D space. It uses the ARKit framework and TrueDepth camera (on supported devices) to provide real-time tracking.
+            
+            🔑 Key Features
+            
+                • Tracks the rotation and movement of the user’s head.
+            
+                • Provides pitch, yaw, and roll values in real time.
+            
+                • Works with ARKit face tracking for precise motion capture.
+            
+                • Can be combined with gaze tracking or facial expressions for richer interactions.
+            
+            📌 Common Use Cases
+            
+                • Accessibility: Control the interface with head movements.
+            
+                • Gaming/AR apps: Move the camera or trigger actions based on head direction.
+            
+                • Health & fitness apps: Measure posture, alignment, or neck movements.
+            
+                • Entertainment: Enable immersive experiences like nodding to confirm actions.
+            
+            ⚠️ Important Considerations
+            
+                • Requires a device with a TrueDepth camera (e.g., Face ID-enabled iPhones/iPads).
+            
+                • Needs the Head Pose entitlement in Xcode.
+            
+                • Must request camera access permission from the user.
+            
+                • Respect user privacy — only use tracking for the stated purpose.
+            
+            
+            🎯 Pitch, Yaw, and Roll
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        arView.session.pause()
-    }
+            1. Pitch – Up and down movement of the head.
 
-    private func setupARView() {
-        arView = ARSCNView(frame: view.bounds)
-        arView.session.delegate = self
-        arView.automaticallyUpdatesLighting = true
-        view.addSubview(arView)
-    }
+                • Like nodding “yes”.
 
-    private func setupResultLabel() {
-        resultLabel = UILabel()
-        resultLabel.text = "Waiting..."
-        resultLabel.font = UIFont.systemFont(ofSize: 28, weight: .bold)
-        resultLabel.textColor = .white
-        resultLabel.textAlignment = .center
-        resultLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(resultLabel)
+                • Example: Looking up at the ceiling or down at the floor.
 
-        NSLayoutConstraint.activate([
-            resultLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            resultLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40),
-            resultLabel.heightAnchor.constraint(equalToConstant: 40)
-        ])
-    }
+            2. Yaw – Left and right movement of the head.
 
-    private func startFaceTracking() {
-        guard ARFaceTrackingConfiguration.isSupported else {
-            print("Face tracking is not supported on this device.")
-            return
-        }
+                • Like shaking your head “no”.
 
-        let config = ARFaceTrackingConfiguration()
-        config.isLightEstimationEnabled = true
-        arView.session.run(config, options: [.resetTracking, .removeExistingAnchors])
-    }
+                • Example: Turning to look over your left or right shoulder.
 
-    func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
-        for anchor in anchors {
-            guard let faceAnchor = anchor as? ARFaceAnchor else { continue }
-            let eulerAngles = getEulerAngles(from: faceAnchor.transform)
-            trackHeadGesture(pitch: eulerAngles.x, yaw: eulerAngles.y)
-        }
-    }
+            3. Roll – Tilting your head sideways.
 
-    private func trackHeadGesture(pitch: Float, yaw: Float) {
-        lastPitchValues.append(pitch)
-        lastYawValues.append(yaw)
+                • Like leaning your ear toward your shoulder.
 
-        if lastPitchValues.count > maxStoredFrames { lastPitchValues.removeFirst() }
-        if lastYawValues.count > maxStoredFrames { lastYawValues.removeFirst() }
+                • Example: Tilting your head to the left/right while thinking.
 
-        if let minPitch = lastPitchValues.min(), let maxPitch = lastPitchValues.max() {
-            if (maxPitch - minPitch) > yesThreshold {
-                print("Detected YES nod")
-                updateResultLabel(text: "YES 👍")
-                lastPitchValues.removeAll()
-            }
-        }
-
-        if let minYaw = lastYawValues.min(), let maxYaw = lastYawValues.max() {
-            if (maxYaw - minYaw) > noThreshold {
-                print("Detected NO shake")
-                updateResultLabel(text: "NO 👎")
-                lastYawValues.removeAll()
-            }
-        }
-    }
-
-    private func updateResultLabel(text: String) {
-        DispatchQueue.main.async {
-            self.resultLabel.text = text
-        }
-    }
-
-    private func getEulerAngles(from transform: simd_float4x4) -> SIMD3<Float> {
-        let rotationMatrix = transform.upperLeft3x3
-        let pitch = asin(-rotationMatrix.columns.2.y)
-        let yaw = atan2(rotationMatrix.columns.2.x, rotationMatrix.columns.2.z)
-        let roll = atan2(rotationMatrix.columns.0.y, rotationMatrix.columns.1.y)
-        return SIMD3<Float>(pitch, yaw, roll)
-    }
-}
-
-extension simd_float4x4 {
-    var upperLeft3x3: simd_float3x3 {
-        return simd_float3x3(columns: (columns.0.xyz, columns.1.xyz, columns.2.xyz))
-    }
-}
-
-extension simd_float4 {
-    var xyz: simd_float3 {
-        return simd_float3(x, y, z)
+            📌 In ARKit, these values are provided in radians (or degrees if you convert them).
+            They let developers know exactly where the user’s head is pointing in 3D space in real time.
+            
+            """
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

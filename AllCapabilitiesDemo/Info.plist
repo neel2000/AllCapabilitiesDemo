@@ -2,10 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>NSCameraUsageDescription</key>
-    <string>This app needs access to the camera</string>
-    <key>NSMicrophoneUsageDescription</key>
-    <string>This app needs access to the microphone for video recording</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This app needs access to the camera</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app needs access to the microphone for video recording</string>
 	<key>NSUbiquitousContainers</key>
 	<dict>
 		<key>iCloud.allcaps.container</key>
@@ -40,6 +40,7 @@
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>SaveTextIntent</string>
+		<string>INStartCallIntent</string>
 	</array>
 	<key>NSUserNotificationsUsageDescription</key>
 	<string>We use notifications for important alerts and reminders.</string>
@@ -111,5 +112,9 @@
 		<string>GreycliffCF-Regular.otf</string>
 		<string>GreycliffCF-MediumOblique.otf</string>
 	</array>
+	<key>NSCriticalMessagingUsageDescription</key>
+	<string>To Send Critical Alerts</string>
+	<key>com.apple.developer.translation-ui-provider.network-access</key>
+	<true/>
 </dict>
 </plist>

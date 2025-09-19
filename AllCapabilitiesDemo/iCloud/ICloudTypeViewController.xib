@@ -67,12 +67,29 @@
                         </button>
                     </subviews>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtR-fh-kfK">
+                    <rect key="frame" x="161.66666666666666" y="728" width="70" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="59Y-Pt-7bp"/>
+                        <constraint firstAttribute="height" constant="40" id="QUk-dV-sCW"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Info">
+                        <color key="baseForegroundColor" name="AccentColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="btnInfoAction:" destination="-1" eventType="touchUpInside" id="VXg-gQ-naq"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="jtR-fh-kfK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1Lv-y8-Rth"/>
                 <constraint firstItem="sB2-RD-Dtl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1uM-b8-bwR"/>
                 <constraint firstItem="sB2-RD-Dtl" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="9aM-J8-cIH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jtR-fh-kfK" secondAttribute="bottom" constant="16" id="bk3-1f-anp"/>
             </constraints>
             <point key="canvasLocation" x="50" y="-11"/>
         </view>

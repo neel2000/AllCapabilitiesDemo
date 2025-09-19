@@ -155,7 +155,11 @@ final class CallViewController: UIViewController {
     
     @objc private func endCall() {
         print("UI EndCall button tapped")
-        callManager?.endActiveCall()
+        if isFromCommunicationNotification {
+            callManager?.endActiveCallForComminicationNotification(activeCallUUID: callUUID)
+        } else {
+            callManager?.endActiveCall()
+        }
     }
     
     // MARK: - Timer

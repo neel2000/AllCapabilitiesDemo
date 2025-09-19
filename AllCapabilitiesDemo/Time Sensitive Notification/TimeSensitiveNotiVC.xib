@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GroupActivitiesVC" customModule="AllCapabilitiesDemo" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimeSensitiveNotiVC" customModule="AllCapabilitiesDemo" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,29 +20,42 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnI-Nr-c5e">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ref-xA-hDn">
+                    <rect key="frame" x="61.666666666666657" y="408.66666666666669" width="270" height="35"/>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Send Time Sensitive Notification">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="btnTimeSensitiveNotifiationAction:" destination="-1" eventType="touchUpInside" id="1xr-dL-h6F"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2O-Bu-a2U">
                     <rect key="frame" x="161.66666666666666" y="728" width="70" height="40"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="70" id="Qnk-N0-4Fa"/>
-                        <constraint firstAttribute="height" constant="40" id="abd-jc-RcA"/>
+                        <constraint firstAttribute="width" constant="70" id="UaJ-ZU-Vpq"/>
+                        <constraint firstAttribute="height" constant="40" id="kd5-18-VfX"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Info">
                         <color key="baseForegroundColor" name="AccentColor"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="btnInfoAction:" destination="-1" eventType="touchUpInside" id="wP6-bj-6KS"/>
+                        <action selector="btnInfoAction:" destination="-1" eventType="touchUpInside" id="82v-OO-5vx"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="pnI-Nr-c5e" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IAV-uY-wx0"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pnI-Nr-c5e" secondAttribute="bottom" constant="16" id="ezi-Gq-3uV"/>
+                <constraint firstItem="Ref-xA-hDn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8GN-fB-wDa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="j2O-Bu-a2U" secondAttribute="bottom" constant="16" id="Cjr-Wp-qig"/>
+                <constraint firstItem="j2O-Bu-a2U" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="i48-Sc-p6i"/>
+                <constraint firstItem="Ref-xA-hDn" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="mMx-ry-fZO"/>
             </constraints>
-            <point key="canvasLocation" x="92" y="-11"/>
+            <point key="canvasLocation" x="37" y="-11"/>
         </view>
     </objects>
     <resources>

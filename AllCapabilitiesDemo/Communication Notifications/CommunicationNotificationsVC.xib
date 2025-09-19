@@ -4,13 +4,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GroupActivitiesVC" customModule="AllCapabilitiesDemo" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommunicationNotificationsVC" customModule="AllCapabilitiesDemo" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,29 +19,39 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnI-Nr-c5e">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuC-y3-ULi">
                     <rect key="frame" x="161.66666666666666" y="728" width="70" height="40"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="70" id="Qnk-N0-4Fa"/>
-                        <constraint firstAttribute="height" constant="40" id="abd-jc-RcA"/>
+                        <constraint firstAttribute="width" constant="70" id="1hK-xj-vN3"/>
+                        <constraint firstAttribute="height" constant="40" id="hII-fc-y8q"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Info">
                         <color key="baseForegroundColor" name="AccentColor"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="btnInfoAction:" destination="-1" eventType="touchUpInside" id="wP6-bj-6KS"/>
+                        <action selector="btnInfoAction:" destination="-1" eventType="touchUpInside" id="lCU-fg-G8g"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="af0-t2-9FP">
+                    <rect key="frame" x="102.66666666666669" y="408.66666666666669" width="188" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Send Call Notification"/>
+                    <connections>
+                        <action selector="btnSendCallNotiicationAction:" destination="-1" eventType="touchUpInside" id="tVV-BC-Ekr"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="pnI-Nr-c5e" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IAV-uY-wx0"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pnI-Nr-c5e" secondAttribute="bottom" constant="16" id="ezi-Gq-3uV"/>
+                <constraint firstItem="af0-t2-9FP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Ao3-mE-qoh"/>
+                <constraint firstItem="af0-t2-9FP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BGM-Rc-mN1"/>
+                <constraint firstItem="OuC-y3-ULi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FOj-UC-siz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OuC-y3-ULi" secondAttribute="bottom" constant="16" id="GhE-e4-bmW"/>
             </constraints>
-            <point key="canvasLocation" x="92" y="-11"/>
+            <point key="canvasLocation" x="132" y="-11"/>
         </view>
     </objects>
     <resources>

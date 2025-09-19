@@ -21,13 +21,13 @@ class FontViewController: UIViewController {
      
      private func setupButtons() {
          let registerFonts = ["GreycliffCF", "Poppins", "Roboto", "SegoeUI"]
-             let unregisterFonts = ["GreycliffCF", "Poppins", "Roboto", "SegoeUI"]
+         let unregisterFonts = ["GreycliffCF", "Poppins", "Roboto", "SegoeUI"]
              
              // Stack for Register Buttons
              let registerStack = UIStackView()
              registerStack.axis = .vertical
              registerStack.alignment = .center
-             registerStack.spacing = 16
+             registerStack.spacing = 13
              
              for (index, fontName) in registerFonts.enumerated() {
                  let button = UIButton(type: .system)
@@ -52,7 +52,7 @@ class FontViewController: UIViewController {
              let unregisterStack = UIStackView()
              unregisterStack.axis = .vertical
              unregisterStack.alignment = .center
-             unregisterStack.spacing = 16
+             unregisterStack.spacing = 13
              
              for (index, fontName) in unregisterFonts.enumerated() {
                  let button = UIButton(type: .system)
@@ -77,7 +77,7 @@ class FontViewController: UIViewController {
              let mainStack = UIStackView(arrangedSubviews: [registerStack, unregisterStack])
              mainStack.axis = .vertical
              mainStack.alignment = .center
-             mainStack.spacing = 35 // space between register & unregister groups
+             mainStack.spacing = 25 // space between register & unregister groups
              mainStack.translatesAutoresizingMaskIntoConstraints = false
              
              view.addSubview(mainStack)
@@ -87,7 +87,45 @@ class FontViewController: UIViewController {
                  mainStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15)
              ])
      }
-     
+    
+    @IBAction func btnInfoAction(_ sender: Any) {
+        let vc = DescriptionVC()
+        vc.infoText = """
+            The Fonts capability allows your app to include and use custom fonts beyond the system-provided ones. With this, you can create a unique look and feel for your app’s text elements.
+
+            🔑 Key Features
+
+                • Embed custom font files (e.g., .ttf, .otf) into your app.
+
+                • Use custom fonts in UILabel, UITextView, UIButton, SwiftUI Text, and more.
+
+                • Provide users with branded typography for a consistent design.
+
+                • Fonts are packaged inside your app bundle, so they work offline.
+
+            📌 Common Use Cases
+
+                • Branding: Match your app’s UI with a company’s official fonts.
+
+                • Design/Creativity apps: Give users more font choices for editing text.
+
+                • Games: Use themed fonts to match the game’s style.
+
+                • Accessibility: Provide fonts optimized for readability.
+
+            ⚠️ Important Considerations
+
+                • Add fonts to your app’s Info.plist under UIAppFonts.
+
+                • Ensure you have the legal right/license to use and distribute the font.
+
+                • Large font files may increase your app size.
+
+                • Dynamic Type compatibility is recommended for accessibility.
+            """
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
      @objc private func registerFont(_ sender: UIButton) {
          switch sender.tag {
          case 0:

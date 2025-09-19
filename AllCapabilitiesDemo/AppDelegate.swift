@@ -11,6 +11,9 @@ import Intents
 import IQKeyboardManagerSwift
 import IQKeyboardToolbarManager
 import AVFAudio
+import CallKit
+
+var isFromCommunicationNotification = false
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
@@ -125,7 +128,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
 
     private func requestNotificationPermission() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge, .criticalAlert]) { granted, error in
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge, .criticalAlert, .providesAppNotificationSettings]) { granted, error in
             if granted {
                 print("✅ Permission granted.")
             } else {

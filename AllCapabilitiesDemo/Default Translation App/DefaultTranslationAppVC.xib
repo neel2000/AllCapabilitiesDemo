@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
@@ -10,39 +10,39 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GroupActivitiesVC" customModule="AllCapabilitiesDemo" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DefaultTranslationAppVC" customModule="AllCapabilitiesDemo" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnI-Nr-c5e">
-                    <rect key="frame" x="161.66666666666666" y="728" width="70" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGM-Xb-3FH">
+                    <rect key="frame" x="172" y="772" width="70" height="40"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="70" id="Qnk-N0-4Fa"/>
-                        <constraint firstAttribute="height" constant="40" id="abd-jc-RcA"/>
+                        <constraint firstAttribute="height" constant="40" id="0Wi-kr-WNT"/>
+                        <constraint firstAttribute="width" constant="70" id="sif-DO-DPj"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Info">
                         <color key="baseForegroundColor" name="AccentColor"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="btnInfoAction:" destination="-1" eventType="touchUpInside" id="wP6-bj-6KS"/>
+                        <action selector="btnInfoAction:" destination="-1" eventType="touchUpInside" id="D9b-5m-Ax0"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="pnI-Nr-c5e" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IAV-uY-wx0"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pnI-Nr-c5e" secondAttribute="bottom" constant="16" id="ezi-Gq-3uV"/>
+                <constraint firstItem="KGM-Xb-3FH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jpH-yA-orM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KGM-Xb-3FH" secondAttribute="bottom" constant="16" id="mX4-gR-pCJ"/>
             </constraints>
-            <point key="canvasLocation" x="92" y="-11"/>
+            <point key="canvasLocation" x="39" y="-11"/>
         </view>
     </objects>
     <resources>
