@@ -11,8 +11,6 @@ class CriticalMessagingVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-      
     }
     
     @IBAction func btnInfoAction(_ sender: Any) {

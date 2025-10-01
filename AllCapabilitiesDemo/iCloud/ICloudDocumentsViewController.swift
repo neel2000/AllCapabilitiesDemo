@@ -52,38 +52,99 @@ class NoteEditorViewController: UIViewController, UITextViewDelegate {
     }
     
     @objc func doneEditing() {
-        guard let doc = document else { return }
-        if doc.text == textView.text { return }
+        guard let doc = document else {
+            os_log("No document to save", log: OSLog.default, type: .error)
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: "Error", message: "No document available to save.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alert, animated: true)
+            }
+            return
+        }
+        
+        // Only save if the text has changed
+        if doc.text == textView.text {
+            os_log("No changes to save for document: %@", log: OSLog.default, type: .info, doc.fileURL.absoluteString)
+            closeDocumentAndDismiss(doc)
+            return
+        }
+        
+        // Update document content
         doc.text = textView.text
         doc.updateChangeCount(.done) // Mark document as changed
-        let coordinator = NSFileCoordinator(filePresenter: nil)
-        coordinator.coordinate(writingItemAt: doc.fileURL, options: .forReplacing, error: nil) { _ in
-            doc.save(to: doc.fileURL, for: .forOverwriting) { success in
-                if success {
-                    os_log("Note saved to: %@", log: OSLog.default, type: .info, doc.fileURL.absoluteString)
-                    doc.close { closeSuccess in
-                        if closeSuccess {
-                            self.textView.resignFirstResponder()
-                            let alert = UIAlertController(title: "Success", message: "Note updated successfully.", preferredStyle: .alert)
-                            self.present(alert, animated: true)
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                                alert.dismiss(animated: true) {
-                                    self.dismiss(animated: true)
+        
+        // Perform file operations on a background queue
+        DispatchQueue.global(qos: .userInitiated).async {
+            let coordinator = NSFileCoordinator()
+            var error: NSError?
+            
+            coordinator.coordinate(writingItemAt: doc.fileURL, options: .forReplacing, error: &error) { url in
+                os_log("Starting save for document: %@", log: OSLog.default, type: .info, doc.fileURL.absoluteString)
+                doc.save(to: url, for: .forOverwriting) { saveSuccess in
+                    if saveSuccess {
+                        os_log("Note saved to: %@", log: OSLog.default, type: .info, doc.fileURL.absoluteString)
+                        doc.close { closeSuccess in
+                            if closeSuccess {
+                                os_log("Document closed successfully: %@", log: OSLog.default, type: .info, doc.fileURL.absoluteString)
+                                DispatchQueue.main.async {
+                                    self.textView.resignFirstResponder()
+                                    let alert = UIAlertController(title: "Success", message: "Note updated successfully.", preferredStyle: .alert)
+                                    self.present(alert, animated: true)
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                                        alert.dismiss(animated: true) {
+                                            // Notify ICloudDocumentsViewController to refresh
+                                            NotificationCenter.default.post(name: .NSMetadataQueryDidUpdate, object: nil)
+                                            self.dismiss(animated: true)
+                                        }
+                                    }
+                                }
+                            } else {
+                                os_log("Failed to close document: %@", log: OSLog.default, type: .error, doc.fileURL.absoluteString)
+                                DispatchQueue.main.async {
+                                    let alert = UIAlertController(title: "Error", message: "Failed to close note.", preferredStyle: .alert)
+                                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                                    self.present(alert, animated: true)
                                 }
                             }
-                        } else {
-                            os_log("Failed to close document: %@", log: OSLog.default, type: .error, doc.fileURL.absoluteString)
+                        }
+                    } else {
+                        os_log("Failed to save document: %@", log: OSLog.default, type: .error, doc.fileURL.absoluteString)
+                        DispatchQueue.main.async {
+                            let alert = UIAlertController(title: "Error", message: "Failed to update note.", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: .default))
+                            self.present(alert, animated: true)
                         }
                     }
-                } else {
-                    os_log("Failed to save document: %@", log: OSLog.default, type: .error, doc.fileURL.absoluteString)
-                    let alert = UIAlertController(title: "Error", message: "Failed to update note.", preferredStyle: .alert)
+                }
+            }
+            
+            if let error = error {
+                os_log("File coordination error: %@", log: OSLog.default, type: .error, error.localizedDescription)
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Error", message: "Failed to coordinate file access: \(error.localizedDescription)", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default))
                     self.present(alert, animated: true)
                 }
             }
         }
     }
+    
+    private func closeDocumentAndDismiss(_ document: NoteDocument) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            document.close { closeSuccess in
+                if closeSuccess {
+                    os_log("Document closed without saving: %@", log: OSLog.default, type: .info, document.fileURL.absoluteString)
+                } else {
+                    os_log("Failed to close document: %@", log: OSLog.default, type: .error, document.fileURL.absoluteString)
+                }
+                DispatchQueue.main.async {
+                    self.textView.resignFirstResponder()
+                    self.dismiss(animated: true)
+                }
+            }
+        }
+    }
+       
     
     func textViewDidChange(_ textView: UITextView) {
         // Auto-save can be implemented here if needed
@@ -100,7 +161,10 @@ class ICloudDocumentsViewController: UITableViewController {
         super.viewDidLoad()
         title = "iCloud Notes"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createNote))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Syncing...", style: .plain, target: nil, action: nil)
+        //navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Syncing...", style: .plain, target: nil, action: nil)
+        
+        // Add Back button to the navigation bar
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backTapped))
         
         // Make UI attractive
         navigationController?.navigationBar.tintColor = .systemBlue
@@ -116,6 +180,15 @@ class ICloudDocumentsViewController: UITableViewController {
         
         setupMetadataQuery()
         checkiCloudAvailability()
+    }
+    
+    @objc func backTapped() {
+        // Handle back action: pop or dismiss based on presentation
+        if navigationController?.viewControllers.count ?? 0 > 1 {
+            navigationController?.popViewController(animated: true)
+        } else {
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

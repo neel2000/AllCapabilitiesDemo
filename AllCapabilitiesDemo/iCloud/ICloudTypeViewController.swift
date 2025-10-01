@@ -11,32 +11,9 @@ class ICloudTypeViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-      
     }
-    
-    @objc private func sendCriticalAlert() {
-           let content = UNMutableNotificationContent()
-           content.title = "🚨 Critical Alert"
-           content.body = "This is a critical alert notification!"
-           content.sound = UNNotificationSound.defaultCritical
-           content.interruptionLevel = .critical
-           
-           // Trigger after 5 seconds
-           let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-           let request = UNNotificationRequest(identifier: "criticalAlert", content: content, trigger: trigger)
-           
-           UNUserNotificationCenter.current().add(request) { error in
-               if let error = error {
-                   print("Error scheduling critical alert: \(error.localizedDescription)")
-               } else {
-                   print("Critical alert scheduled ✅")
-               }
-           }
-       }
-    
+  
     @IBAction func btnCloudkitAction(_ sender: Any) {
-        sendCriticalAlert()
-        return
         let vc = ICloudViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -93,3 +70,31 @@ class ICloudTypeViewController: UIViewController {
     
     
 }
+
+//import UIKit
+//import HomeKit
+//
+//class ICloudTypeViewController: UIViewController, HMHomeManagerDelegate {
+//    
+//    private var homeManager: HMHomeManager!
+//    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        homeManager = HMHomeManager()
+//        homeManager.delegate = self
+//    }
+//    
+//    // Called when homes are loaded
+//    func homeManagerDidUpdateHomes(_ manager: HMHomeManager) {
+//        if let primaryHome = manager.primaryHome {
+//            print("Primary Home: \(primaryHome.name)")
+//            
+//            // List accessories
+//            for accessory in primaryHome.accessories {
+//                print("Accessory: \(accessory.name)")
+//            }
+//        } else {
+//            print("No Home configured")
+//        }
+//    }
+//}

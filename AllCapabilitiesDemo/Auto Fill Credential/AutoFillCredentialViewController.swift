@@ -18,10 +18,13 @@ class AutoFillCredentialViewController: UIViewController {
         super.viewDidLoad()
         saveAutofillCredential()
         usernameTextField.textContentType = .username
+        usernameTextField.keyboardType = .emailAddress
+        
         passwordTextField.textContentType = .password
-        usernameTextField.autocorrectionType = .no
-        usernameTextField.autocapitalizationType = .none
-        passwordTextField.isSecureTextEntry = true
+        
+//        usernameTextField.autocorrectionType = .no
+//        usernameTextField.autocapitalizationType = .none
+//        passwordTextField.isSecureTextEntry = true
     }
 
     @IBAction func saveCredential(_ sender: UIButton) {
@@ -54,19 +57,21 @@ class AutoFillCredentialViewController: UIViewController {
         
         ASCredentialIdentityStore.shared.getState({ state in
             if state.isEnabled {
-                self.saveAutofillCredential()
-            } else {
-                print("Autofill is not enabled")
+                ASCredentialIdentityStore.shared.getState { state in
+                  if state.isEnabled {
+                    ASCredentialIdentityStore.shared.saveCredentialIdentities([credentialIdentity]) { success, error in
+                      if success {
+                        print("Saved for autofill")
+                      } else {
+                        print("Error: \(String(describing: error?.localizedDescription))")
+                      }
+                    }
+                  } else {
+                    print("Autofill is not enabled")
+                  }
+                }
             }
         })
-        
-//        ASCredentialIdentityStore.shared.saveCredentialIdentities([credentialIdentity]) { success, error in
-//            if success {
-//                print("Saved for autofill")
-//            } else {
-//                print("Error: \(String(describing: error?.localizedDescription))")
-//            }
-        }
+    }
     
-
 }

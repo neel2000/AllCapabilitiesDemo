@@ -2,34 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCameraUsageDescription</key>
-	<string>This app needs access to the camera</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>This app needs access to the microphone for video recording</string>
-	<key>NSUbiquitousContainers</key>
-	<dict>
-		<key>iCloud.allcaps.container</key>
-		<dict>
-			<key>NSUbiquitousContainerIsDocumentScopePublic</key>
-			<true/>
-			<key>NSUbiquitousContainerSupportedFolderLevels</key>
-			<string>Any</string>
-			<key>NSUbiquitousContainerName</key>
-			<string>AllCapability</string>
-		</dict>
-	</dict>
-	<key>NSCallKitUsageDescription</key>
-	<string>We need access to handle calls.</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.appcaps</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>tel</string>
 				<string>telprompt</string>
 			</array>
-			<key>CFBundleURLName</key>
-			<string>com.appcaps</string>
 		</dict>
 	</array>
 	<key>IntentsSupported</key>
@@ -37,6 +19,22 @@
 		<string>INStartAudioCallIntent</string>
 		<string>INStartVideoCallIntent</string>
 	</array>
+	<key>NSCallKitUsageDescription</key>
+	<string>We need access to handle calls.</string>
+	<key>NSCriticalMessagingUsageDescription</key>
+	<string>To Send Critical Alerts</string>
+	<key>NSUbiquitousContainers</key>
+	<dict>
+		<key>iCloud.allcaps.container</key>
+		<dict>
+			<key>NSUbiquitousContainerIsDocumentScopePublic</key>
+			<true/>
+			<key>NSUbiquitousContainerName</key>
+			<string>AllCapability</string>
+			<key>NSUbiquitousContainerSupportedFolderLevels</key>
+			<string>Any</string>
+		</dict>
+	</dict>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>SaveTextIntent</string>
@@ -44,35 +42,6 @@
 	</array>
 	<key>NSUserNotificationsUsageDescription</key>
 	<string>We use notifications for important alerts and reminders.</string>
-	<key>UIApplicationSceneManifest</key>
-	<dict>
-		<key>NSLocationWhenInUseUsageDescription</key>
-		<string>This app uses your location to provide weather updates.</string>
-		<key>UIApplicationSupportsMultipleScenes</key>
-		<false/>
-		<key>UISceneConfigurations</key>
-		<dict>
-			<key>UIWindowSceneSessionRoleApplication</key>
-			<array>
-				<dict>
-					<key>UISceneConfigurationName</key>
-					<string>Default Configuration</string>
-					<key>UISceneDelegateClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
-					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
-				</dict>
-			</array>
-		</dict>
-	</dict>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>fetch</string>
-		<string>location</string>
-		<string>processing</string>
-		<string>remote-notification</string>
-		<string>voip</string>
-	</array>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Segoe UI Semibold.ttf</string>
@@ -112,9 +81,39 @@
 		<string>GreycliffCF-Regular.otf</string>
 		<string>GreycliffCF-MediumOblique.otf</string>
 	</array>
-	<key>NSCriticalMessagingUsageDescription</key>
-	<string>To Send Critical Alerts</string>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>NSLocationWhenInUseUsageDescription</key>
+		<string>This app uses your location to provide weather updates.</string>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+		<key>UISceneConfigurations</key>
+		<dict>
+			<key>UIWindowSceneSessionRoleApplication</key>
+			<array>
+				<dict>
+					<key>UISceneConfigurationName</key>
+					<string>Default Configuration</string>
+					<key>UISceneDelegateClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+					<key>UISceneStoryboardFile</key>
+					<string>Main</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>location</string>
+		<string>processing</string>
+		<string>remote-notification</string>
+		<string>voip</string>
+		<string>audio</string>
+	</array>
 	<key>com.apple.developer.translation-ui-provider.network-access</key>
 	<true/>
+	<key>NFCReaderUsageDescription</key>
+	<string>To read and write data</string>
 </dict>
 </plist>

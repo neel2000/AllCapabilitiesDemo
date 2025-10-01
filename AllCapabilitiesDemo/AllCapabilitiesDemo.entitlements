@@ -12,7 +12,7 @@
 	</array>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>webcredentials:kardder.com</string>
+		<string>applinks:kardder.com</string>
 	</array>
 	<key>com.apple.developer.authentication-services.autofill-credential-provider</key>
 	<true/>
@@ -26,13 +26,13 @@
 	<true/>
 	<key>com.apple.developer.default-data-protection</key>
 	<string>NSFileProtectionComplete</string>
-	<key>com.apple.developer.fileprovider.testing-mode</key>
-	<true/>
 	<key>com.apple.developer.group-session</key>
 	<true/>
 	<key>com.apple.developer.healthkit</key>
 	<true/>
 	<key>com.apple.developer.healthkit.background-delivery</key>
+	<true/>
+	<key>com.apple.developer.homekit</key>
 	<true/>
 	<key>com.apple.developer.icloud-container-identifiers</key>
 	<array>
@@ -51,7 +51,7 @@
 	<array>
 		<string>suggestions</string>
 	</array>
-	<key>com.apple.developer.kernel.extended-virtual-addressing</key>
+	<key>com.apple.developer.kernel.increased-debugging-memory-limit</key>
 	<true/>
 	<key>com.apple.developer.messages.critical-messaging</key>
 	<true/>

@@ -84,6 +84,8 @@ class GameCenterVC: UIViewController, GKGameCenterControllerDelegate {
     private var timer: Timer?
     private var isAuthenticated: Bool = false
     
+    private var virtualController: GCVirtualController?
+    
     // Game Center IDs (Match your App Store Connect setup)
     let leaderboardID = "high_scores"
     let achievementID = "master_tapper"
@@ -129,7 +131,115 @@ class GameCenterVC: UIViewController, GKGameCenterControllerDelegate {
         playAgainButton.addTarget(self, action: #selector(playAgainAction), for: .touchUpInside)
         leaderboardButton.addTarget(self, action: #selector(showLeaderboard), for: .touchUpInside)
         achievementsButton.addTarget(self, action: #selector(showAchievements), for: .touchUpInside)
+        
+        setupVirtualController()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        virtualController?.disconnect()
+    }
+    
+    private func setupVirtualController() {
+          // Full configuration with all common inputs
+        let config = GCVirtualController.Configuration()
+        config.elements = [
+            // Face buttons
+            GCInputButtonA,
+            GCInputButtonB,
+            GCInputButtonX,
+            GCInputButtonY,
+            
+            // D-Pad
+            GCInputDirectionPad,
+            
+//            // Thumbsticks
+//            GCInputLeftThumbstick,
+//            GCInputRightThumbstick,
+//            
+            // Triggers
+            GCInputLeftTrigger,
+            GCInputRightTrigger,
+            
+            // Shoulder buttons
+            GCInputLeftShoulder,
+            GCInputRightShoulder,
+            
+            // Menu button (like "Start")
+            //GCInputButtonMenu
+        ]
+          
+          // Create and connect the virtual controller
+          virtualController = GCVirtualController(configuration: config)
+          virtualController?.connect()
+          
+          // Listen for connection
+          NotificationCenter.default.addObserver(
+              self,
+              selector: #selector(controllerDidConnect),
+              name: .GCControllerDidConnect,
+              object: nil
+          )
+      }
+       
+    @objc private func controllerDidConnect(_ notification: Notification) {
+         if let controller = notification.object as? GCController {
+             print("Virtual controller connected: \(controller.vendorName ?? "Unknown")")
+             
+             if let gamepad = controller.extendedGamepad {
+                 // Handle buttons
+                 gamepad.buttonA.pressedChangedHandler = { _, _, pressed in
+                     if pressed { print("Button A pressed") }
+                 }
+                 gamepad.buttonB.pressedChangedHandler = { _, _, pressed in
+                     if pressed { print("Button B pressed") }
+                 }
+                 gamepad.buttonX.pressedChangedHandler = { _, _, pressed in
+                     if pressed { print("Button X pressed") }
+                 }
+                 gamepad.buttonY.pressedChangedHandler = { _, _, pressed in
+                     if pressed {
+                         self.tapAction()
+                         print("Button Y pressed")
+                     }
+                 }
+                 
+                 // Thumbsticks
+                 gamepad.leftThumbstick.valueChangedHandler = { _, x, y in
+                     print("Left Thumbstick moved: x=\(x), y=\(y)")
+                 }
+                 gamepad.rightThumbstick.valueChangedHandler = { _, x, y in
+                     print("Right Thumbstick moved: x=\(x), y=\(y)")
+                 }
+                 
+                 // D-Pad
+                 gamepad.dpad.valueChangedHandler = { _, x, y in
+                     print("D-Pad moved: x=\(x), y=\(y)")
+                 }
+                 
+                 // Triggers
+                 gamepad.leftTrigger.pressedChangedHandler = { _, _, pressed in
+                     if pressed { print("Left Trigger pressed") }
+                 }
+                 gamepad.rightTrigger.pressedChangedHandler = { _, _, pressed in
+                     if pressed { print("Right Trigger pressed") }
+                 }
+                 
+                 // Shoulder buttons
+                 gamepad.leftShoulder.pressedChangedHandler = { _, _, pressed in
+                     if pressed { print("Left Shoulder pressed") }
+                 }
+                 gamepad.rightShoulder.pressedChangedHandler = { _, _, pressed in
+                     if pressed { print("Right Shoulder pressed") }
+                 }
+                 
+                 // Menu button
+                 gamepad.buttonMenu.pressedChangedHandler = { _, _, pressed in
+                     if pressed { print("Menu button pressed") }
+                 }
+             }
+         }
+     }
     
     @IBAction func btnInfoAction(_ sender: Any) {
         let vc = DescriptionVC()

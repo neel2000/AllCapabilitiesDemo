@@ -226,6 +226,51 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 //        }
     }
     
+    @IBAction func btnIncreadedDebuggingMemoryLimitAction(_ sender: Any) {
+        let vc = DescriptionVC()
+        vc.infoText = """
+        
+        The “Increased Debugging Memory Limit” capability in iOS is a developer-focused feature that allows your app to use more memory than usual when running in a debugging session. This is mainly useful for apps that handle large data sets, high-resolution images, or intensive computations during development.
+
+        Here’s a concise breakdown:
+
+        🔑 What It Is
+
+        Normally, iOS imposes memory limits on apps to prevent a single app from consuming too much system memory, which could affect stability. When you enable Increased Debugging Memory Limit:
+
+            • The system raises the memory cap while debugging.
+
+            • Your app can load larger resources (like big datasets or complex scenes) without crashing in the debugger.
+
+            • It does not affect the memory limit for production builds on users’ devices.
+
+        📌 Use Cases
+
+            • Loading high-resolution images or videos for testing.
+
+            • Processing large data arrays or JSON datasets.
+
+            • Debugging memory-heavy algorithms like AI models, 3D graphics, or AR scenes.
+
+        📱 How It Works
+
+            • Only available when the app is run from Xcode in debug mode.
+
+            • The system automatically adjusts the memory limit — no runtime code changes are required.
+
+            • You don’t enable it in code, you enable it as an App Capability in Xcode (or via your scheme).
+
+        ⚠️ Important Notes
+
+            • This capability cannot be used in production; it’s strictly for development.
+
+            • Memory limits in production remain strict to avoid affecting device stability.
+
+            • Helps catch memory-related bugs early without crashing the debugger due to low memory.
+        """
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @IBAction func btnNFCTagAction(_ sender: Any) {
         let vc = NFCReadWriteViewController()
         self.navigationController?.pushViewController(vc, animated: true)
@@ -303,7 +348,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func btnExtendedVirtualAddressingAction(_ sender: Any) {
         let vc = DescriptionVC()
         vc.infoText = """
-            
             The Extended Virtual Addressing capability allows apps to use a much larger virtual memory space on supported Apple devices. This is especially useful for apps that handle very large datasets, complex files, or advanced workloads like video editing, 3D modeling, AI/ML, and scientific computing.
 
             🔹 What It Does
@@ -337,7 +381,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func btnDefaultNavigtionAppAction(_ sender: Any) {
         let vc = DescriptionVC()
         vc.infoText = """
-            
             The Default Navigation App capability allows third-party apps to register themselves as a user’s preferred navigation app, similar to how users can choose a default browser or mail app. With this capability, your app can replace Apple Maps as the system-wide navigation choice.
 
             🔹 What It Does
@@ -375,6 +418,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func btnHomeKitAction(_ sender: Any) {
+        let vc = HomeKitVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     private func showAlert(message: String) {
         let alert = UIAlertController(title: "Info", message: message, preferredStyle: .alert)

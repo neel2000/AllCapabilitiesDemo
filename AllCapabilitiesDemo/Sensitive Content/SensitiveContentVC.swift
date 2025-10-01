@@ -157,6 +157,11 @@ import SensitiveContentAnalysis
 import AVFoundation
 import UniformTypeIdentifiers
 
+//For Testing this capability,
+  //1) Install "SensitiveContentAnalysis.mobileconfig" profile in ios device. ("SensitiveContentAnalysis.mobileconfig" profile is available in "Sensitive Content Folder")
+  //2) add "qr-sca.jpg" & "qr-sca.mov" in the ios device photo library. ("qr-sca.jpg" & "qr-sca.mov" are available in "Sensitive Content Folder")
+  //3) Select "qr-sca.jpg" for image sensitive testing OR Select "qr-sca.mov" for video sensitive testing.
+
 @available(iOS 17.0, *)
 final class SensitiveContentVC: UIViewController, PHPickerViewControllerDelegate {
     
