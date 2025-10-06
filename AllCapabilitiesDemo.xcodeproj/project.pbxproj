@@ -18,6 +18,8 @@
 		513DC6E52E42305000DA2C0F /* AppGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51346A6D2E3B42D5008664DB /* AppGroupsViewController.swift */; };
 		514B43752E62CB2F00ED8697 /* JournalingSuggestionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51186E1C2E5886B100A1D754 /* JournalingSuggestionsVC.swift */; };
 		514B43762E62CB2F00ED8697 /* JournalingSuggestionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51186E1D2E5886B100A1D754 /* JournalingSuggestionsVC.xib */; };
+		5161AFE62E8E7FE7009FCBB9 /* MessageCollaborationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5161AFE52E8E7FE7009FCBB9 /* MessageCollaborationVC.xib */; };
+		5161AFE72E8E7FE7009FCBB9 /* MessageCollaborationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5161AFE42E8E7FE7009FCBB9 /* MessageCollaborationVC.swift */; };
 		5161B7982E55CDC300A945BF /* KeyValueStorageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5161B7962E55CDC300A945BF /* KeyValueStorageViewController.swift */; };
 		5161B7992E55CDC300A945BF /* KeyValueStorageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5161B7972E55CDC300A945BF /* KeyValueStorageViewController.xib */; };
 		5161B79D2E56064D00A945BF /* MultipathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5161B79B2E56064D00A945BF /* MultipathViewController.swift */; };
@@ -46,6 +48,8 @@
 		51CD89822E8CFB5400FFB93B /* qr-sca.mov in Resources */ = {isa = PBXBuildFile; fileRef = 51CD89812E8CFB5400FFB93B /* qr-sca.mov */; };
 		51CD89832E8CFB5400FFB93B /* qr-sca.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51CD89802E8CFB5400FFB93B /* qr-sca.jpg */; };
 		51CD89852E8CFBD800FFB93B /* SensitiveContentAnalysis.mobileconfig in Resources */ = {isa = PBXBuildFile; fileRef = 51CD89842E8CFBD800FFB93B /* SensitiveContentAnalysis.mobileconfig */; };
+		51CD898C2E8D677B00FFB93B /* FamilyControlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CD898A2E8D677B00FFB93B /* FamilyControlVC.swift */; };
+		51CD898D2E8D677B00FFB93B /* FamilyControlVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51CD898B2E8D677B00FFB93B /* FamilyControlVC.xib */; };
 		51D036AA2E3A013900948296 /* AppleLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51D036A92E3A013900948296 /* AppleLoginViewController.xib */; };
 		51D036AB2E3A013900948296 /* AppleLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D036A82E3A013900948296 /* AppleLoginViewController.swift */; };
 		51D1D91C2E7BD5340010BDF4 /* CommunicationNotificationsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51D1D91B2E7BD5340010BDF4 /* CommunicationNotificationsVC.xib */; };
@@ -64,6 +68,9 @@
 		51D9F1412E797D4400ED97C9 /* JournalingSuggestionsVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D9F1402E797D4400ED97C9 /* JournalingSuggestionsVC1.swift */; };
 		51D9F1452E79A01E00ED97C9 /* ClassKitVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51D9F1442E79A01E00ED97C9 /* ClassKitVC.xib */; };
 		51D9F1462E79A01E00ED97C9 /* ClassKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D9F1432E79A01E00ED97C9 /* ClassKitVC.swift */; };
+		51E38F942E93992D001B0A50 /* Airbridge in Frameworks */ = {isa = PBXBuildFile; productRef = 51E38F932E93992D001B0A50 /* Airbridge */; };
+		51E38F9D2E93DF34001B0A50 /* ShallowDepthPressureVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E38F9C2E93DF34001B0A50 /* ShallowDepthPressureVC.xib */; };
+		51E38F9E2E93DF34001B0A50 /* ShallowDepthPressureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E38F9B2E93DF34001B0A50 /* ShallowDepthPressureVC.swift */; };
 		51E700F12E0D88A30033F74D /* WeatherKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E700F02E0D88A30033F74D /* WeatherKitViewController.xib */; };
 		51E700F22E0D88A30033F74D /* WeatherKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E700EF2E0D88A30033F74D /* WeatherKitViewController.swift */; };
 		51EA11822E547D7700FF4947 /* GroupActivitiesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EA11802E547D7700FF4947 /* GroupActivitiesVC.swift */; };
@@ -218,6 +225,8 @@
 		51346A6C2E3B4216008664DB /* DemoWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DemoWidgetExtension.entitlements; sourceTree = "<group>"; };
 		51346A6D2E3B42D5008664DB /* AppGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroupsViewController.swift; sourceTree = "<group>"; };
 		51346A6E2E3B42D5008664DB /* AppGroupsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppGroupsViewController.xib; sourceTree = "<group>"; };
+		5161AFE42E8E7FE7009FCBB9 /* MessageCollaborationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCollaborationVC.swift; sourceTree = "<group>"; };
+		5161AFE52E8E7FE7009FCBB9 /* MessageCollaborationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCollaborationVC.xib; sourceTree = "<group>"; };
 		5161B7962E55CDC300A945BF /* KeyValueStorageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageViewController.swift; sourceTree = "<group>"; };
 		5161B7972E55CDC300A945BF /* KeyValueStorageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyValueStorageViewController.xib; sourceTree = "<group>"; };
 		5161B79B2E56064D00A945BF /* MultipathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipathViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +254,8 @@
 		51CD89802E8CFB5400FFB93B /* qr-sca.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "qr-sca.jpg"; sourceTree = "<group>"; };
 		51CD89812E8CFB5400FFB93B /* qr-sca.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "qr-sca.mov"; sourceTree = "<group>"; };
 		51CD89842E8CFBD800FFB93B /* SensitiveContentAnalysis.mobileconfig */ = {isa = PBXFileReference; lastKnownFileType = text; path = SensitiveContentAnalysis.mobileconfig; sourceTree = "<group>"; };
+		51CD898A2E8D677B00FFB93B /* FamilyControlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyControlVC.swift; sourceTree = "<group>"; };
+		51CD898B2E8D677B00FFB93B /* FamilyControlVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyControlVC.xib; sourceTree = "<group>"; };
 		51D036A82E3A013900948296 /* AppleLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginViewController.swift; sourceTree = "<group>"; };
 		51D036A92E3A013900948296 /* AppleLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppleLoginViewController.xib; sourceTree = "<group>"; };
 		51D1D91A2E7BD5340010BDF4 /* CommunicationNotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationNotificationsVC.swift; sourceTree = "<group>"; };
@@ -263,6 +274,8 @@
 		51D9F1402E797D4400ED97C9 /* JournalingSuggestionsVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalingSuggestionsVC1.swift; sourceTree = "<group>"; };
 		51D9F1432E79A01E00ED97C9 /* ClassKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassKitVC.swift; sourceTree = "<group>"; };
 		51D9F1442E79A01E00ED97C9 /* ClassKitVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassKitVC.xib; sourceTree = "<group>"; };
+		51E38F9B2E93DF34001B0A50 /* ShallowDepthPressureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShallowDepthPressureVC.swift; sourceTree = "<group>"; };
+		51E38F9C2E93DF34001B0A50 /* ShallowDepthPressureVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShallowDepthPressureVC.xib; sourceTree = "<group>"; };
 		51E700EF2E0D88A30033F74D /* WeatherKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherKitViewController.swift; sourceTree = "<group>"; };
 		51E700F02E0D88A30033F74D /* WeatherKitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherKitViewController.xib; sourceTree = "<group>"; };
 		51EA11802E547D7700FF4947 /* GroupActivitiesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupActivitiesVC.swift; sourceTree = "<group>"; };
@@ -387,6 +400,7 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		51346A582E3B403F008664DB /* DemoWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (51346A672E3B4040008664DB /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DemoWidget; sourceTree = "<group>"; };
 		51BBC7382E40DA1100211F13 /* SaveTextIntent */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (51BBC73F2E40DA1100211F13 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = SaveTextIntent; sourceTree = "<group>"; };
+		51E38F952E939B41001B0A50 /* Shared with you */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Shared with you"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +425,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E38F942E93992D001B0A50 /* Airbridge in Frameworks */,
 				51B526052E44E7B900999ABE /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,6 +473,15 @@
 				51346A6E2E3B42D5008664DB /* AppGroupsViewController.xib */,
 			);
 			path = "App Groups";
+			sourceTree = "<group>";
+		};
+		5161AFE12E8E7FBE009FCBB9 /* Mesage Collaboration */ = {
+			isa = PBXGroup;
+			children = (
+				5161AFE42E8E7FE7009FCBB9 /* MessageCollaborationVC.swift */,
+				5161AFE52E8E7FE7009FCBB9 /* MessageCollaborationVC.xib */,
+			);
+			path = "Mesage Collaboration";
 			sourceTree = "<group>";
 		};
 		5161B79A2E5605C300A945BF /* MultiPath */ = {
@@ -534,6 +558,15 @@
 			path = "5G Network Slicing";
 			sourceTree = "<group>";
 		};
+		51CD89892E8D676300FFB93B /* Family Control */ = {
+			isa = PBXGroup;
+			children = (
+				51CD898A2E8D677B00FFB93B /* FamilyControlVC.swift */,
+				51CD898B2E8D677B00FFB93B /* FamilyControlVC.xib */,
+			);
+			path = "Family Control";
+			sourceTree = "<group>";
+		};
 		51D036A72E3A011C00948296 /* Apple Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,6 +630,15 @@
 				51D9F1442E79A01E00ED97C9 /* ClassKitVC.xib */,
 			);
 			path = ClassKit;
+			sourceTree = "<group>";
+		};
+		51E38F9A2E93DF23001B0A50 /* Shallow Depth and Pressure */ = {
+			isa = PBXGroup;
+			children = (
+				51E38F9B2E93DF34001B0A50 /* ShallowDepthPressureVC.swift */,
+				51E38F9C2E93DF34001B0A50 /* ShallowDepthPressureVC.xib */,
+			);
+			path = "Shallow Depth and Pressure";
 			sourceTree = "<group>";
 		};
 		51E700EE2E0D88890033F74D /* WeatherKit */ = {
@@ -872,7 +914,9 @@
 				BD2ECEBF2D0841CA00639E0D /* AppDelegate.swift */,
 				BD2ECEC12D0841CA00639E0D /* SceneDelegate.swift */,
 				BD2ECEC32D0841CA00639E0D /* ViewController.swift */,
+				5161AFE12E8E7FBE009FCBB9 /* Mesage Collaboration */,
 				51D9F1422E79A00900ED97C9 /* ClassKit */,
+				51CD89892E8D676300FFB93B /* Family Control */,
 				51B525FD2E44868600999ABE /* Wallet */,
 				51D9F1322E793ECA00ED97C9 /* Time Sensitive Notification */,
 				51D1D9562E7C34210010BDF4 /* Game Center */,
@@ -905,7 +949,9 @@
 				51F368942E5C6CCB00B168F5 /* Multitasking Camera Acsess */,
 				51D1D9222E7C0D080010BDF4 /* Default Translation App */,
 				51F158E32E7D8BDF00408E2B /* HomeKit */,
+				51E38F9A2E93DF23001B0A50 /* Shallow Depth and Pressure */,
 				519E1B272E5D9C8600DFC311 /* Hotspot */,
+				51E38F952E939B41001B0A50 /* Shared with you */,
 				BD2ECEC82D0841CB00639E0D /* Assets.xcassets */,
 				BD2ECEC52D0841CA00639E0D /* Main.storyboard */,
 				BD2ECECA2D0841CB00639E0D /* LaunchScreen.storyboard */,
@@ -1020,6 +1066,9 @@
 				51346A652E3B4040008664DB /* PBXTargetDependency */,
 				51BBC73D2E40DA1100211F13 /* PBXTargetDependency */,
 			);
+			fileSystemSynchronizedGroups = (
+				51E38F952E939B41001B0A50 /* Shared with you */,
+			);
 			name = AllCapabilitiesDemo;
 			productName = AllCapabilitiesDemo;
 			productReference = BD2ECEBC2D0841CA00639E0D /* AllCapabilitiesDemo.app */;
@@ -1101,6 +1150,7 @@
 			mainGroup = BD2ECEB32D0841CA00639E0D;
 			packageReferences = (
 				51B526032E44E7B900999ABE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				51E38F922E93992D001B0A50 /* XCRemoteSwiftPackageReference "airbridge-ios-sdk-deployment" */,
 			);
 			productRefGroup = BD2ECEBD2D0841CA00639E0D /* Products */;
 			projectDirPath = "";
@@ -1148,6 +1198,7 @@
 				51D9F1452E79A01E00ED97C9 /* ClassKitVC.xib in Resources */,
 				51F01C0E2E53436F00F04F6B /* Roboto-Light.ttf in Resources */,
 				51BD3B302E7A797B0043AD9E /* WirelessAccessoryConfigurationVC.xib in Resources */,
+				5161AFE62E8E7FE7009FCBB9 /* MessageCollaborationVC.xib in Resources */,
 				51F01C0F2E53436F00F04F6B /* Poppins-Medium.ttf in Resources */,
 				51F01C102E53436F00F04F6B /* Segoe UI Bold.ttf in Resources */,
 				51F01C112E53436F00F04F6B /* Roboto-Medium.ttf in Resources */,
@@ -1183,9 +1234,11 @@
 				51F01BE82E532B7900F04F6B /* GreycliffCF-Light.otf in Resources */,
 				51F01BE92E532B7900F04F6B /* GreycliffCF-ExtraLightOblique.otf in Resources */,
 				51F01BEA2E532B7900F04F6B /* GreycliffCF-RegularOblique.otf in Resources */,
+				51CD898D2E8D677B00FFB93B /* FamilyControlVC.xib in Resources */,
 				51F01BEB2E532B7900F04F6B /* GreycliffCF-ExtraBoldOblique.otf in Resources */,
 				51F368A72E5C760D00B168F5 /* FusumaVC.xib in Resources */,
 				51D1D9252E7C0D230010BDF4 /* DefaultTranslationAppVC.xib in Resources */,
+				51E38F9D2E93DF34001B0A50 /* ShallowDepthPressureVC.xib in Resources */,
 				51F368A82E5C760D00B168F5 /* FSVideoCameraViewVC.xib in Resources */,
 				51CD89822E8CFB5400FFB93B /* qr-sca.mov in Resources */,
 				51CD89832E8CFB5400FFB93B /* qr-sca.jpg in Resources */,
@@ -1312,11 +1365,14 @@
 				51F01B972E53249C00F04F6B /* AccessWiFiInfoViewController.swift in Sources */,
 				51F01BAA2E53251800F04F6B /* DefaultMessagingAppVC.swift in Sources */,
 				51D036AB2E3A013900948296 /* AppleLoginViewController.swift in Sources */,
+				51E38F9E2E93DF34001B0A50 /* ShallowDepthPressureVC.swift in Sources */,
+				5161AFE72E8E7FE7009FCBB9 /* MessageCollaborationVC.swift in Sources */,
 				51F01BA52E5324F000F04F6B /* DefaultCallingAppVC.swift in Sources */,
 				51F01BA62E5324F000F04F6B /* CallHandler.swift in Sources */,
 				5117C1162E3C995200D8FCCD /* DataProtectionVC.swift in Sources */,
 				51C979482E4367F6006E99C6 /* FiveGNetworkSliceVC.swift in Sources */,
 				BD2ECEC02D0841CA00639E0D /* AppDelegate.swift in Sources */,
+				51CD898C2E8D677B00FFB93B /* FamilyControlVC.swift in Sources */,
 				51B526012E44869800999ABE /* WalletVC.swift in Sources */,
 				51D1D9582E7C34430010BDF4 /* GameCenterVC.swift in Sources */,
 				5161B7982E55CDC300A945BF /* KeyValueStorageViewController.swift in Sources */,
@@ -1672,6 +1728,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AllCapabilitiesDemo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = AppDemo;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "To read and write data";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to the camera";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "To Share Health Related Data to this app";
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "Configure smart home accessories";
@@ -1683,7 +1741,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1715,6 +1773,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AllCapabilitiesDemo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = AppDemo;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "To read and write data";
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to the camera";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "To Share Health Related Data to this app";
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "Configure smart home accessories";
@@ -1726,7 +1786,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1878,6 +1938,14 @@
 				minimumVersion = 8.0.1;
 			};
 		};
+		51E38F922E93992D001B0A50 /* XCRemoteSwiftPackageReference "airbridge-ios-sdk-deployment" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ab180/airbridge-ios-sdk-deployment";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.8.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1885,6 +1953,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 51B526032E44E7B900999ABE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
+		};
+		51E38F932E93992D001B0A50 /* Airbridge */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51E38F922E93992D001B0A50 /* XCRemoteSwiftPackageReference "airbridge-ios-sdk-deployment" */;
+			productName = Airbridge;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

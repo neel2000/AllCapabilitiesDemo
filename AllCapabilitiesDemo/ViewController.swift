@@ -423,6 +423,30 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func btnFamilyControlAction(_ sender: Any) {
+        let vc = UIHostingController(rootView: FamilyControlVC())
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnMessageCollaboration(_ sender: Any) {
+        let vc  = MessageCollaborationVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnSharedWithYouAction(_ sender: Any) {
+        if #available(iOS 16.0, *) {
+            let vc = SharedWithYouVC()
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            showAlert(message: "Shared with you is available on iOS 16.0 and later")
+        }
+    }
+    
+    @IBAction func btnShallowDepthAction(_ sender: Any) {
+        let vc = ShallowDepthPressureVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     private func showAlert(message: String) {
         let alert = UIAlertController(title: "Info", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

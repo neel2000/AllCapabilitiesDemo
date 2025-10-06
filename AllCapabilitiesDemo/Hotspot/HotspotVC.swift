@@ -8,6 +8,7 @@
 import UIKit
 import NetworkExtension
 import SystemConfiguration.CaptiveNetwork
+import Airbridge
 
 class HotspotVC: UIViewController {
     
@@ -88,6 +89,36 @@ class HotspotVC: UIViewController {
         ])
     }
     
+    func shareLink() {
+        let name = "Kardder" + " • " + "Test"
+
+        // Create your custom deep link with query params
+        let deepLink = "appcapabilities://sharepost"
+
+        Airbridge.createTrackingLink(
+            channel: "share_post",
+            option: [
+                AirbridgeTrackingLinkOption.CAMPAIGN: "share_post_campaign",
+                AirbridgeTrackingLinkOption.DEEPLINK_URL: deepLink,
+                AirbridgeTrackingLinkOption.FALLBACK_IOS: "https://apps.apple.com/in/app/kardder/id1446851842",
+                AirbridgeTrackingLinkOption.FALLBACK_ANDROID: "https://play.google.com/store/apps/details?id=com.app.kardder",
+                AirbridgeTrackingLinkOption.FALLBACK_DESKTOP: "https://kardder.com/",
+                AirbridgeTrackingLinkOption.OGTAG_TITLE: name,
+                AirbridgeTrackingLinkOption.OGTAG_DESCRIPTION: "Kardder Post",
+                AirbridgeTrackingLinkOption.OGTAG_IMAGE_URL: "https://kardder.com/Live/public/storage/image/profile_pics/user_profiles_1737552232_fQTNsm46Bg.png"
+            ],
+            onSuccess: { trackingLink in
+                // Handling created tracking-link
+                print(trackingLink)
+                self.shareLink(trackingLink.shortURL)
+            },
+            onFailure: { error in
+                // Handling error
+                print(error.localizedDescription)
+            }
+        )
+    }
+    
     @objc private func connectToWifi() {
         guard let ssid = ssidTextField.text, !ssid.isEmpty else {
             statusLabel.text = "⚠️ Please enter SSID"
@@ -156,5 +187,18 @@ class HotspotVC: UIViewController {
             }
         }
         statusLabel.text = "❌ Failed to verify connection to \(ssid)"
+    }
+}
+
+extension UIViewController {
+    
+    func shareLink(_ link: URL) {
+        let activityViewController = UIActivityViewController(
+            activityItems: [link],
+            applicationActivities: nil
+        )
+        DispatchQueue.main.async {
+            self.present(activityViewController, animated: true, completion: nil)
+        }
     }
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 import Intents
+import CloudKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -26,7 +27,106 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
         // Fallback if the activity carries a URL like tel:123456789
-        handle(userActivity: userActivity)
+        //handle(userActivity: userActivity)
+        print("activityType =", userActivity.activityType)
+        
+        // Prefer the intent payload over webpageURL for call intents
+        if let interaction = userActivity.interaction,
+           let audioIntent = interaction.intent as? INStartCallIntent,
+           let handle = audioIntent.contacts?.first?.personHandle?.value,
+           !handle.isEmpty {
+            // handle is the phone number/identifier to dial
+            startCall(with: handle)
+            return
+        }
+        
+        
+        //For Handling Collaboration link, Code is in "MessageCollaborationVC.swift" File
+        guard let windowScene = scene as? UIWindowScene,
+              let rootVC = windowScene.windows.first?.rootViewController else {
+            print("Failed to access UIWindowScene or rootViewController")
+            return
+        }
+        
+        if userActivity.activityType == NSUserActivityTypeBrowsingWeb,
+           let url = userActivity.webpageURL,
+           let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
+           components.path.contains("share"),
+           let userInfo = userActivity.userInfo,
+           let cloudKitMetadataArray = userInfo["UIUserActivityCloudKitShareMetadataKey"] as? [CKShare.Metadata],
+           let shareMetadata = cloudKitMetadataArray.first {
+            
+            // Get or create MessageCollaborationVC
+            let messageVC: MessageCollaborationVC
+            if let navController = rootVC as? UINavigationController,
+               let existingVC = navController.topViewController as? MessageCollaborationVC {
+                messageVC = existingVC
+            } else if let existingVC = rootVC as? MessageCollaborationVC {
+                messageVC = existingVC
+            } else {
+                messageVC = MessageCollaborationVC()
+                let navController = UINavigationController(rootViewController: messageVC)
+                navController.modalPresentationStyle = .fullScreen
+                rootVC.present(navController, animated: true)
+            }
+            
+            // Accept the share invitation using CKAcceptSharesOperation
+            let acceptOperation = CKAcceptSharesOperation(shareMetadatas: [shareMetadata])
+            acceptOperation.perShareCompletionBlock = { (metadata: CKShare.Metadata, share: CKShare?, error: Error?) in
+                if let error = error {
+                    print("Failed to accept share: \(error)")
+                    DispatchQueue.main.async {
+                        messageVC.showAlert(title: "Share Error", message: "Failed to accept share: \(error.localizedDescription)")
+                    }
+                    return
+                }
+                // Share accepted, now load the root record document
+                guard let share = share else {
+                    print("No CKShare received")
+                    DispatchQueue.main.async {
+                        messageVC.showAlert(title: "Share Error", message: "Invalid share received")
+                    }
+                    return
+                }
+                
+                // Fetch the root record from sharedCloudDatabase using the share's rootRecordID
+                messageVC.container.sharedCloudDatabase.fetch(withRecordID: share.recordID) { (record: CKRecord?, error: Error?) in
+                    if let error = error {
+                        print("Error fetching shared record: \(error)")
+                        DispatchQueue.main.async {
+                            messageVC.showAlert(title: "Load Error", message: "Could not load shared document: \(error.localizedDescription)")
+                        }
+                        return
+                    }
+                    guard let record = record else {
+                        print("No record found for shared document")
+                        DispatchQueue.main.async {
+                            messageVC.showAlert(title: "Load Error", message: "Shared document not found")
+                        }
+                        return
+                    }
+                    DispatchQueue.main.async {
+                        // Use the existing handleShareMetadata method to load the document into textView
+                        messageVC.handleShareMetadata(metadata)
+                    }
+                }
+            }
+            
+            acceptOperation.acceptSharesResultBlock = { result in
+                switch result {
+                case .success:
+                    print("Successfully accepted CloudKit share")
+                case .failure(let error):
+                    print("Error completing share acceptance: \(error)")
+                    DispatchQueue.main.async {
+                        messageVC.showAlert(title: "Share Error", message: "Failed to complete share: \(error.localizedDescription)")
+                    }
+                }
+            }
+            
+            // Add operation to the container
+            messageVC.container.add(acceptOperation)
+        }
     }
     
     func application(_ application: UIApplication,
@@ -82,6 +182,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-
 }
-

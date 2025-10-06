@@ -1,6 +1,15 @@
 {
-  "originHash" : "8f41067740b6399ffc93220974bde95c34fe4fe411e2dc043beb699efc0e7d84",
+  "originHash" : "cc109e9e9a362ad8b68e778c93658cd1fc1f42210d3f36da89a1be3e6664450a",
   "pins" : [
+    {
+      "identity" : "airbridge-ios-sdk-deployment",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ab180/airbridge-ios-sdk-deployment",
+      "state" : {
+        "revision" : "21687865c1461956706cef5506f9e5f8bdf97444",
+        "version" : "4.8.1"
+      }
+    },
     {
       "identity" : "iqkeyboardcore",
       "kind" : "remoteSourceControl",

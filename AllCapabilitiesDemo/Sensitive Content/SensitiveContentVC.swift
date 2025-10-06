@@ -299,7 +299,7 @@ final class SensitiveContentVC: UIViewController, PHPickerViewControllerDelegate
                     if let error = error {
                         Task { @MainActor in
                             self.spinner.stopAnimating()
-                            self.showAlert(message: "Failed to load video: $$error.localizedDescription)")
+                            self.showAlert(message: "Failed to load video: \(error.localizedDescription)")
                         }
                         return
                     }
@@ -332,7 +332,7 @@ final class SensitiveContentVC: UIViewController, PHPickerViewControllerDelegate
                     } catch {
                         Task { @MainActor in
                             self.spinner.stopAnimating()
-                            self.showAlert(message: "Failed to stage video: $$error.localizedDescription)")
+                            self.showAlert(message: "Failed to stage video: \(error.localizedDescription)")
                         }
                     }
                 }
@@ -405,7 +405,7 @@ final class SensitiveContentVC: UIViewController, PHPickerViewControllerDelegate
                 await MainActor.run {
                     self.videoHandler = nil
                     self.spinner.stopAnimating()
-                    self.showAlert(message: "Video analysis failed: $$error.localizedDescription)")
+                    self.showAlert(message: "Video analysis failed: \(error.localizedDescription)")
                 }
             }
             
