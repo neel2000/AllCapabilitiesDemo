@@ -14,6 +14,8 @@
 	<array>
 		<string>applinks:appcapabilitiesdemo.airbridge.io</string>
 	</array>
+	<key>com.apple.developer.associated-domains.mdm-managed</key>
+	<true/>
 	<key>com.apple.developer.authentication-services.autofill-credential-provider</key>
 	<true/>
 	<key>com.apple.developer.avfoundation.multitasking-camera-access</key>
@@ -28,11 +30,15 @@
 	<string>NSFileProtectionComplete</string>
 	<key>com.apple.developer.family-controls</key>
 	<true/>
+	<key>com.apple.developer.game-center</key>
+	<true/>
 	<key>com.apple.developer.group-session</key>
 	<true/>
 	<key>com.apple.developer.healthkit</key>
 	<true/>
 	<key>com.apple.developer.healthkit.background-delivery</key>
+	<true/>
+	<key>com.apple.developer.healthkit.recalibrate-estimates</key>
 	<true/>
 	<key>com.apple.developer.homekit</key>
 	<true/>
@@ -53,8 +59,16 @@
 	<array>
 		<string>suggestions</string>
 	</array>
+	<key>com.apple.developer.kernel.extended-virtual-addressing</key>
+	<true/>
 	<key>com.apple.developer.kernel.increased-debugging-memory-limit</key>
 	<true/>
+	<key>com.apple.developer.kernel.increased-memory-limit</key>
+	<true/>
+	<key>com.apple.developer.managed-app-distribution.install-ui</key>
+	<array>
+		<string>managed-app</string>
+	</array>
 	<key>com.apple.developer.messages.critical-messaging</key>
 	<true/>
 	<key>com.apple.developer.messaging-app</key>

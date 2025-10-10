@@ -9,6 +9,18 @@ import UIKit
 import NetworkExtension
 import SystemConfiguration.CaptiveNetwork
 import Airbridge
+import AVFoundation
+import AVKit
+
+extension HotspotVC: AVPictureInPictureControllerDelegate {
+    func pictureInPictureControllerDidStartPictureInPicture(_ pictureInPictureController: AVPictureInPictureController) {
+        print("✅ PiP started")
+    }
+
+    func pictureInPictureControllerDidStopPictureInPicture(_ pictureInPictureController: AVPictureInPictureController) {
+        print("🛑 PiP stopped")
+    }
+}
 
 class HotspotVC: UIViewController {
     
@@ -48,13 +60,34 @@ class HotspotVC: UIViewController {
         return lbl
     }()
     
+    var player: AVPlayer!
+       var playerLayer: AVPlayerLayer!
+       var pipController: AVPictureInPictureController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = "WiFi Demo"
         
-        setupLayout()
+       setupLayout()
+        setupVideo()
     }
+    
+    func setupVideo() {
+        let url = URL(string: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4")!
+        player = AVPlayer(url: url)
+        playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = CGRect(x: 0, y: 50, width: UIScreen.main.bounds.width, height: 400)
+        view.layer.addSublayer(playerLayer)
+        
+        if AVPictureInPictureController.isPictureInPictureSupported() {
+            pipController = AVPictureInPictureController(playerLayer: playerLayer)
+            pipController?.delegate = self
+        }
+        
+        player.play()
+    }
+
     
     private func setupLayout() {
         view.addSubview(ssidTextField)
@@ -78,7 +111,7 @@ class HotspotVC: UIViewController {
             passwordTextField.trailingAnchor.constraint(equalTo: ssidTextField.trailingAnchor),
             passwordTextField.heightAnchor.constraint(equalToConstant: 44),
             
-            connectButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 30),
+            connectButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 300),
             connectButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             connectButton.widthAnchor.constraint(equalToConstant: 180),
             connectButton.heightAnchor.constraint(equalToConstant: 50),
@@ -120,6 +153,15 @@ class HotspotVC: UIViewController {
     }
     
     @objc private func connectToWifi() {
+        
+        if let pip = pipController {
+            if pip.isPictureInPictureActive {
+                pip.stopPictureInPicture()
+            } else {
+                pip.startPictureInPicture()
+            }
+        }
+        return
         guard let ssid = ssidTextField.text, !ssid.isEmpty else {
             statusLabel.text = "⚠️ Please enter SSID"
             return

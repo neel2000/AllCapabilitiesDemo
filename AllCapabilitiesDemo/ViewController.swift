@@ -20,7 +20,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var btnCapiCloud: UIButton!
     
-    
     @IBOutlet weak var mview: UIView!
     
     private var locationManager = CLLocationManager()
@@ -122,6 +121,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func btnAutoFillCredentialProviderAction(_ sender: Any) {
         let vc = AutoFillCredentialViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnAppTransportSecurityExcetionAction(_ sender: Any) {
+        let vc = AppTransportSecurityExceptionVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -444,6 +448,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func btnShallowDepthAction(_ sender: Any) {
         let vc = ShallowDepthPressureVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnManagedAppAction(_ sender: Any) {
+        let vc = ManagedAppInstallationUIVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnMDMManagedAssociatedDomainsAction(_ sender: Any) {
+        let vc = MDMManagedAssociatedDomainsVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnAgoraAction(_ sender: Any) {
+        let vc = AgoraDemoVCViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

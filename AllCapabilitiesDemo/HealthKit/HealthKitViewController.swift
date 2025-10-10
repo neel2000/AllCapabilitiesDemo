@@ -6,9 +6,9 @@
 //
 
 
-import HealthKit
 import SwiftUI
 import Combine
+import HealthKit
 
 @available(iOS 16.0, *)
 struct HealthSummaryView: View {
@@ -30,6 +30,8 @@ struct HealthSummaryView: View {
                     .ignoresSafeArea()
                     
                     VStack(spacing: 24) {
+                        
+                        // MARK: - Date Picker
                         DatePicker("Select Date", selection: $selectedDate, displayedComponents: .date)
                             .datePickerStyle(.compact)
                             .padding(.horizontal)
@@ -37,6 +39,7 @@ struct HealthSummaryView: View {
                             .cornerRadius(10)
                             .colorMultiply(.white)
                         
+                        // MARK: - Load Data Button
                         Button("Load Data") {
                             loadHealthData(for: selectedDate)
                         }
@@ -46,6 +49,22 @@ struct HealthSummaryView: View {
                         .background(Color.green)
                         .cornerRadius(10)
                         
+                        // MARK: - Save Workout Button
+                        Button("Save Running Workout") {
+                            //saveRunningWorkout(distance: 1000, // Convert km -> m
+//                                               duration: 1200, // 15 mins example
+//                                               energy: 0.52)
+                            saveRunningWorkout(distance: distance * 1000, // Convert km -> m
+                                               duration: 900, // 15 mins example
+                                               energy: energy)
+                        }
+                        .foregroundColor(.white)
+                        .padding(.horizontal)
+                        .padding(.vertical, 8)
+                        .background(Color.orange)
+                        .cornerRadius(10)
+                        
+                        // MARK: - Health Cards
                         healthCard(title: "👣 Steps", value: "\(Int(steps))", unit: "steps", color: .green)
                         healthCard(title: "❤️ Heart Rate", value: String(format: "%.0f", heartRate), unit: "BPM", color: .red)
                         healthCard(title: "🔥 Energy", value: String(format: "%.2f", energy), unit: "kcal", color: .orange)
@@ -57,9 +76,10 @@ struct HealthSummaryView: View {
                     .padding()
                 }
             }
-            .background(LinearGradient(colors: [.blue.opacity(0.6), .purple],
-                                       startPoint: .topLeading,
-                                       endPoint: .bottomTrailing)
+            .background(
+                LinearGradient(colors: [.blue.opacity(0.6), .purple],
+                               startPoint: .topLeading,
+                               endPoint: .bottomTrailing)
                 .ignoresSafeArea()
             )
         }
@@ -69,20 +89,54 @@ struct HealthSummaryView: View {
                 manager.startObserving()
             }
         }
-        // Listen for real-time changes from HealthKit
+        // Listen for real-time HealthKit changes
         .onReceive(manager.stepsPublisher) { _ in loadHealthData(for: selectedDate) }
         .onReceive(manager.heartRatePublisher) { _ in loadHealthData(for: selectedDate) }
         .onReceive(manager.energyPublisher) { _ in loadHealthData(for: selectedDate) }
         .onReceive(manager.distancePublisher) { _ in loadHealthData(for: selectedDate) }
     }
 
+    // MARK: - Load Health Data
     func loadHealthData(for date: Date) {
         manager.fetch(.stepCount, unit: .count(), for: date) { self.steps = $0 }
         manager.fetch(.heartRate, unit: HKUnit.count().unitDivided(by: .minute()), for: date) { self.heartRate = $0 }
         manager.fetch(.activeEnergyBurned, unit: .kilocalorie(), for: date) { self.energy = $0 }
         manager.fetch(.distanceWalkingRunning, unit: HKUnit.meterUnit(with: .kilo), for: date) { self.distance = $0 }
     }
+    
+    // MARK: - Save Workout
+    func saveRunningWorkout(distance: Double, duration: TimeInterval, energy: Double) {
+        guard HKHealthStore.isHealthDataAvailable() else { return }
 
+        let healthStore = HKHealthStore()
+        let distanceType = HKQuantityType.quantityType(forIdentifier: .distanceWalkingRunning)!
+        let energyType = HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!
+        let workoutType = HKWorkoutActivityType.running
+
+        let startDate = Date()
+        let endDate = startDate.addingTimeInterval(duration)
+
+        let distanceQuantity = HKQuantity(unit: HKUnit.meter(), doubleValue: distance)
+        let energyQuantity = HKQuantity(unit: HKUnit.kilocalorie(), doubleValue: energy)
+
+        let workout = HKWorkout(activityType: workoutType,
+                                start: startDate,
+                                end: endDate,
+                                workoutEvents: nil,
+                                totalEnergyBurned: energyQuantity,
+                                totalDistance: distanceQuantity,
+                                metadata: nil)
+
+        healthStore.save(workout) { success, error in
+            if success {
+                print("✅ Workout saved for recalibration use")
+            } else {
+                print("❌ Error saving workout:", error?.localizedDescription ?? "Unknown error")
+            }
+        }
+    }
+
+    // MARK: - UI Card
     func healthCard(title: String, value: String, unit: String, color: Color) -> some View {
         VStack(spacing: 8) {
             Text(title)
@@ -105,6 +159,7 @@ struct HealthSummaryView: View {
     }
 }
 
+// MARK: - HealthKit Manager Class
 class HealthKitManager: ObservableObject {
     let store = HKHealthStore()
     var stepsPublisher = PassthroughSubject<Void, Never>()
@@ -118,9 +173,10 @@ class HealthKitManager: ObservableObject {
             HKObjectType.quantityType(forIdentifier: .stepCount)!,
             HKObjectType.quantityType(forIdentifier: .heartRate)!,
             HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!,
-            HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning)!
+            HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning)!,
+            HKObjectType.workoutType()
         ]
-        store.requestAuthorization(toShare: [], read: readTypes) { success, _ in
+        store.requestAuthorization(toShare: [HKObjectType.workoutType()], read: readTypes) { success, _ in
             completion(success)
         }
     }
@@ -132,7 +188,6 @@ class HealthKitManager: ObservableObject {
         observe(.activeEnergyBurned, publisher: energyPublisher)
         observe(.distanceWalkingRunning, publisher: distancePublisher)
         observersAdded = true
-        // Enable background delivery so observer queries work in all app states
         enableBackgroundDelivery(for: .stepCount)
         enableBackgroundDelivery(for: .heartRate)
         enableBackgroundDelivery(for: .activeEnergyBurned)
@@ -141,7 +196,7 @@ class HealthKitManager: ObservableObject {
 
     private func observe(_ type: HKQuantityTypeIdentifier, publisher: PassthroughSubject<Void, Never>) {
         guard let quantityType = HKObjectType.quantityType(forIdentifier: type) else { return }
-        let query = HKObserverQuery(sampleType: quantityType, predicate: nil) { [weak self] _, _, error in
+        let query = HKObserverQuery(sampleType: quantityType, predicate: nil) { _, _, error in
             if error == nil {
                 DispatchQueue.main.async {
                     publisher.send()
@@ -178,7 +233,5 @@ class HealthKitManager: ObservableObject {
 #Preview {
     if #available(iOS 16.0, *) {
         HealthSummaryView()
-    } else {
-        // Fallback on earlier versions
     }
 }

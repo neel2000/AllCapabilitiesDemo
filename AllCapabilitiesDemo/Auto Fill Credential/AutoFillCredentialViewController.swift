@@ -20,7 +20,7 @@ class AutoFillCredentialViewController: UIViewController {
         usernameTextField.textContentType = .username
         usernameTextField.keyboardType = .emailAddress
         
-        passwordTextField.textContentType = .password
+         passwordTextField.textContentType = .password
         
 //        usernameTextField.autocorrectionType = .no
 //        usernameTextField.autocapitalizationType = .none

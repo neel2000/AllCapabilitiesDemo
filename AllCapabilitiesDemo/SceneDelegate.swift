@@ -141,7 +141,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // Prefer the intent payload over webpageURL for call intents
         if let interaction = userActivity.interaction,
-           let audioIntent = interaction.intent as? INStartAudioCallIntent,
+           let audioIntent = interaction.intent as? INStartCallIntent,
            let handle = audioIntent.contacts?.first?.personHandle?.value,
            !handle.isEmpty {
             // handle is the phone number/identifier to dial

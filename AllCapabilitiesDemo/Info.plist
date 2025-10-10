@@ -30,11 +30,39 @@
 			</array>
 		</dict>
 	</array>
+	<key>GCSupportedGameControllers</key>
+	<array>
+		<dict>
+			<key>ProfileName</key>
+			<string>DirectionalGamepad</string>
+		</dict>
+		<dict>
+			<key>ProfileName</key>
+			<string>ExtendedGamepad</string>
+		</dict>
+		<dict>
+			<key>ProfileName</key>
+			<string>MicroGamepad</string>
+		</dict>
+	</array>
 	<key>IntentsSupported</key>
 	<array>
 		<string>INStartAudioCallIntent</string>
 		<string>INStartVideoCallIntent</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>www.kardder.com</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
 	<key>NSCallKitUsageDescription</key>
 	<string>We need access to handle calls.</string>
 	<key>NSCriticalMessagingUsageDescription</key>
@@ -71,13 +99,13 @@
 		<string>Roboto-Light.ttf</string>
 		<string>Roboto-Bold.ttf</string>
 		<string>Roboto-Black.ttf</string>
-		<string>Poppins-Black.ttf</string>
-		<string>Poppins-LightItalic.ttf</string>
-		<string>Poppins-Medium.ttf</string>
-		<string>Poppins-Regular.ttf</string>
-		<string>Poppins-SemiBold.ttf</string>
-		<string>Poppins-MediumItalic.ttf</string>
-		<string>Poppins-Bold.ttf</string>
+		<string>Poppins Black.ttf</string>
+		<string>Poppins Light Italic.ttf</string>
+		<string>Poppins Medium.ttf</string>
+		<string>Poppins Regular.ttf</string>
+		<string>Poppins SemiBold.ttf</string>
+		<string>Poppins Medium Italic.ttf</string>
+		<string>Poppins Bold.ttf</string>
 		<string>GreycliffCF-ThinOblique.otf</string>
 		<string>GreycliffCF-Heavy.otf</string>
 		<string>GreycliffCF-ExtraBold.otf</string>
@@ -131,9 +159,5 @@
 	<true/>
 	<key>com.apple.developer.translation-ui-provider.network-access</key>
 	<true/>
-	<key>NSUserTrackingUsageDescription</key>
-	<string>This identifier is used to provide a better app experience by tracking events and measuring the effectiveness of links.</string>
-	<key>NSMotionUsageDescription</key>
-	<string>To Track the water depth and pressure</string>
 </dict>
 </plist>

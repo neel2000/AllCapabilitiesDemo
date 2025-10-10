@@ -23,13 +23,13 @@ class JournalingSuggestionsVC: UIViewController {
     }
     
     @IBAction func btnJournalingSuggestionsAction(_ sender: Any) {
-        if #available(iOS 18.0, *) {
-            let vc = JournalingDemo()
-            let hostingVC = UIHostingController(rootView: vc)
-            self.navigationController?.pushViewController(hostingVC, animated: true)
-        } else {
-            showAlert(message: "Journaling Suggestions is available on iOS 18.0 and later")
-        }
+//        if #available(iOS 18.0, *) {
+//            let vc = JournalingDemo()
+//            let hostingVC = UIHostingController(rootView: vc)
+//            self.navigationController?.pushViewController(hostingVC, animated: true)
+//        } else {
+//            showAlert(message: "Journaling Suggestions is available on iOS 18.0 and later")
+//        }
     }
     
     private func showAlert(message: String) {

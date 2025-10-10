@@ -12,7 +12,10 @@ import CoreMotion
 class ShallowDepthPressureVC: UIViewController {
     
     // The submersion manager
+    @IBOutlet weak var btninfo: UIButton!
     private let submersionManager = CMWaterSubmersionManager()
+    
+    
     
     // UI labels
     private let stateLabel = UILabel()
@@ -24,6 +27,7 @@ class ShallowDepthPressureVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupLabels()
+       
         
         // Set delegate to receive events
         submersionManager.delegate = self

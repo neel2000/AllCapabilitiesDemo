@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51084AA82E962F4500A7B9A4 /* CountryPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 51084AA72E962F4500A7B9A4 /* CountryPicker */; };
+		51084AAB2E9631FC00A7B9A4 /* CountryPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 51084AAA2E9631FC00A7B9A4 /* CountryPicker */; };
 		5117C1162E3C995200D8FCCD /* DataProtectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5117C1142E3C995200D8FCCD /* DataProtectionVC.swift */; };
 		5117C1172E3C995200D8FCCD /* DataProtectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5117C1152E3C995200D8FCCD /* DataProtectionVC.xib */; };
 		51346A562E3B403F008664DB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51346A382E3B3FEE008664DB /* WidgetKit.framework */; };
@@ -16,6 +18,7 @@
 		513DC6732E41E76500DA2C0F /* SiriVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBC6E12E40A99500211F13 /* SiriVC.swift */; };
 		513DC6E42E42305000DA2C0F /* AppGroupsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51346A6E2E3B42D5008664DB /* AppGroupsViewController.xib */; };
 		513DC6E52E42305000DA2C0F /* AppGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51346A6D2E3B42D5008664DB /* AppGroupsViewController.swift */; };
+		5148FE172E97839700FC6FC9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5148FE162E97839700FC6FC9 /* StoreKit.framework */; };
 		514B43752E62CB2F00ED8697 /* JournalingSuggestionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51186E1C2E5886B100A1D754 /* JournalingSuggestionsVC.swift */; };
 		514B43762E62CB2F00ED8697 /* JournalingSuggestionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51186E1D2E5886B100A1D754 /* JournalingSuggestionsVC.xib */; };
 		5161AFE62E8E7FE7009FCBB9 /* MessageCollaborationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5161AFE52E8E7FE7009FCBB9 /* MessageCollaborationVC.xib */; };
@@ -26,6 +29,11 @@
 		5161B79E2E56064D00A945BF /* MultipathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5161B79C2E56064D00A945BF /* MultipathViewController.xib */; };
 		516FE3F62E81603D00CC6897 /* DolbyAtmosSample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 516FE3F52E81603D00CC6897 /* DolbyAtmosSample.mp3 */; };
 		516FE3FF2E816CF000CC6897 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 516FE3FE2E816CF000CC6897 /* sound.mp3 */; };
+		51728B9D2E98DB8500B804AE /* AgoraDemoVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51728B9B2E98DB8500B804AE /* AgoraDemoVCViewController.swift */; };
+		51728B9E2E98DB8500B804AE /* AgoraDemoVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51728B9C2E98DB8500B804AE /* AgoraDemoVCViewController.xib */; };
+		51728BA12E98DC2C00B804AE /* RtcBasic in Frameworks */ = {isa = PBXBuildFile; productRef = 51728BA02E98DC2C00B804AE /* RtcBasic */; };
+		51728BA32E98DC2C00B804AE /* SpatialAudio in Frameworks */ = {isa = PBXBuildFile; productRef = 51728BA22E98DC2C00B804AE /* SpatialAudio */; };
+		51728BA52E98DC2C00B804AE /* VirtualBackground in Frameworks */ = {isa = PBXBuildFile; productRef = 51728BA42E98DC2C00B804AE /* VirtualBackground */; };
 		519E1B2A2E5D9C9D00DFC311 /* HotspotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519E1B282E5D9C9D00DFC311 /* HotspotVC.swift */; };
 		519E1B2B2E5D9C9D00DFC311 /* HotspotVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 519E1B292E5D9C9D00DFC311 /* HotspotVC.xib */; };
 		51B526002E44869800999ABE /* WalletVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B525FF2E44869800999ABE /* WalletVC.xib */; };
@@ -117,17 +125,17 @@
 		51F01C092E53436F00F04F6B /* Segoe UI Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01C042E53436F00F04F6B /* Segoe UI Bold Italic.ttf */; };
 		51F01C0A2E53436F00F04F6B /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01C002E53436F00F04F6B /* Roboto-Thin.ttf */; };
 		51F01C0B2E53436F00F04F6B /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BFC2E53436F00F04F6B /* Roboto-Bold.ttf */; };
-		51F01C0C2E53436F00F04F6B /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BF92E53436F00F04F6B /* Poppins-SemiBold.ttf */; };
-		51F01C0D2E53436F00F04F6B /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BF32E53436F00F04F6B /* Poppins-Black.ttf */; };
+		51F01C0C2E53436F00F04F6B /* Poppins SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BF92E53436F00F04F6B /* Poppins SemiBold.ttf */; };
+		51F01C0D2E53436F00F04F6B /* Poppins Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BF32E53436F00F04F6B /* Poppins Black.ttf */; };
 		51F01C0E2E53436F00F04F6B /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BFD2E53436F00F04F6B /* Roboto-Light.ttf */; };
-		51F01C0F2E53436F00F04F6B /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BF62E53436F00F04F6B /* Poppins-Medium.ttf */; };
+		51F01C0F2E53436F00F04F6B /* Poppins Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BF62E53436F00F04F6B /* Poppins Medium.ttf */; };
 		51F01C102E53436F00F04F6B /* Segoe UI Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01C032E53436F00F04F6B /* Segoe UI Bold.ttf */; };
 		51F01C112E53436F00F04F6B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BFE2E53436F00F04F6B /* Roboto-Medium.ttf */; };
-		51F01C122E53436F00F04F6B /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BF52E53436F00F04F6B /* Poppins-LightItalic.ttf */; };
-		51F01C132E53436F00F04F6B /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BF82E53436F00F04F6B /* Poppins-Regular.ttf */; };
-		51F01C142E53436F00F04F6B /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BF72E53436F00F04F6B /* Poppins-MediumItalic.ttf */; };
+		51F01C122E53436F00F04F6B /* Poppins Light Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BF52E53436F00F04F6B /* Poppins Light Italic.ttf */; };
+		51F01C132E53436F00F04F6B /* Poppins Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BF82E53436F00F04F6B /* Poppins Regular.ttf */; };
+		51F01C142E53436F00F04F6B /* Poppins Medium Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BF72E53436F00F04F6B /* Poppins Medium Italic.ttf */; };
 		51F01C152E53436F00F04F6B /* Segoe UI Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01C062E53436F00F04F6B /* Segoe UI Semibold.ttf */; };
-		51F01C162E53436F00F04F6B /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BF42E53436F00F04F6B /* Poppins-Bold.ttf */; };
+		51F01C162E53436F00F04F6B /* Poppins Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BF42E53436F00F04F6B /* Poppins Bold.ttf */; };
 		51F01C172E53436F00F04F6B /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BFB2E53436F00F04F6B /* Roboto-Black.ttf */; };
 		51F01C182E53436F00F04F6B /* Segoe UI Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01C052E53436F00F04F6B /* Segoe UI Italic.ttf */; };
 		51F01C192E53436F00F04F6B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51F01BFF2E53436F00F04F6B /* Roboto-Regular.ttf */; };
@@ -225,6 +233,7 @@
 		51346A6C2E3B4216008664DB /* DemoWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DemoWidgetExtension.entitlements; sourceTree = "<group>"; };
 		51346A6D2E3B42D5008664DB /* AppGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroupsViewController.swift; sourceTree = "<group>"; };
 		51346A6E2E3B42D5008664DB /* AppGroupsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppGroupsViewController.xib; sourceTree = "<group>"; };
+		5148FE162E97839700FC6FC9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		5161AFE42E8E7FE7009FCBB9 /* MessageCollaborationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCollaborationVC.swift; sourceTree = "<group>"; };
 		5161AFE52E8E7FE7009FCBB9 /* MessageCollaborationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCollaborationVC.xib; sourceTree = "<group>"; };
 		5161B7962E55CDC300A945BF /* KeyValueStorageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageViewController.swift; sourceTree = "<group>"; };
@@ -233,6 +242,8 @@
 		5161B79C2E56064D00A945BF /* MultipathViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MultipathViewController.xib; sourceTree = "<group>"; };
 		516FE3F52E81603D00CC6897 /* DolbyAtmosSample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DolbyAtmosSample.mp3; sourceTree = "<group>"; };
 		516FE3FE2E816CF000CC6897 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
+		51728B9B2E98DB8500B804AE /* AgoraDemoVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoraDemoVCViewController.swift; sourceTree = "<group>"; };
+		51728B9C2E98DB8500B804AE /* AgoraDemoVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AgoraDemoVCViewController.xib; sourceTree = "<group>"; };
 		519E1B282E5D9C9D00DFC311 /* HotspotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotspotVC.swift; sourceTree = "<group>"; };
 		519E1B292E5D9C9D00DFC311 /* HotspotVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotspotVC.xib; sourceTree = "<group>"; };
 		51B525FE2E44869800999ABE /* WalletVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletVC.swift; sourceTree = "<group>"; };
@@ -318,13 +329,13 @@
 		51F01BDD2E532B7900F04F6B /* GreycliffCF-RegularOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GreycliffCF-RegularOblique.otf"; sourceTree = "<group>"; };
 		51F01BDE2E532B7900F04F6B /* GreycliffCF-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GreycliffCF-Thin.otf"; sourceTree = "<group>"; };
 		51F01BDF2E532B7900F04F6B /* GreycliffCF-ThinOblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GreycliffCF-ThinOblique.otf"; sourceTree = "<group>"; };
-		51F01BF32E53436F00F04F6B /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
-		51F01BF42E53436F00F04F6B /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
-		51F01BF52E53436F00F04F6B /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
-		51F01BF62E53436F00F04F6B /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
-		51F01BF72E53436F00F04F6B /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
-		51F01BF82E53436F00F04F6B /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
-		51F01BF92E53436F00F04F6B /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		51F01BF32E53436F00F04F6B /* Poppins Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Black.ttf"; sourceTree = "<group>"; };
+		51F01BF42E53436F00F04F6B /* Poppins Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Bold.ttf"; sourceTree = "<group>"; };
+		51F01BF52E53436F00F04F6B /* Poppins Light Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Light Italic.ttf"; sourceTree = "<group>"; };
+		51F01BF62E53436F00F04F6B /* Poppins Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Medium.ttf"; sourceTree = "<group>"; };
+		51F01BF72E53436F00F04F6B /* Poppins Medium Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Medium Italic.ttf"; sourceTree = "<group>"; };
+		51F01BF82E53436F00F04F6B /* Poppins Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins Regular.ttf"; sourceTree = "<group>"; };
+		51F01BF92E53436F00F04F6B /* Poppins SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins SemiBold.ttf"; sourceTree = "<group>"; };
 		51F01BFB2E53436F00F04F6B /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		51F01BFC2E53436F00F04F6B /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		51F01BFD2E53436F00F04F6B /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -398,8 +409,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		51084AB02E96439300A7B9A4 /* App Transport Securiy Exception */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "App Transport Securiy Exception"; sourceTree = "<group>"; };
 		51346A582E3B403F008664DB /* DemoWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (51346A672E3B4040008664DB /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DemoWidget; sourceTree = "<group>"; };
+		516B35C12E94EE6E00316CF0 /* Managed App Installation UI */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Managed App Installation UI"; sourceTree = "<group>"; };
 		51BBC7382E40DA1100211F13 /* SaveTextIntent */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (51BBC73F2E40DA1100211F13 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = SaveTextIntent; sourceTree = "<group>"; };
+		51C2C0932E95466700813A06 /* MDM Managed Assocaited Domains */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "MDM Managed Assocaited Domains"; sourceTree = "<group>"; };
 		51E38F952E939B41001B0A50 /* Shared with you */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Shared with you"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -425,8 +439,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51728BA52E98DC2C00B804AE /* VirtualBackground in Frameworks */,
 				51E38F942E93992D001B0A50 /* Airbridge in Frameworks */,
+				51084AA82E962F4500A7B9A4 /* CountryPicker in Frameworks */,
+				5148FE172E97839700FC6FC9 /* StoreKit.framework in Frameworks */,
 				51B526052E44E7B900999ABE /* IQKeyboardManagerSwift in Frameworks */,
+				51084AAB2E9631FC00A7B9A4 /* CountryPicker in Frameworks */,
+				51728BA12E98DC2C00B804AE /* RtcBasic in Frameworks */,
+				51728BA32E98DC2C00B804AE /* SpatialAudio in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +511,15 @@
 				5161B79C2E56064D00A945BF /* MultipathViewController.xib */,
 			);
 			path = MultiPath;
+			sourceTree = "<group>";
+		};
+		51728B9A2E98DA5E00B804AE /* Agora Demo */ = {
+			isa = PBXGroup;
+			children = (
+				51728B9B2E98DB8500B804AE /* AgoraDemoVCViewController.swift */,
+				51728B9C2E98DB8500B804AE /* AgoraDemoVCViewController.xib */,
+			);
+			path = "Agora Demo";
 			sourceTree = "<group>";
 		};
 		519E1B272E5D9C8600DFC311 /* Hotspot */ = {
@@ -786,13 +815,13 @@
 		51F01BFA2E53436F00F04F6B /* PoppinsFont */ = {
 			isa = PBXGroup;
 			children = (
-				51F01BF32E53436F00F04F6B /* Poppins-Black.ttf */,
-				51F01BF42E53436F00F04F6B /* Poppins-Bold.ttf */,
-				51F01BF52E53436F00F04F6B /* Poppins-LightItalic.ttf */,
-				51F01BF62E53436F00F04F6B /* Poppins-Medium.ttf */,
-				51F01BF72E53436F00F04F6B /* Poppins-MediumItalic.ttf */,
-				51F01BF82E53436F00F04F6B /* Poppins-Regular.ttf */,
-				51F01BF92E53436F00F04F6B /* Poppins-SemiBold.ttf */,
+				51F01BF32E53436F00F04F6B /* Poppins Black.ttf */,
+				51F01BF42E53436F00F04F6B /* Poppins Bold.ttf */,
+				51F01BF52E53436F00F04F6B /* Poppins Light Italic.ttf */,
+				51F01BF62E53436F00F04F6B /* Poppins Medium.ttf */,
+				51F01BF72E53436F00F04F6B /* Poppins Medium Italic.ttf */,
+				51F01BF82E53436F00F04F6B /* Poppins Regular.ttf */,
+				51F01BF92E53436F00F04F6B /* Poppins SemiBold.ttf */,
 			);
 			path = PoppinsFont;
 			sourceTree = "<group>";
@@ -870,6 +899,7 @@
 		BD279F8B2D0ABD33001D05E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5148FE162E97839700FC6FC9 /* StoreKit.framework */,
 				BD279F8C2D0ABD33001D05E4 /* AuthenticationServices.framework */,
 				51346A382E3B3FEE008664DB /* WidgetKit.framework */,
 				51346A3A2E3B3FEF008664DB /* SwiftUI.framework */,
@@ -935,6 +965,7 @@
 				51F01BA32E5324F000F04F6B /* Default Calling App */,
 				51F01BA92E53251800F04F6B /* Default Messaging App */,
 				51F01BAE2E53252E00F04F6B /* Spatial Audio Profile */,
+				51084AB02E96439300A7B9A4 /* App Transport Securiy Exception */,
 				51BBC6DB2E40950300211F13 /* HeadPose */,
 				51D9F13B2E79752200ED97C9 /* Critical Messaging */,
 				51BBC6E02E40A90F00211F13 /* Siri */,
@@ -945,11 +976,14 @@
 				51F01C1A2E5344F300F04F6B /* Font */,
 				51EA117F2E547D5600FF4947 /* Group Activities */,
 				5161B79A2E5605C300A945BF /* MultiPath */,
+				51C2C0932E95466700813A06 /* MDM Managed Assocaited Domains */,
+				516B35C12E94EE6E00316CF0 /* Managed App Installation UI */,
 				51186E1B2E58869300A1D754 /* Journaling Suggestions  */,
 				51F368942E5C6CCB00B168F5 /* Multitasking Camera Acsess */,
 				51D1D9222E7C0D080010BDF4 /* Default Translation App */,
 				51F158E32E7D8BDF00408E2B /* HomeKit */,
 				51E38F9A2E93DF23001B0A50 /* Shallow Depth and Pressure */,
+				51728B9A2E98DA5E00B804AE /* Agora Demo */,
 				519E1B272E5D9C8600DFC311 /* Hotspot */,
 				51E38F952E939B41001B0A50 /* Shared with you */,
 				BD2ECEC82D0841CB00639E0D /* Assets.xcassets */,
@@ -1067,6 +1101,9 @@
 				51BBC73D2E40DA1100211F13 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
+				51084AB02E96439300A7B9A4 /* App Transport Securiy Exception */,
+				516B35C12E94EE6E00316CF0 /* Managed App Installation UI */,
+				51C2C0932E95466700813A06 /* MDM Managed Assocaited Domains */,
 				51E38F952E939B41001B0A50 /* Shared with you */,
 			);
 			name = AllCapabilitiesDemo;
@@ -1151,6 +1188,8 @@
 			packageReferences = (
 				51B526032E44E7B900999ABE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				51E38F922E93992D001B0A50 /* XCRemoteSwiftPackageReference "airbridge-ios-sdk-deployment" */,
+				51084AA92E9631FC00A7B9A4 /* XCRemoteSwiftPackageReference "CountryPicker" */,
+				51728B9F2E98DC2C00B804AE /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */,
 			);
 			productRefGroup = BD2ECEBD2D0841CA00639E0D /* Products */;
 			projectDirPath = "";
@@ -1193,21 +1232,21 @@
 				51F01C092E53436F00F04F6B /* Segoe UI Bold Italic.ttf in Resources */,
 				51F01C0A2E53436F00F04F6B /* Roboto-Thin.ttf in Resources */,
 				51F01C0B2E53436F00F04F6B /* Roboto-Bold.ttf in Resources */,
-				51F01C0C2E53436F00F04F6B /* Poppins-SemiBold.ttf in Resources */,
-				51F01C0D2E53436F00F04F6B /* Poppins-Black.ttf in Resources */,
+				51F01C0C2E53436F00F04F6B /* Poppins SemiBold.ttf in Resources */,
+				51F01C0D2E53436F00F04F6B /* Poppins Black.ttf in Resources */,
 				51D9F1452E79A01E00ED97C9 /* ClassKitVC.xib in Resources */,
 				51F01C0E2E53436F00F04F6B /* Roboto-Light.ttf in Resources */,
 				51BD3B302E7A797B0043AD9E /* WirelessAccessoryConfigurationVC.xib in Resources */,
 				5161AFE62E8E7FE7009FCBB9 /* MessageCollaborationVC.xib in Resources */,
-				51F01C0F2E53436F00F04F6B /* Poppins-Medium.ttf in Resources */,
+				51F01C0F2E53436F00F04F6B /* Poppins Medium.ttf in Resources */,
 				51F01C102E53436F00F04F6B /* Segoe UI Bold.ttf in Resources */,
 				51F01C112E53436F00F04F6B /* Roboto-Medium.ttf in Resources */,
 				5161B79E2E56064D00A945BF /* MultipathViewController.xib in Resources */,
-				51F01C122E53436F00F04F6B /* Poppins-LightItalic.ttf in Resources */,
-				51F01C132E53436F00F04F6B /* Poppins-Regular.ttf in Resources */,
-				51F01C142E53436F00F04F6B /* Poppins-MediumItalic.ttf in Resources */,
+				51F01C122E53436F00F04F6B /* Poppins Light Italic.ttf in Resources */,
+				51F01C132E53436F00F04F6B /* Poppins Regular.ttf in Resources */,
+				51F01C142E53436F00F04F6B /* Poppins Medium Italic.ttf in Resources */,
 				51F01C152E53436F00F04F6B /* Segoe UI Semibold.ttf in Resources */,
-				51F01C162E53436F00F04F6B /* Poppins-Bold.ttf in Resources */,
+				51F01C162E53436F00F04F6B /* Poppins Bold.ttf in Resources */,
 				51D1D9552E7C333F0010BDF4 /* GameCenterDemo.gamekit in Resources */,
 				51F01C172E53436F00F04F6B /* Roboto-Black.ttf in Resources */,
 				51F01C182E53436F00F04F6B /* Segoe UI Italic.ttf in Resources */,
@@ -1266,6 +1305,7 @@
 				51F01BB52E53257600F04F6B /* NFCReadWriteViewController.xib in Resources */,
 				BD2162F22D11A5FD0071786F /* ApplePayVC.xib in Resources */,
 				BD2ECEC72D0841CA00639E0D /* Base in Resources */,
+				51728B9E2E98DB8500B804AE /* AgoraDemoVCViewController.xib in Resources */,
 				51F01BAB2E53251800F04F6B /* DefaultMessagingAppVC.xib in Resources */,
 				5117C1172E3C995200D8FCCD /* DataProtectionVC.xib in Resources */,
 				51D036AA2E3A013900948296 /* AppleLoginViewController.xib in Resources */,
@@ -1358,6 +1398,7 @@
 				51EA11822E547D7700FF4947 /* GroupActivitiesVC.swift in Sources */,
 				51F368AF2E5C776700B168F5 /* FSAlbumView.swift in Sources */,
 				BD2ECEC42D0841CA00639E0D /* ViewController.swift in Sources */,
+				51728B9D2E98DB8500B804AE /* AgoraDemoVCViewController.swift in Sources */,
 				51D1D91D2E7BD5340010BDF4 /* CommunicationNotificationsVC.swift in Sources */,
 				51D9F13A2E794B3B00ED97C9 /* HeadPoseVC1.swift in Sources */,
 				51D1D9212E7BD5CD0010BDF4 /* NotificationManager.swift in Sources */,
@@ -1728,14 +1769,18 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AllCapabilitiesDemo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = AppDemo;
+				INFOPLIST_KEY_GCSupportsControllerUserInteraction = YES;
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NFCReaderUsageDescription = "To read and write data";
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to the camera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "for agora video calling";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "To Share Health Related Data to this app";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "for health recalibration";
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "Configure smart home accessories";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For Location";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app needs access to the microphone for video recording";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "for agora video calling";
+				INFOPLIST_KEY_NSMotionUsageDescription = "To Track the water depth and pressure";
 				INFOPLIST_KEY_NSSiriUsageDescription = "We need Siri to order coffee with voice commands.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier is used to provide a better app experience by tracking events and measuring the effectiveness of links.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1773,14 +1818,18 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AllCapabilitiesDemo/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = AppDemo;
+				INFOPLIST_KEY_GCSupportsControllerUserInteraction = YES;
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NFCReaderUsageDescription = "To read and write data";
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to the camera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "for agora video calling";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "To Share Health Related Data to this app";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "for health recalibration";
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "Configure smart home accessories";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For Location";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app needs access to the microphone for video recording";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "for agora video calling";
+				INFOPLIST_KEY_NSMotionUsageDescription = "To Track the water depth and pressure";
 				INFOPLIST_KEY_NSSiriUsageDescription = "We need Siri to order coffee with voice commands.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier is used to provide a better app experience by tracking events and measuring the effectiveness of links.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1930,6 +1979,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		51084AA62E962F4500A7B9A4 /* XCRemoteSwiftPackageReference "CountryPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mobven/CountryPicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.3;
+			};
+		};
+		51084AA92E9631FC00A7B9A4 /* XCRemoteSwiftPackageReference "CountryPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mobven/CountryPicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.3;
+			};
+		};
+		51728B9F2E98DC2C00B804AE /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AgoraIO/AgoraRtcEngine_iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.6.0;
+			};
+		};
 		51B526032E44E7B900999ABE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
@@ -1949,6 +2022,31 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		51084AA72E962F4500A7B9A4 /* CountryPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51084AA62E962F4500A7B9A4 /* XCRemoteSwiftPackageReference "CountryPicker" */;
+			productName = CountryPicker;
+		};
+		51084AAA2E9631FC00A7B9A4 /* CountryPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51084AA92E9631FC00A7B9A4 /* XCRemoteSwiftPackageReference "CountryPicker" */;
+			productName = CountryPicker;
+		};
+		51728BA02E98DC2C00B804AE /* RtcBasic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51728B9F2E98DC2C00B804AE /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = RtcBasic;
+		};
+		51728BA22E98DC2C00B804AE /* SpatialAudio */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51728B9F2E98DC2C00B804AE /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = SpatialAudio;
+		};
+		51728BA42E98DC2C00B804AE /* VirtualBackground */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51728B9F2E98DC2C00B804AE /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = VirtualBackground;
+		};
 		51B526042E44E7B900999ABE /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 51B526032E44E7B900999ABE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;

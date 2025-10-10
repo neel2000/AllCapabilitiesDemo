@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShallowDepthPressureVC" customModule="AllCapabilitiesDemo" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManagedAppInstallationUIVC" customModule="AllCapabilitiesDemo" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,21 +19,22 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIi-OL-jgb">
-                    <rect key="frame" x="170.33333333333334" y="733.66666666666663" width="52.666666666666657" height="34.333333333333371"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Info"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Info"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znh-Ca-E8i">
+                    <rect key="frame" x="184.66666666666666" y="754" width="24" height="14"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Info">
+                        <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="0.0"/>
+                    </buttonConfiguration>
                     <connections>
-                        <action selector="btnInfoAction:" destination="-1" eventType="touchUpInside" id="0eS-Xf-Pwd"/>
+                        <action selector="btnInfoAction:" destination="-1" eventType="touchUpInside" id="ao5-v0-ntu"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OIi-OL-jgb" secondAttribute="bottom" constant="16" id="68x-bJ-AsU"/>
-                <constraint firstItem="OIi-OL-jgb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Dzz-bJ-LiG"/>
+                <constraint firstItem="znh-Ca-E8i" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QVi-Et-HCW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="znh-Ca-E8i" secondAttribute="bottom" constant="16" id="fQt-Zg-sC4"/>
             </constraints>
             <point key="canvasLocation" x="132" y="-11"/>
         </view>
